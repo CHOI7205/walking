@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.dev.vars
+.env*
+!/.env.example
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.test-dist/
+assets/originals/
