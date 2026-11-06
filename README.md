@@ -65,6 +65,12 @@ Pages에는 Cron Triggers가 없으므로 문의 개인정보의 자동 보관�
 
 ## 로컬 확인
 
+첫 화면에는 15초 키네틱 타이포그래피를 적용했습니다. 세 장면이 한 번 재생된 뒤 마지막 문구에 머물며, 일시정지·이어서 재생·다시 재생을 지원합니다. 탭을 숨기거나 히어로를 벗어나면 재생을 멈춥니다. 기기의 움직임 줄이기 설정에서는 마지막 장면을 정지 화면으로 제공합니다.
+
+글꼴은 공식 Pretendard v1.3.9의 가변 웹폰트를 내려받아 사이트에 포함했습니다. 외부 폰트 CDN 없이 제공하며 SIL Open Font License 1.1 전문은 `assets/fonts/Pretendard-LICENSE.txt`에 있습니다. 원본: https://github.com/orioncactus/pretendard/tree/v1.3.9
+
+히어로 문구와 사진은 `scripts/hero.mjs`, 디자인은 `assets/hero.css`, 재생 동작은 `assets/hero-motion.js`에서 수정합니다. 마지막 장면 사진은 협회 소개자료의 권선구보건소·서호노인복지관 프로그램 현장 사진을 사용했습니다.
+
 Node.js 22 이상에서 추가 패키지 설치 없이 실행합니다.
 
     node scripts/build.mjs
