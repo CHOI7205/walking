@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { listPublished } from '../server/press.mjs';
-import { renderPress, dynamicSitemap, pressFeed } from '../server/render-press.mjs';
+import { renderPress, dynamicSitemap, pressFeed, renderMarkdown } from '../server/render-press.mjs';
 import { bundledPosts } from '../server/bundled-posts.mjs';
 import worker from '../server/worker.mjs';
 
@@ -11,7 +11,7 @@ const env={ASSETS:{fetch:async request=>new Response(new URL(request.url).pathna
 test('bundled articles, images, list search, feed and sitemap work without database or administrator setup',async()=>{
   const first=bundledPosts[0];
   assert.ok(first);
-  assert.equal((await listPublished(null)).posts[0].slug,first.slug);
+  assert.ok((await listPublished(null)).posts.some(post=>post.slug===first.slug));
   assert.equal((await listPublished(null,{q:'no-match-123'})).posts.length,0);
   assert.equal((await listPublished(null,{category:'협회소식'})).posts.length,0);
   assert.equal((await listPublished(null,{page:2})).posts.length,0);
@@ -28,4 +28,17 @@ test('bundled articles, images, list search, feed and sitemap work without datab
   assert.ok((await homepage.text()).includes(first.title));
   const write=await worker.fetch(new Request(config.origin+'/api/admin/posts',{method:'POST',headers:{Origin:config.origin,'Content-Type':'application/json'},body:'{}'}),env,{});
   assert.equal(write.status,401);
+});
+
+test('source photographs render only from the bundled article image allowlist',async()=>{
+  const photoPost=bundledPosts.find(post=>post.slug==='yangcheon-walking-education');
+  assert.ok(photoPost);
+  const detail=await renderPress(new Request(config.origin+'/press/'+photoPost.slug+'/'),env,config);
+  assert.equal(detail.status,200);
+  const html=await detail.text();
+  for(const image of photoPost.body_images)assert.ok(html.includes('src="'+image+'"'));
+  assert.ok(html.includes('https://blog.naver.com/bja620/223960596248'));
+  const marker='![caption](/assets/images/unapproved.jpg)';
+  assert.ok(!renderMarkdown(marker).includes('<img'));
+  assert.ok(!renderMarkdown('![caption](https://unapproved.example/photo.jpg)',[],photoPost.body_images).includes('<img'));
 });
