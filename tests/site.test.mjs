@@ -47,3 +47,26 @@ test('production build requires a domain and generates canonical URL and sitemap
   // Restore the report and preview output. Test output is kept separate from deployable files.
   execFileSync(process.execPath,['scripts/build.mjs'],{cwd:root,stdio:'pipe'});
 });
+
+test('hero assets get fresh URLs when their contents change so old cached controls cannot break new markup',()=>{
+  const fixture=fs.mkdtempSync(path.join(root,'.test-dist','hero-cache-'));
+  for(const entry of ['scripts','assets','server','content.mjs','site.config.json']) {
+    fs.cpSync(path.join(root,entry),path.join(fixture,entry),{recursive:true});
+  }
+  const build=()=>{
+    execFileSync(process.execPath,['scripts/build.mjs'],{cwd:fixture,stdio:'pipe',env:{...process.env,BUILD_OUTPUT:'dist',SITE_ORIGIN:''}});
+    const html=fs.readFileSync(path.join(fixture,'dist','index.html'),'utf8');
+    const script=html.match(/src="(\/assets\/hero-motion\.[a-f0-9]{12}\.js)"/)[1];
+    const css=html.match(/href="(\/assets\/hero\.[a-f0-9]{12}\.css)"/)[1];
+    assert.equal(fs.readFileSync(path.join(fixture,'dist',script),'utf8'),fs.readFileSync(path.join(fixture,'assets','hero-motion.js'),'utf8'));
+    assert.equal(fs.readFileSync(path.join(fixture,'dist',css),'utf8'),fs.readFileSync(path.join(fixture,'assets','hero.css'),'utf8'));
+    assert.doesNotMatch(html,/<button[^>]*data-motion|data-motion-time/);
+    return {script,css};
+  };
+  const before=build();
+  fs.appendFileSync(path.join(fixture,'assets','hero-motion.js'),'\n// Cache regression fixture\n');
+  fs.appendFileSync(path.join(fixture,'assets','hero.css'),'\n/* Cache regression fixture */\n');
+  const after=build();
+  assert.notEqual(after.script,before.script);
+  assert.notEqual(after.css,before.css);
+});

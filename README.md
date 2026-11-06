@@ -79,6 +79,8 @@ Pages에는 Cron Triggers가 없으므로 문의 개인정보의 자동 보관�
 
 히어로 문구와 사진은 `scripts/hero.mjs`, 디자인은 `assets/hero.css`, 재생 동작은 `assets/hero-motion.js`에서 수정합니다. 마지막 장면 사진은 협회 소개자료의 권선구보건소·서호노인복지관 프로그램 현장 사진을 사용했습니다.
 
+히어로 CSS와 JavaScript는 빌드 시 내용의 해시를 파일명에 붙여 제공합니다. 모션을 수정하면 파일 주소도 바뀌므로, 이전 버전이 브라우저에 캐시되어 새 화면과 충돌하는 문제를 방지합니다.
+
 Node.js 22 이상에서 추가 패키지 설치 없이 실행합니다.
 
     node scripts/build.mjs

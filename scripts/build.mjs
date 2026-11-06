@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { programs, cases, articles, faqs } from '../content.mjs';
 import { renderHero } from './hero.mjs';
 
@@ -16,6 +17,15 @@ await fs.mkdir(path.join(dist, 'assets'), { recursive: true });
 await fs.cp(path.join(root, 'assets', 'images'), path.join(dist, 'assets', 'images'), { recursive: true });
 await fs.cp(path.join(root, 'assets', 'fonts'), path.join(dist, 'assets', 'fonts'), { recursive: true });
 for (const file of ['styles.css', 'app.js','cms.css','admin.js','hero.css','hero-motion.js']) await fs.copyFile(path.join(root, 'assets', file), path.join(dist, 'assets', file));
+// A new asset URL prevents cached scripts from running against newer hero markup.
+const heroAssets = {};
+for (const file of ['hero.css', 'hero-motion.js']) {
+  const bytes = await fs.readFile(path.join(root, 'assets', file));
+  const version = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
+  const filename = file.replace(/\.(css|js)$/, `.${version}.$1`);
+  await fs.writeFile(path.join(dist, 'assets', filename), bytes);
+  heroAssets[file] = `/assets/${filename}`;
+}
 const esc = x => String(x ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const absolute = route => origin + route;
 const orgId = absolute('/#organization');
@@ -45,7 +55,7 @@ async function writePage({route,title,description,body,schema=[],crumbs=[],noind
   ];
   if (crumbs.length && origin) graph.push({'@type':'BreadcrumbList',itemListElement:[['/','홈'],...crumbs].map(([url,label],i)=>({'@type':'ListItem',position:i+1,name:label,item:absolute(url)}))});
   const html = `<!doctype html>
-<html lang="ko" id="top"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(fullTitle)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="${!production || noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'}"><meta name="theme-color" content="#153f3c">${origin?`<link rel="canonical" href="${esc(absolute(route))}"><meta property="og:url" content="${esc(absolute(route))}">`:''}<meta property="og:type" content="${type}"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="${esc(config.name)}"><meta property="og:title" content="${esc(fullTitle)}"><meta property="og:description" content="${esc(description)}">${origin?`<meta property="og:image" content="${esc(absolute('/assets/images/social.jpg'))}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="대한바른자세걷기협회 야외 운동 교육 현장"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${esc(absolute('/assets/images/social.jpg'))}">`:''}<meta name="twitter:title" content="${esc(fullTitle)}"><meta name="twitter:description" content="${esc(description)}">${config.googleVerification?`<meta name="google-site-verification" content="${esc(config.googleVerification)}">`:''}${config.naverVerification?`<meta name="naver-site-verification" content="${esc(config.naverVerification)}">`:''}<link rel="icon" type="image/png" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/styles.css">${heroImage?'<link rel="preload" href="/assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/hero.css"><script src="/assets/hero-motion.js" defer></script>':''}<script type="application/ld+json">${graphJson({'@context':'https://schema.org','@graph':graph})}</script><script src="/assets/app.js" defer></script></head><body>${header(route)}<main id="main">${body}</main>${showCta?cta:''}${footer()}</body></html>`;
+<html lang="ko" id="top"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(fullTitle)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="${!production || noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'}"><meta name="theme-color" content="#153f3c">${origin?`<link rel="canonical" href="${esc(absolute(route))}"><meta property="og:url" content="${esc(absolute(route))}">`:''}<meta property="og:type" content="${type}"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="${esc(config.name)}"><meta property="og:title" content="${esc(fullTitle)}"><meta property="og:description" content="${esc(description)}">${origin?`<meta property="og:image" content="${esc(absolute('/assets/images/social.jpg'))}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="대한바른자세걷기협회 야외 운동 교육 현장"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${esc(absolute('/assets/images/social.jpg'))}">`:''}<meta name="twitter:title" content="${esc(fullTitle)}"><meta name="twitter:description" content="${esc(description)}">${config.googleVerification?`<meta name="google-site-verification" content="${esc(config.googleVerification)}">`:''}${config.naverVerification?`<meta name="naver-site-verification" content="${esc(config.naverVerification)}">`:''}<link rel="icon" type="image/png" href="/assets/images/favicon.png"><link rel="stylesheet" href="/assets/styles.css">${heroImage?'<link rel="preload" href="/assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="'+heroAssets['hero.css']+'"><script src="'+heroAssets['hero-motion.js']+'" defer></script>':''}<script type="application/ld+json">${graphJson({'@context':'https://schema.org','@graph':graph})}</script><script src="/assets/app.js" defer></script></head><body>${header(route)}<main id="main">${body}</main>${showCta?cta:''}${footer()}</body></html>`;
   const filename = route === '/404.html' ? path.join(dist,'404.html') : path.join(dist,route.replace(/^\//,''),'index.html');
   await fs.mkdir(path.dirname(filename),{recursive:true});
   const finalHtml=html.replace('<link rel="stylesheet" href="/assets/styles.css">','<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/cms.css">').replace('</main>',()=>`${['/','/news/'].includes(route)?'<!--LATEST_PRESS-->':''}</main>`);
