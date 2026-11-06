@@ -19,9 +19,9 @@ export default {
     if(url.pathname==='/sitemap.xml')return await dynamicSitemap(request,env,config);
     if (url.pathname === '/api/inquiries') return handleInquiry(request,env,ctx);
     if (url.pathname.startsWith('/api/')) return new Response('Not found',{status:404,headers:{'X-Robots-Tag':'noindex'}});
-    if((url.pathname==='/'||url.pathname==='/news/')&&env.DB){
+    if((url.pathname==='/'||url.pathname==='/news/')){
       const response=await env.ASSETS.fetch(request);
-      if(response.status===200){const html=await response.text();let section='';try{section=pressHomeSection((await listPublished(env.DB,{limit:3})).posts);}catch{/* Keep the static homepage available during DB maintenance. */}
+      if(response.status===200){const html=await response.text();let section='';try{section=pressHomeSection((await listPublished(env.DB,{limit:3})).posts);}catch{section=pressHomeSection((await listPublished(null,{limit:3})).posts);}
       const headers=new Headers(response.headers);headers.set('Cache-Control','no-store');headers.delete('Content-Length');
       return new Response(html.replace('<!--LATEST_PRESS-->',()=>section),{status:200,headers});}
     }
