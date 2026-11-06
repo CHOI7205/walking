@@ -1,7 +1,7 @@
 {
   "mode": "preview",
   "origin": null,
-  "pages": 27,
+  "pages": 29,
   "indexable": 0,
   "routes": [
     "/",
@@ -30,6 +30,8 @@
     "/contact/",
     "/privacy/",
     "/editorial/",
-    "/404.html"
+    "/404.html",
+    "/press/",
+    "/admin/"
   ]
 }

@@ -1,0 +1,1 @@
+export default {"name":"대한바른자세걷기협회","englishName":"Korea Upright Walking Association","origin":"","phone":"02-3472-4177","email":"kptchoi7205@gamil.com","language":"ko-KR","contentUpdated":"2026-11-06","googleVerification":"","naverVerification":"","production":false};

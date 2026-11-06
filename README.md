@@ -1,147 +1,99 @@
 # 대한바른자세걷기협회 홈페이지
 
-기획안을 바탕으로 제작한 27개 HTML 페이지와 Cloudflare 문의 접수 서버입니다. 현재는 로컬 미리보기 버전이며 외부에 배포하지 않았습니다.
+협회 소개와 교육 프로그램, 활동 사례, 보도자료 게시판을 제공합니다. 주 배포 환경은 Cloudflare Pages + D1 + R2입니다.
 
-## 지금 보기
+## Cloudflare Pages 설정
 
-Node.js 22 이상에서 이 폴더를 열고 실행합니다. 추가 패키지 설치 없이 미리보기를 실행할 수 있습니다.
+| 항목 | 값 |
+|---|---|
+| Framework preset | None |
+| Build command | node scripts/build.mjs |
+| Build output directory | dist |
+| Root directory | 저장소 루트, 비워두기 |
+| Node.js | NODE_VERSION=22 이상 |
+| D1 binding | walking-db → 기존 walking-db |
+| R2 binding | walking-r2 → 기존 walking-r2 |
 
-```powershell
-node scripts/build.mjs
-node scripts/serve.mjs
-```
+빌드가 dist/_worker.js와 서버 모듈을 생성합니다. Git 연동으로 재배포하면 서버 기능도 함께 배포됩니다. 서버 코드 경로는 외부 요청에서 차단합니다. 이전 Workers 전용 예시는 wrangler.worker.example.jsonc로 옮겨 Pages 설정과 충돌하지 않도록 했습니다.
 
-브라우저에서 `http://127.0.0.1:4173`을 엽니다. 종료는 터미널에서 Ctrl+C입니다.
+## 관리자 설정
 
-미리보기는 개인정보를 저장하지 않습니다. 문의 양식에 입력하고 보내기를 누르면 Cloudflare 미연결 안내가 나옵니다. 서버 저장에 성공하지 않았는데 접수 완료라고 표시하지 않습니다.
+Pages 프로젝트의 Settings → Variables and Secrets에서 ADMIN_PASSWORD를 Secret으로 추가하고 재배포합니다. 값은 직접 정한 16자 이상의 충분히 긴 비밀번호입니다. 실제 비밀번호를 GitHub, 소스 파일, 대화창에 적지 않습니다.
 
-## 구성
+배포 후 사이트주소/admin/에서 로그인합니다. 로그인 세션은 HttpOnly·SameSite=Strict 쿠키를 사용하고 HTTPS에서 Secure 속성을 적용합니다. 비밀번호를 바꾸면 기존 서명 세션은 무효화됩니다. 로그인 시도는 접속 정보의 해시값으로 제한합니다.
 
-- `site.config.json`: 협회명, 전화, 이메일, 운영 도메인과 검색 등록 인증값
-- `content.mjs`: 프로그램 5개, 활동 사례 7개, 교육 정보 3개와 FAQ
-- `scripts/build.mjs`: 본문과 구조화 데이터를 포함한 HTML 생성
-- `assets/styles.css`, `assets/app.js`: 반응형 디자인, 메뉴, 사례 필터, 문의 양식
-- `assets/images`: 압축된 WebP 이미지와 공유용 이미지
-- `server/worker.mjs`: Cloudflare Workers 진입점
-- `server/inquiries.mjs`: 문의 검증, D1 저장, 스팸 제한, 선택적 이메일 알림
-- `migrations/0001_inquiries.sql`: 문의 저장 테이블
-- `wrangler.jsonc`: 정적 파일·서버·D1·예약 삭제 작업 설정
-- `dist`: 만들어진 정적 파일. 소스가 수정되면 다시 빌드
+앱은 기존 데이터를 삭제하지 않고 필요한 press_posts, press_media, press_login_attempts 테이블과 인덱스를 CREATE IF NOT EXISTS로 자동 생성합니다. 수동 관리용 동일 스키마는 migrations/0002_press.sql에 있습니다.
 
-웹사이트에 자료 PPTX나 HWP 원본을 그대로 올리지 않습니다. 실제 첨부 자료에서 선정한 이미지와 편집한 설명만 사용했습니다. 일부 사례의 직접 사진이 아닌 이미지는 해당 페이지에 참고 사진이라고 표시했습니다. 첨부 홍보영상은 내용·음원·자막 검토 후 추가할 수 있도록 이번 버전에서 제외했습니다.
+## 보도자료 작성
 
-## Cloudflare에 올릴 때
+1. /admin/에서 로그인합니다.
+2. 새 글 작성에서 제목, 분류, 작성자, 요약과 본문을 입력합니다.
+3. 사진이나 PDF를 업로드합니다. JPG·PNG·WebP·PDF를 지원하며 파일당 최대 10MB, 글당 최대 20개입니다.
+4. 사진은 대표 사진으로 지정하거나 본문에 넣을 수 있습니다.
+5. 원문 매체·자료명과 기사 링크를 필요에 따라 입력합니다.
+6. 임시저장 → 미리보기 → 발행하기 순서로 확인합니다.
 
-온라인 문의를 실제 저장하려면 **Cloudflare Workers Static Assets + D1** 구성을 사용합니다. 홈페이지는 정적 HTML로 빠르게 제공하고 `/api/inquiries`만 서버에서 처리합니다. 별도 상시 실행 서버는 필요하지 않습니다.
+본문은 빈 줄로 문단을 나눕니다. ## 소제목, ### 작은 소제목, - 목록, **강조**, [링크](https://...)를 지원합니다. HTML 태그는 실행하지 않습니다.
 
-`dist` 폴더만 업로드하면 화면은 열리지만 문의 서버는 배포되지 않습니다. 온라인 문의까지 운영하려면 아래 절차로 전체 프로젝트를 배포해야 합니다. Cloudflare 계정 연결이나 배포는 아직 하지 않았습니다.
+발행 글 주소는 /press/글주소/입니다. 한 번 발행한 글 주소는 유지합니다. 다른 창에서 수정한 글을 덮어쓰지 않도록 저장 버전을 확인합니다. 발행된 글은 수정하거나 비공개로 전환할 수 있습니다. 영구 삭제 기능은 넣지 않았습니다.
 
-### 1. 계정과 D1 연결
+관리자 목록은 최근 수정한 200개 글을 표시하며 그 안에서 제목으로 찾을 수 있습니다. 연결 해제한 파일은 R2에서 즉시 삭제하지 않으므로 원본이 실수로 사라지지 않습니다. 미사용 파일은 운영자가 별도로 관리합니다.
 
-Node.js 환경에서 공식 Wrangler CLI를 준비합니다. 아래 명령은 배포 시 사용자가 계정을 연결한 뒤 실행할 절차이며, 이번 제작 과정에서 실행하지 않았습니다.
+## 데이터 저장과 공개 범위
 
-```powershell
-npx wrangler login
-npx wrangler d1 create walking-inquiries
-```
+- D1: 제목·본문·요약·작성자·출처·발행 상태·파일 연결 정보
+- R2: 사진·PDF 원본
+- 임시저장 글과 파일: 관리자 세션으로만 열람
+- 발행 글에 연결된 파일: /media/파일ID로 제공
+- R2 버킷 자체를 public으로 전환할 필요 없음
+- 비공개 전환 시 글과 파일의 공개 접근을 재확인하고 응답을 캐시하지 않음
 
-반환된 `database_id`를 `wrangler.jsonc`의 `REPLACE_WITH_CLOUDFLARE_DATABASE_ID`에 입력합니다.
+## 검색·AI 검색
 
-```powershell
-npx wrangler d1 migrations apply walking-inquiries --remote
-npx wrangler secret put INQUIRY_HASH_SALT
-```
+기존 페이지는 정적 HTML이며 보도자료 목록과 상세는 서버에서 본문 전체를 HTML로 응답합니다. 발행 글에는 고유 제목·요약·대표 이미지, 작성자, 발행·수정일과 NewsArticle 또는 BlogPosting 구조화 데이터를 제공합니다. 홈페이지와 협회 소식에 최근 발행 글이 표시됩니다. 검색·분류·페이지 이동, RSS(/press/feed.xml), 발행 글을 포함하는 동적 사이트맵을 제공합니다.
 
-`INQUIRY_HASH_SALT`에는 충분히 긴 임의의 비밀값을 입력합니다. 실제 비밀값을 소스 파일이나 대화창에 넣지 않습니다.
+현재 운영 도메인을 전달받지 않아 기본 빌드는 검색 차단 상태입니다. 운영 주소가 정해지면 Pages 빌드 환경변수 SITE_ORIGIN에 실제 HTTPS 주소를 경로 없이 입력하고 빌드 명령을 node scripts/build.mjs --production으로 바꿉니다. 자체 도메인 없이도 실제 https://프로젝트명.pages.dev 주소를 사용할 수 있습니다. 관리자와 임시저장 글은 사이트맵에 포함하지 않습니다. 검색 순위와 AI 인용은 보장되지 않습니다.
 
-### 2. 도메인과 운영 빌드
+## 연락처와 기존 문의 기능
 
-처음에는 Cloudflare에서 제공하는 `workers.dev` 주소를 운영 주소로 사용할 수 있습니다. 추후 자체 도메인이 생기면 같은 설정을 변경해 다시 빌드합니다.
+대표 전화: 02-3472-4177
+대표 이메일 및 기본 알림 수신 주소: kptchoi7205@gamil.com
 
-`site.config.json`의 `origin`에 실제 HTTPS 주소를 경로 없이 입력합니다. 예: `https://실제-프로젝트.실제-계정.workers.dev`. 가짜 예시 주소를 그대로 사용하지 않습니다.
+새 D1에서 문의 접수까지 운영한다면 migrations/0001_inquiries.sql도 적용하고 INQUIRY_HASH_SALT Secret을 설정합니다. 자동 이메일 알림은 선택적으로 RESEND_API_KEY, 검증된 발신 주소 CONTACT_FROM, CONTACT_TO를 설정한 경우 동작합니다. 메일 서비스 없이도 문의 DB 저장은 가능합니다. Cloudflare에 기존 CONTACT_TO 환경변수를 별도로 설정했다면 새 주소로 수정해야 합니다.
 
-```powershell
-node scripts/build.mjs --production
-npx wrangler deploy
-```
+Pages에는 Cron Triggers가 없으므로 문의 개인정보의 자동 보관기한 관리는 별도 예약 Worker 또는 운영 절차를 연결해야 합니다. 문의 접수 시에도 만료 데이터를 정리합니다. Workers 예시에는 하루 한 번 정리하는 예약 작업이 있습니다.
 
-최초에 주소를 확인할 필요가 있다면 미리보기 빌드 상태로 먼저 배포해 `workers.dev` 주소를 확인하고, 그 주소를 설정한 뒤 운영 빌드로 다시 배포합니다. 첫 배포 버전은 검색 차단 상태입니다. D1 및 비밀값 연결을 확인하기 전 온라인 접수는 작동하지 않습니다.
+## 로컬 확인
 
-운영 빌드에서는 canonical, Open Graph 이미지 주소, 조직 식별 URL, 페이지 경로와 사이트맵을 실제 도메인으로 생성합니다. 도메인이 없는 상태에서 운영 빌드를 실행하면 중단합니다.
+Node.js 22 이상에서 추가 패키지 설치 없이 실행합니다.
 
-### 3. 문의 확인과 이메일 알림
+    node scripts/build.mjs
+    node scripts/serve.mjs
 
-문의는 서버 검증과 D1 저장이 성공한 뒤 접수번호를 반환합니다. 기본 확인 위치는 Cloudflare의 D1 콘솔입니다.
+브라우저에서 http://127.0.0.1:4173을 엽니다. 종료는 Ctrl+C입니다. 기본 미리보기는 실제 문의를 저장하지 않습니다.
 
-```sql
-SELECT id,
-  datetime(created_at, 'unixepoch', '+9 hours') AS received_kst,
-  json_extract(payload, '$.organization') AS organization,
-  json_extract(payload, '$.name') AS name,
-  json_extract(payload, '$.phone') AS phone,
-  json_extract(payload, '$.email') AS email,
-  json_extract(payload, '$.message') AS message,
-  notification_status
-FROM inquiries
-ORDER BY created_at DESC;
-```
-
-`kptchoi@gmail.com`으로 자동 알림을 받으려면 선택적으로 Resend를 연결합니다. 홈페이지에 Gmail 주소를 적는 것만으로 서버에서 이메일이 발송되지는 않습니다. Resend의 발신 도메인 확인이 필요합니다.
-
-```powershell
-npx wrangler secret put RESEND_API_KEY
-npx wrangler secret put CONTACT_FROM
-```
-
-`CONTACT_FROM`은 Resend에서 검증한 발신 주소입니다. 수신 주소는 `wrangler.jsonc`의 `CONTACT_TO`이며 현재 `kptchoi@gmail.com`입니다. 알림 실패가 문의 데이터 손실로 이어지지 않도록 문의를 먼저 저장합니다. 이메일 실패 시 DB의 `notification_status`는 `failed`가 됩니다. 외부 메일 서비스를 실제로 연결한다면 개인정보 안내의 처리업무·수탁/이전 관련 설명도 실제 환경에 맞춰 확정합니다.
-
-자동 알림 미설정 시에도 D1 접수는 가능하지만, 운영자가 D1의 새 문의를 정기적으로 확인해야 합니다. 공개 전 시험 문의 1건을 실제 배포 주소에서 보내 저장·답변 동선을 확인합니다. 테스트를 위해 실제 사용자 문의를 대신 보내지는 않았습니다.
-
-### 4. 보관과 스팸 제한
-
-- 동의, 필수값, 형식, 길이를 서버에서도 검증합니다.
-- 동일 출처 JSON 요청만 허용하고 허니팟과 요청 크기 제한을 사용합니다.
-- 원본 IP를 저장하지 않고 비밀값으로 해시한 값으로 시간당 5건을 제한합니다.
-- 문의는 89일 후 삭제 대상이 되고 하루 1회 예약 작업으로 정리해 정상 실행 시 90일 이내 삭제합니다. Cron 실행 상태를 운영 중 점검합니다.
-- 요청 실패 시 입력값을 유지합니다. 브라우저 저장소에는 개인정보를 저장하지 않습니다.
-- 문의 API에는 조회 기능을 공개하지 않습니다. DB 접근은 Cloudflare 계정 권한으로 제한합니다.
-
-## SEO · GEO · AEO 적용 내용
-
-1. 모든 주요 내용이 최초 HTML 응답에 포함됩니다. JavaScript 실행 없이도 협회·프로그램·활동 정보를 읽을 수 있습니다.
-2. 페이지별 고유 title·description·H1, 의미 있는 URL, 내부 링크와 탐색 경로를 제공합니다.
-3. Organization, WebSite, WebPage, BreadcrumbList, Service, Article, Person 구조화 데이터를 실제 본문과 맞춰 생성합니다.
-4. FAQ는 화면에서 읽을 수 있는 질문·답변과 FAQPage 의미 구조로 제공합니다. Google FAQ 리치결과나 AI 인용 노출을 약속하지 않습니다.
-5. 협회 이름·전화·이메일을 일관되게 사용하고, 활동 사례의 기관·대상·시기·근거 자료를 표시합니다.
-6. 교육 정보는 질문에 대한 답을 먼저 제시하고, 작성 주체·자료 근거·수정 기준을 안내합니다. 확인되지 않은 전문가 검수나 치료 효과를 만들지 않습니다.
-7. 이미지 압축, 크기 지정, 적응형 이미지, 지연 로딩, 대표 이미지 우선 로딩을 적용했습니다. 외부 폰트·대형 프레임워크·광고 스크립트는 사용하지 않습니다.
-8. 운영 빌드에서 sitemap.xml·robots.txt·canonical·공유 메타데이터를 생성합니다. 현재 미리보기는 noindex 상태입니다.
-
-Google 공식 안내에 따르면 AI 검색을 위한 별도의 특수 마크업이나 AI 텍스트 파일은 필수가 아닙니다. 그래서 `llms.txt`가 노출을 높인다고 주장하거나 확인되지 않은 자동 인용 기능을 추가하지 않았습니다. 검색 노출과 순위, AI 답변 인용은 보장되지 않습니다.
-
-## 공개 후 검색 등록
-
-1. 실제 도메인으로 운영 빌드했는지, HTML robots가 `index, follow`이고 robots.txt가 접근을 허용하는지 확인합니다.
-2. Google Search Console과 네이버 서치어드바이저에서 사이트 소유권을 확인합니다. HTML 인증값은 `site.config.json`에 넣고 재빌드할 수 있습니다.
-3. `/sitemap.xml`을 제출하고 대표 페이지의 색인 상태를 확인합니다.
-4. Cloudflare의 봇 차단·접근 제어가 검색용 크롤링을 막지 않는지 실제 계정 설정을 확인합니다.
-5. 자체 도메인으로 이전하면 이전 호스트에서 새 도메인으로 리디렉션을 설정하고, canonical·사이트맵을 새 도메인으로 다시 생성합니다.
+편집실 검토는 node scripts/serve.mjs --cms-demo로 실행합니다. 메모리 DB와 파일 저장소를 사용하며 종료 시 테스트 데이터가 사라집니다. 실제 Cloudflare D1·R2와 연결하지 않습니다. 검토 전용 비밀번호는 preview-only-walking-2026이며 배포 서버에 기본 비밀번호로 설정되지 않습니다.
 
 ## 검증
 
-```powershell
-node --test tests/inquiries.test.mjs tests/site.test.mjs
-```
+    node --test tests/*.test.mjs
 
-27개 HTML의 제목·설명·H1·구조화 데이터·내부 링크, 운영 도메인 생성, 문의 검증·실제 SQLite 저장·속도 제한·DB 장애·기한 만료 삭제를 확인합니다. 테스트는 메모리 DB와 가상 도메인을 사용하며 외부로 메일을 발송하지 않습니다.
+29개 정적 HTML, 제목·설명·H1·내부 링크·구조화 데이터, 운영 주소 생성, 문의 저장, 관리자 인증, 글 상태 변경·수정 충돌, R2 저장·비공개 접근, XSS 방지, RSS·사이트맵 반영을 검사합니다. 검사는 가상 도메인과 메모리 SQLite/R2를 사용합니다. 실제 Cloudflare 계정에서의 저장·접수·메일 발송 검증은 별도입니다.
 
-## 공개 전에 확인할 내용
+## 주요 파일
 
-전화·이메일은 사용자 제공값을 반영했습니다. 임원 직함과 활동 기록은 첨부 자료 기준이므로 최신 상태를 확인합니다. 현장 사진·학생 안내 이미지와 기관명 사용 범위, 개인정보 처리 주체·운영 환경을 최종 확인합니다. 도메인·Cloudflare DB·비밀값·메일 발신 설정은 배포 시 연결합니다.
+- site.config.json: 협회 연락처·운영 주소
+- assets/admin.html, assets/admin.js, assets/cms.css: 관리자 편집실
+- server/auth.mjs: 관리자 인증
+- server/press.mjs: D1·R2 저장과 파일 접근
+- server/render-press.mjs: 기사 HTML·RSS·사이트맵
+- server/worker.mjs: Pages와 Workers 공통 요청 처리
+- scripts/build.mjs: 정적 페이지와 Pages 서버 출력 생성
 
-## 공식 참고 문서
+첨부 원본 PPTX·HWP, 검토용 테스트 출력, 실제 비밀값은 Git에 올리지 않습니다.
 
-- [Google AI 검색과 웹사이트](https://developers.google.com/search/docs/appearance/ai-features)
-- [Cloudflare Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/binding/)
-- [Cloudflare D1](https://developers.cloudflare.com/d1/)
-- [Resend 이메일 API](https://resend.com/docs/api-reference/emails/send-email)
+## 공식 참고
+
+- [Cloudflare Pages Advanced mode](https://developers.cloudflare.com/pages/functions/advanced-mode/)
+- [Cloudflare R2 Workers API](https://developers.cloudflare.com/r2/api/workers/workers-api-reference/)
+- [Google AI 검색 안내](https://developers.google.com/search/docs/appearance/ai-features)

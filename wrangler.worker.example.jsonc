@@ -5,19 +5,20 @@
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/*"],
+    "run_worker_first": ["/api/*", "/press*", "/media/*", "/sitemap.xml", "/", "/news/", "/_server/*"],
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "walking-inquiries",
+      "database_name": "walking-db",
       "database_id": "REPLACE_WITH_CLOUDFLARE_DATABASE_ID",
       "migrations_dir": "migrations"
     }
   ],
+  "r2_buckets": [{"binding":"MEDIA", "bucket_name":"walking-r2"}],
   "triggers": {"crons": ["0 18 * * *"]},
-  "vars": {"CONTACT_TO": "kptchoi@gmail.com"},
+  "vars": {"CONTACT_TO": "kptchoi7205@gamil.com"},
   "observability": {"enabled": true}
 }

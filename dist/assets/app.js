@@ -63,7 +63,7 @@ if (form) {
     } catch (error) {
       status.className = 'status error';
       status.textContent = error.name === 'TimeoutError'
-        ? '접수 결과를 확인하지 못했습니다. 중복 접수 전 02-3472-4177 또는 kptchoi@gmail.com으로 확인해 주세요.'
+        ? '접수 결과를 확인하지 못했습니다. 중복 접수 전 02-3472-4177 또는 kptchoi7205@gamil.com으로 확인해 주세요.'
         : error.message;
     } finally {
       submit.disabled = false;
