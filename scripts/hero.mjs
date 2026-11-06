@@ -21,12 +21,5 @@ export function renderHero() {
       <div class="kinetic-purpose"><span>걸음을 배우고, 일상에서 실천합니다</span><p>물리치료사의 전문성으로 만나는 걷기 교육</p></div>
       <div class="kinetic-actions"><a class="button light" href="/contact/">기관 교육 문의 <span aria-hidden="true">↗</span></a><a class="kinetic-link" href="/stories/">교육 현장 보기 <span aria-hidden="true">↗</span></a></div>
     </div>
-    <div class="kinetic-player container" hidden>
-      <span class="kinetic-playback-label">바른 걸음 이야기</span><div class="kinetic-track" aria-hidden="true"><span data-motion-progress></span></div>
-      <span class="kinetic-time" aria-hidden="true" data-motion-time>00:00 / 00:15</span>
-      <button class="kinetic-control" type="button" data-motion-toggle aria-label="모션 일시정지">일시정지 <span aria-hidden="true">Ⅱ</span></button>
-      <button class="kinetic-control" type="button" data-motion-replay aria-label="15초 모션 다시 재생">다시 재생 <span aria-hidden="true">↻</span></button>
-      <span class="visually-hidden" role="status" data-motion-status></span>
-    </div>
   </section>`;
 }
