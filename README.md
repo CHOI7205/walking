@@ -65,9 +65,11 @@ Pages 프로젝트의 Settings → Variables and Secrets에서 ADMIN_PASSWORD를
 ## 연락처와 기존 문의 기능
 
 대표 전화: 02-3472-4177
-대표 이메일 및 기본 알림 수신 주소: kptchoi7205@gamil.com
+대표 이메일 및 기본 알림 수신 주소: kptchoi7205@gmail.com
 
-새 D1에서 문의 접수까지 운영한다면 migrations/0001_inquiries.sql도 적용하고 INQUIRY_HASH_SALT Secret을 설정합니다. 자동 이메일 알림은 선택적으로 RESEND_API_KEY, 검증된 발신 주소 CONTACT_FROM, CONTACT_TO를 설정한 경우 동작합니다. 메일 서비스 없이도 문의 DB 저장은 가능합니다. Cloudflare에 기존 CONTACT_TO 환경변수를 별도로 설정했다면 새 주소로 수정해야 합니다.
+기관 교육 문의는 추가 메일 서비스 가입 없이 Gmail 작성창으로 연결합니다. 양식을 작성하고 **Gmail에서 문의 보내기**를 누르면 `kptchoi7205@gmail.com`과 문의 내용이 자동 입력됩니다. 방문자가 Gmail에서 최종 **보내기**를 눌러야 발송됩니다. Gmail 로그인이 필요할 수 있습니다. 홈페이지는 발송 완료로 표시하거나 입력 내용을 지우지 않습니다. 새 창이 막히면 화면의 **Gmail 작성창 다시 열기** 링크를 사용합니다.
+
+이 문의 양식은 `/api/inquiries`를 호출하거나 문의를 D1에 저장하지 않습니다. 기존 서버 접수 코드는 유지하지만 사이트의 문의 버튼에서는 사용하지 않습니다. FormSubmit 및 Web3Forms 등 별도 폼 전송 서비스에는 문의 정보를 전달하지 않습니다.
 
 Pages에는 Cron Triggers가 없으므로 문의 개인정보의 자동 보관기한 관리는 별도 예약 Worker 또는 운영 절차를 연결해야 합니다. 문의 접수 시에도 만료 데이터를 정리합니다. Workers 예시에는 하루 한 번 정리하는 예약 작업이 있습니다.
 

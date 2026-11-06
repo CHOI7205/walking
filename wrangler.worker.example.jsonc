@@ -19,6 +19,6 @@
   ],
   "r2_buckets": [{"binding":"MEDIA", "bucket_name":"walking-r2"}],
   "triggers": {"crons": ["0 18 * * *"]},
-  "vars": {"CONTACT_TO": "kptchoi7205@gamil.com"},
+  "vars": {"CONTACT_TO": "kptchoi7205@gmail.com"},
   "observability": {"enabled": true}
 }

@@ -53,7 +53,7 @@ export async function notifyInquiry(env, reference, data) {
     const response = await fetch('https://api.resend.com/emails', {
       method:'POST',
       headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':reference},
-      body:JSON.stringify({from:env.CONTACT_FROM,to:[env.CONTACT_TO || 'kptchoi7205@gamil.com'],subject:'[대한바른자세걷기협회] 기관 교육 문의 '+reference,text,...(data.email?{reply_to:data.email}:{})}),
+      body:JSON.stringify({from:env.CONTACT_FROM,to:[env.CONTACT_TO || 'kptchoi7205@gmail.com'],subject:'[대한바른자세걷기협회] 기관 교육 문의 '+reference,text,...(data.email?{reply_to:data.email}:{})}),
       signal:AbortSignal.timeout(10000)
     });
     await env.DB.prepare('UPDATE inquiries SET notification_status = ? WHERE id = ?').bind(response.ok?'sent':'failed',reference).run();
@@ -74,7 +74,7 @@ export async function handleInquiry(request, env, ctx = {}) {
   if (typeof raw?.website === 'string' && raw.website.trim()) return failure(400,'문의 양식을 확인해 주세요.');
   const result = validateInquiry(raw);
   if (result.error) return failure(400,result.error);
-  if (!env.DB || !env.INQUIRY_HASH_SALT) return failure(503,'현재 온라인 접수 연결을 준비하고 있습니다. 02-3472-4177 또는 kptchoi7205@gamil.com으로 문의해 주세요.');
+  if (!env.DB || !env.INQUIRY_HASH_SALT) return failure(503,'현재 온라인 접수 연결을 준비하고 있습니다. 02-3472-4177 또는 kptchoi7205@gmail.com으로 문의해 주세요.');
   const reference = 'WALK-' + crypto.randomUUID();
   const now = Math.floor(Date.now()/1000);
   const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
