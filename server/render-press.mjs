@@ -21,7 +21,7 @@ export function renderMarkdown(source,allowedIds=[],allowedImages=[]) {
   }).join('\n');
 }
 function postCard(post){return `<article class="press-card"><a href="/press/${e(post.slug)}/"><div class="press-card-image">${coverUrl(post)?`<img src="${e(coverUrl(post))}" alt="${e(post.cover_alt||post.title)}" loading="lazy">`:'<div class="press-placeholder" aria-hidden="true"><span>WALKING JOURNAL</span><b>함께 걷는 이야기</b></div>'}</div><div class="press-card-copy"><span class="pill">${e(post.category)}</span><h2>${e(post.title)}</h2><p>${e(post.excerpt)}</p><span class="post-date">${readableDate(post.published_at)}</span></div></a></article>`;}
-export function pressHomeSection(posts){if(!posts.length)return '';return `<section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">Newsroom</p><h2>협회의 새로운 이야기</h2></div><a href="/press/" class="text-link">보도자료 모두 보기 <span aria-hidden="true">↗</span></a></div><div class="press-grid">${posts.map(postCard).join('')}</div></div></section>`;}
+export function pressHomeSection(posts){if(!posts.length)return '';return `<section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">Newsroom</p><h2>협회의 새로운 이야기</h2></div><a href="/press/" class="text-link">전체 글 보기 <span aria-hidden="true">↗</span></a></div><div class="press-grid">${posts.map(postCard).join('')}</div></div></section>`;}
 function pageHead(config,{title,description,path,image,type='website',schema=[],noindex=false}){
   const origin=config.origin,canonical=origin?origin+path:'';
   const full=title+' | '+config.name;

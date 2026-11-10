@@ -9,9 +9,13 @@ const config={name:'대한바른자세걷기협회',origin:'https://walking-90b.
 const env={ASSETS:{fetch:async request=>new Response(new URL(request.url).pathname==='/sitemap.xml'?'<urlset></urlset>':'<html><head></head><body><main id="main"></main><!--LATEST_PRESS--></body></html>')}};
 
 test('bundled articles, images, list search, feed and sitemap work without database or administrator setup',async()=>{
-  const first=bundledPosts[0];
+  const {posts}=await listPublished(null);
+  const first=posts[0];
   assert.ok(first);
-  assert.ok((await listPublished(null)).posts.some(post=>post.slug===first.slug));
+  assert.ok(posts.some(post=>post.slug==='walking-shoes-fit-check'));
+  const walkingInfo=(await listPublished(null,{category:'걷기 정보'})).posts;
+  assert.ok(walkingInfo.some(post=>post.slug==='walking-shoes-fit-check'));
+  assert.ok(walkingInfo.every(post=>post.category==='걷기 정보'));
   assert.equal((await listPublished(null,{q:'no-match-123'})).posts.length,0);
   assert.equal((await listPublished(null,{category:'협회소식'})).posts.length,0);
   assert.equal((await listPublished(null,{page:2})).posts.length,0);

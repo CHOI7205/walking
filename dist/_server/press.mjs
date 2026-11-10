@@ -1,7 +1,7 @@
 import { apiJson, ensurePressSchema, sameOrigin, readJsonBody, boundedBody } from './storage.mjs';
 import { isAdmin } from './auth.mjs';
 import { bundledPosts } from './bundled-posts.mjs';
-export const categories=['보도자료','협회소식'];
+export const categories=['보도자료','협회소식','걷기 정보'];
 export function validatePost(raw) {
   if(!raw||typeof raw!=='object'||Array.isArray(raw))throw new Error('글 내용을 확인해 주세요.');
   const limits={title:180,excerpt:300,body:50000,author:100,source_name:100,source_url:2000,cover_id:80,cover_alt:300,slug:100};
