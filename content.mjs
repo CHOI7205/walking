@@ -1,5 +1,5 @@
 export const programs = [
-  {slug:'community',num:'01',category:'보건소 · 복지관',title:'지역사회 바른 걷기',short:'주민의 일상에 가까운 걷기 교육',description:'보건소와 복지관의 지역주민을 위한 교육입니다. 족압과 보행 습관을 이해하고, 걷기와 근력·균형·유연성 운동을 함께 배웁니다.',audience:'보건소·지자체·노인복지관·지역 건강증진기관',image:'community',alt:'서호노인복지관 참여자들이 야외에서 균형운동을 배우는 모습',items:['올바른 걷기와 신발 선택에 관한 이론','족압·보행 특성을 살펴보는 측정 구성 협의','유연성·균형·근력운동과 걷기 실습','과정에 따른 사전·사후 측정 구성 협의'],cases:['seoho','gwonseon','jangan','yangju','pangyo','yangcheon'],note:'실내 강의와 야외 실습을 조합할 수 있습니다. 대상자의 특성, 현장 환경과 회차에 따라 내용을 협의합니다.'},
+  {slug:'community',num:'01',category:'보건소 · 복지관',title:'지역사회 바른 걷기',short:'주민의 일상에 가까운 걷기 교육',description:'보건소와 복지관의 지역주민을 위한 교육입니다. 족압과 보행 습관을 이해하고, 걷기와 근력·균형·유연성 운동을 함께 배웁니다.',audience:'보건소·지자체·노인복지관·지역 건강증진기관',image:'community',alt:'서호노인복지관 참여자들이 야외에서 균형운동을 배우는 모습',items:['올바른 걷기와 신발 선택에 관한 이론','족압·보행 특성을 살펴보는 측정 구성 협의','유연성·균형·근력운동과 걷기 실습','과정에 따른 사전·사후 측정 구성 협의'],cases:['seoho','gwonseon','jangan','yangju','pangyo','yangcheon','seocho-ai-walking','gunpo-fall-prevention'],note:'실내 강의와 야외 실습을 조합할 수 있습니다. 대상자의 특성, 현장 환경과 회차에 따라 내용을 협의합니다.'},
   {slug:'school',num:'02',category:'학교 · 청소년',title:'학생 바른자세·보행 교육',short:'자신의 발과 걸음을 이해하는 시간',description:'성장기 학생이 자신의 발과 보행 습관을 이해하도록 돕는 교육입니다. 학교 현장에서 족압 측정과 올바른 보행 교육을 진행하는 방식으로 구성합니다.',audience:'초·중·고등학교·교육기관·학생 건강증진 담당기관',image:'school',alt:'권선구보건소와 협회의 학생 바른 성장 프로젝트 안내문',items:['학생 눈높이에 맞춘 발과 보행 습관 이해','학교 방문 족압 측정 구성 협의','바른 자세와 올바른 보행을 위한 교육','학급 규모·장소에 맞춘 진행 방식 협의'],cases:['school-project','gyeonggi-education'],note:'학년, 학급 수, 교육 공간과 측정 장비 운영 여건을 먼저 확인합니다. 자세나 성장의 결과를 보장하는 과정은 아닙니다.'},
   {slug:'workplace',num:'03',category:'기업 · 임직원',title:'직장인 발 건강·걷기 교육',short:'일터에서 시작하는 바른 걷기 습관',description:'기업 임직원이 발과 보행을 이해하고 일상에서 활용할 걷기 방법을 배우는 교육입니다. 족압 분석과 걷기 교육을 기관의 운영 목적에 맞게 구성합니다.',audience:'기업 인사·복지·안전보건 담당 부서',image:'workplace',alt:'신세계 남산캠퍼스의 스마트 족압분석을 통한 올바른 보행 강의 안내',items:['족압과 보행 습관을 이해하는 강의','발 건강과 운동화 선택에 관한 교육','올바른 걷기 및 운동 실습 구성 협의','사내 강의·캠페인에 맞춘 현장 운영'],cases:['shinsegae','sbs','samsung','hyundai'],note:'근무 환경과 참여 인원에 따라 강의형 또는 측정·체험형으로 협의합니다. 구체적인 시간과 비용은 교육 구성에 따라 달라집니다.'},
   {slug:'experience',num:'04',category:'행사 · 건강 체험',title:'찾아가는 걷기·족압 체험',short:'현장에서 만나고, 직접 살펴보는 내 걸음',description:'지역 걷기축제와 건강 행사에서 족압 측정 및 보행 교육을 진행합니다. 행사 동선과 참여 규모를 고려해 체험 운영을 협의합니다.',audience:'지자체·지역 행사 주최기관·건강 캠페인 운영기관',image:'lecture',alt:'참여자들을 대상으로 진행하는 바른 걷기 교육 현장',items:['행사 공간과 예상 참여 인원 사전 협의','족압 측정 및 보행 특성 설명','올바른 걷기와 운동 방법 교육','현장 동선과 장비 운영 방식 협의'],cases:['yangcheon-marathon','ywca','anseong-festival','seocho-health','baby-expo','seongnam-senior','chuncheon-walking-festival','chuncheon-childcare','sillegil-walk'],note:'측정 가능 인원과 운영 방식은 행사 시간, 장비 수와 공간에 따라 결정합니다.'},
@@ -10,8 +10,8 @@ export const cases = [
   {slug:'school-project',category:'학교 · 청소년',title:'스마트 발걸음! 우리 아이 바른 성장 프로젝트',institution:'수원시 권선구보건소',date:'2026.09',period:'2026년 9월',audience:'권선구 관내 중학교 1학년 학생',image:'school',alt:'스마트 발걸음 우리 아이 바른 성장 프로젝트 사업 안내',summary:'학교로 찾아가 스마트 족압 측정과 올바른 보행 교육을 진행하는 학생 대상 사업입니다.',body:'사업 안내에 따르면 전문인력이 학교를 방문해 각 학급 교실 또는 교육실에서 교육을 진행하는 방식입니다. 자신의 발과 몸을 이해하도록 스마트 족압 측정 및 올바른 보행을 위한 교육을 구성했습니다.',items:['학교 방문형 교육','스마트 족압 측정','올바른 보행을 위한 교육'],source:'협회 소개자료 56쪽 및 첨부 사업 안내문',program:'school'},
   {slug:'shinsegae',category:'기업 · 임직원',title:'스마트 족압분석을 통한 올바른 보행',institution:'신세계그룹',date:'2026.07',period:'2026년 7월',audience:'임직원 15명',image:'workplace',alt:'신세계 남산캠퍼스의 족압분석 및 올바른 보행 강의 안내',summary:'임직원을 대상으로 스마트 족압분석과 올바른 보행을 다룬 교육입니다.',body:'협회 소개자료에 수록된 기업 교육 사례입니다. 스마트 족압분석을 통해 보행을 이해하고 올바른 보행 방법을 배우는 내용으로 진행했습니다.',items:['스마트 족압분석의 이해','올바른 보행 교육'],source:'협회 소개자료 51쪽',program:'workplace'},
   {slug:'gwonseon',category:'보건소 · 복지관',title:'어르신 건강걷기 교육',institution:'수원시 권선구보건소',date:'2026.05–06',period:'2026년 5월 8일~6월 12일, 6회',audience:'지역 어르신 20명',image:'outdoor',alt:'협회 어르신 걷기 프로그램의 야외 운동 현장 참고 사진',referencePhoto:true,summary:'공원과 산책로에서 걷기와 근력운동을 함께 배우는 어르신 대상 교육입니다.',body:'협회 소개자료에 따르면 지역 어르신을 대상으로 인근 공원 및 산책로에서 건강걷기, 올바른 걷기 및 근력운동 교육을 진행했습니다.',items:['인근 공원·산책로 건강걷기','올바른 걷기 및 근력운동 교육'],source:'협회 소개자료 50쪽',program:'community'},
-  {slug:'jangan',category:'보건소 · 복지관',title:'도심 속 공원 건강 걷기',institution:'수원시 장안구보건소',date:'2025.10–11',period:'2025년 10월 31일~11월 21일',audience:'지역주민 15명',image:'park',alt:'장안구보건소 건강 걷기 자료에 수록된 조원공원 안내판',summary:'지역 공원을 활용해 올바른 걷기와 근력운동을 진행한 프로그램입니다.',body:'주 1회, 4곳의 공원에서 지역주민과 함께 올바른 걷기 및 근력운동을 진행한 사례입니다.',items:['지역 공원 현장 교육','올바른 걷기','근력운동'],source:'협회 소개자료 48~49쪽',program:'community'},
-  {slug:'sbs',category:'기업 · 임직원',title:'올바른 걷기 & 발 건강 프로그램',institution:'SBS 방송국 · 양천구청',date:'2026.05',period:'2026년 5월',audience:'임직원',image:'walking-test',alt:'협회 소개자료에 수록된 보행검사 참고 장면',referencePhoto:true,summary:'임직원을 대상으로 올바른 걷기와 발 건강을 다룬 프로그램입니다.',body:'협회 소개자료에 수록된 SBS 방송국 현장 교육 사례입니다. 임직원을 대상으로 올바른 걷기와 발 건강을 주제로 프로그램을 진행했습니다.',items:['올바른 걷기 교육','발 건강 프로그램'],source:'협회 소개자료 42쪽',program:'workplace'},
+  {slug:'jangan',category:'보건소 · 복지관',title:'도심 속 공원 건강 걷기',institution:'수원시 장안구보건소',date:'2025.10–11',period:'2025년 10월 31일~11월 21일',audience:'지역주민 15명',eventPhoto:'jangan-park-exercise',alt:'공원 운동기구 옆에서 함께 운동하는 건강 걷기 참가자들',summary:'지역 공원을 활용해 올바른 걷기와 근력운동을 진행한 프로그램입니다.',body:'주 1회, 4곳의 공원에서 지역주민과 함께 올바른 걷기 및 근력운동을 진행한 사례입니다.',items:['지역 공원 현장 교육','올바른 걷기','근력운동'],source:'협회 소개자료 48~49쪽',program:'community'},
+  {slug:'sbs',category:'기업 · 임직원',title:'올바른 걷기 & 발 건강 프로그램',institution:'SBS방송국',date:'2026.05',period:'2026년 5월',audience:'임직원',eventPhoto:'sbs-walking-poster',poster:true,alt:'족압 검사, 일대일 상담과 걷기 교육을 안내하는 SBS 임직원 프로그램 포스터',summary:'임직원을 대상으로 올바른 걷기와 발 건강을 다룬 프로그램입니다.',body:'SBS방송국 임직원을 대상으로 올바른 걷기와 발 건강을 주제로 프로그램을 진행했습니다.',items:['올바른 걷기 교육','발 건강 프로그램'],source:'협회 소개자료 42쪽 및 임직원 프로그램 안내 포스터',program:'workplace'},
   {slug:'ywca',category:'행사 · 건강 체험',title:'시민걷기 축제 현장 봉사',institution:'서울YWCA',date:'2025.05',period:'2025년 5월 24일',audience:'시민걷기 축제 참가자',eventPhoto:'ywca-walking-festival',alt:'서울YWCA 시민걷기 축제 족압 측정 부스',summary:'남산 백범광장에서 참가자들을 대상으로 족압검사와 걷기 교육 등을 진행했습니다.',body:'서울YWCA 시민걷기 축제에서 참가자에게 족압검사와 상담을 제공했습니다. 현장에서 걷기 교육과 테이핑 봉사도 함께 진행했습니다.',items:['족압검사 및 상담','걷기 교육','테이핑 봉사'],source:'협회 소개자료 23~25쪽',program:'experience'},
   {
     slug:'samsung', category:'기업 · 임직원', program:'workplace',
@@ -138,6 +138,24 @@ export const cases = [
     summary:'경기도교육청 중앙도서관에서 Walk Together 걷기 연수교육을 진행했습니다.',
     body:'경기도교육청이 주관한 걷기 연수교육입니다. 협회 소개자료에는 교육명과 장소가 기록돼 있습니다.',
     items:['Walk Together 걷기 연수교육'], source:'협회 소개자료 59쪽',
+  },
+  {
+    slug:'seocho-ai-walking', category:'보건소 · 복지관', program:'community',
+    title:'똑똑하게 걷자! AI 걷기 운동교실', institution:'서초구청',
+    date:'2026.04 · 09', period:'2026년 4월과 9월', audience:'서초구 지역주민',
+    eventPhoto:'seocho-class', alt:'서초구청 AI 걷기 운동교실에서 교육과 상담을 받는 주민들',
+    summary:'서초구청에서 지역주민을 대상으로 AI 걷기 운동교실을 열었습니다.',
+    body:'서초구청이 주관한 운동교실에서 주민에게 걷기 운동을 안내했습니다. 교육실에서 참가자를 대상으로 현장 상담도 진행했습니다.',
+    items:['주민 대상 걷기 운동 교육','현장 상담'], source:'협회 소개자료 40~41쪽',
+  },
+  {
+    slug:'gunpo-fall-prevention', category:'보건소 · 복지관', program:'community',
+    title:'경로당 건강지도자 낙상예방교육', institution:'군포시 산본보건지소',
+    date:'2026년 상반기', period:'2026년 상반기', audience:'경로당 건강지도자',
+    eventPhoto:'gunpo-leader-training', poster:true, alt:'군포시 산본보건지소 상반기 경로당 건강지도자교육 현수막',
+    summary:'경로당 건강지도자를 대상으로 어르신 낙상 예방을 위한 근력·균형운동을 교육했습니다.',
+    body:'군포시보건소가 주관한 산본보건지소 교육에서 경로당 건강지도자에게 어르신의 근력과 균형을 기르는 운동을 안내했습니다. 소개자료에는 근력·균형 운동 완성프로그램 ‘어운완’으로 소개돼 있습니다.',
+    items:['경로당 건강지도자 낙상예방교육','어르신 근력·균형운동 지도'], source:'협회 소개자료 43쪽',
   },
 ];
 export const articles = [

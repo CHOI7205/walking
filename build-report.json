@@ -1,7 +1,7 @@
 {
   "mode": "preview",
   "origin": null,
-  "pages": 44,
+  "pages": 46,
   "indexable": 0,
   "routes": [
     "/",
@@ -36,6 +36,8 @@
     "/stories/chuncheon-childcare/",
     "/stories/sillegil-walk/",
     "/stories/gyeonggi-education/",
+    "/stories/seocho-ai-walking/",
+    "/stories/gunpo-fall-prevention/",
     "/insights/",
     "/insights/plantar-pressure/",
     "/insights/walking-exercise/",
