@@ -42,5 +42,48 @@ export const bundledPosts = [
     "status": "published",
     "published_at": "2026-11-06T09:00:00+09:00",
     "updated_at": "2026-11-06T09:00:00+09:00"
+  },
+  {
+    "id": "bundled-police-hospital-walking-health-lecture",
+    "slug": "police-hospital-walking-health-lecture",
+    "title": "경찰병원 직원 40여 명 대상 걷기 건강강좌",
+    "excerpt": "대한바른자세걷기협회가 2025년 3월 25일 경찰병원 직원 약 40명에게 걷기 건강강좌를 열고 족압 측정을 시연했습니다.",
+    "body": "대한바른자세걷기협회는 2025년 3월 25일 경찰병원에서 직원 대상 건강강좌를 진행했습니다. 보도뉴스닷컴에 따르면 경찰, 간호사, 행정직 등 여러 직군에서 약 40명이 참여했습니다.\n\n## 일하는 사람들의 걷기 습관을 돌아본 시간\n\n강좌에는 김찬문 당시 협회장과 최영호 당시 부회장이 강사로 참여했습니다. 김찬문 강사가 강당에서 건강강좌를 진행하는 모습은 보도 사진으로 소개됐습니다. 강의에서는 걷기 자세와 습관을 살피는 방법을 다뤘으며, 발바닥에 압력이 어떻게 실리는지 알아보는 족압 측정도 시연했습니다.\n\n족압 시연은 강의에서 들은 내용을 발의 움직임과 연결해 살펴보는 순서였습니다. 최영호 강사는 측정 자료를 활용해 자신의 보행 특성을 살펴보고 걷기 습관을 점검할 수 있다는 취지를 설명했습니다. 김찬문 강사는 일상에서 바른 자세로 걷는 문화를 넓히기 위해 교육을 이어가겠다는 뜻을 전했습니다.\n\n### 자료와 사진 출처\n\n김정화 기자의 2025년 3월 31일 보도와 기사에 실린 강좌 사진을 바탕으로 작성했습니다. [보도뉴스닷컴 경찰병원 건강강좌 원문](https://m.bodonews.com/604251)",
+    "category": "보도자료",
+    "author": "대한바른자세걷기협회",
+    "source_name": "보도뉴스닷컴 · 김정화 기자",
+    "source_url": "https://m.bodonews.com/604251",
+    "cover_id": "",
+    "cover_image": "/assets/images/police-hospital-walking-health-lecture.jpg",
+    "cover_alt": "경찰병원 강당에서 건강강좌를 진행하는 김찬문 당시 협회장",
+    "cover_caption": "경찰병원 직원 대상 건강강좌에서 설명하는 김찬문 당시 협회장. 사진 출처는 보도뉴스닷컴입니다.",
+    "body_images": [],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-10T09:00:00+09:00",
+    "updated_at": "2026-11-10T09:00:00+09:00"
+  },
+  {
+    "id": "bundled-songpa-public-health-walking-education",
+    "slug": "songpa-public-health-walking-education",
+    "title": "송파구보건소에서 주민 40여 명과 바르게 걷기 교육",
+    "excerpt": "대한바른자세걷기협회가 2025년 3월 24일 송파구보건소에서 주민 약 40명을 대상으로 걷기 이론을 안내하고 족압을 측정했습니다.",
+    "body": "대한바른자세걷기협회는 2025년 3월 24일 오후 2시부터 4시까지 송파구보건소 3층 보건교육실에서 ‘바르게 걷기’ 강좌를 진행했습니다. 걷기에 관심 있는 송파구 주민 약 40명이 참석했습니다.\n\n## 걷기 이론과 족압 측정을 한자리에서\n\n교육은 김찬문 당시 협회장과 최영호 당시 부회장이 맡았습니다. 두 강사는 바르게 걷는 방법을 이론으로 안내하고, 걸을 때 발바닥의 어느 부위에 압력이 실리는지 살펴보는 족압 측정을 진행했습니다. 주민들은 평소 익숙하게 해 온 걷기를 발에 실리는 압력이라는 관점에서 살펴볼 수 있었습니다.\n\n![송파구보건소 보건교육실에서 강좌에 참석한 주민들. 사진 출처는 네이버 블로그 ‘컴닥’입니다.](/assets/images/songpa-public-health-walking-attendees.jpg)\n\n강의실에서는 올바른 걷기와 근력운동을 주제로 한 자료도 소개했습니다. 이론 강의와 측정을 함께 마련해, 평소 자신의 걸음과 움직임에 관심을 갖는 계기를 제공했습니다.\n\n![송파구보건소에서 걷기 교육을 진행하는 최영호 당시 부회장. 사진 출처는 네이버 블로그 ‘컴닥’입니다.](/assets/images/songpa-public-health-walking-lecture.jpg)\n\n### 자료와 사진 출처\n\n네이버 블로그 ‘컴닥’의 2025년 3월 25일 현장 기록을 바탕으로 작성했습니다. [송파구보건소 걷기 교육 원문](https://blog.naver.com/gnsup129/223809272557)",
+    "category": "보도자료",
+    "author": "대한바른자세걷기협회",
+    "source_name": "네이버 블로그 컴닥",
+    "source_url": "https://blog.naver.com/gnsup129/223809272557",
+    "cover_id": "",
+    "cover_image": "/assets/images/songpa-public-health-walking-education.jpg",
+    "cover_alt": "2025년 3월 24일 송파구보건소 바르게 걷기 강좌 안내판",
+    "cover_caption": "송파구보건소 보건교육실 앞에 놓인 강좌 안내판. 사진 출처는 네이버 블로그 ‘컴닥’입니다.",
+    "body_images": [
+      "/assets/images/songpa-public-health-walking-attendees.jpg",
+      "/assets/images/songpa-public-health-walking-lecture.jpg"
+    ],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-10T09:00:00+09:00",
+    "updated_at": "2026-11-10T09:00:00+09:00"
   }
 ];

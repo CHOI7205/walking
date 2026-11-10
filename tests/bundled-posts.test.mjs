@@ -25,7 +25,9 @@ test('bundled articles, images, list search, feed and sitemap work without datab
   assert.ok((await (await pressFeed(new Request(config.origin+'/press/feed.xml'),env,config)).text()).includes(first.slug));
   assert.ok((await (await dynamicSitemap(new Request(config.origin+'/sitemap.xml'),env,config)).text()).includes(first.slug));
   const homepage=await worker.fetch(new Request(config.origin),env,{});
-  assert.ok((await homepage.text()).includes(first.title));
+  const homepageHtml=await homepage.text();
+  const {posts:latestPosts}=await listPublished(null,{limit:3});
+  for(const post of latestPosts)assert.ok(homepageHtml.includes(post.title));
   const write=await worker.fetch(new Request(config.origin+'/api/admin/posts',{method:'POST',headers:{Origin:config.origin,'Content-Type':'application/json'},body:'{}'}),env,{});
   assert.equal(write.status,401);
 });
