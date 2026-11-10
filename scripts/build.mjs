@@ -94,7 +94,7 @@ await writePage({
   description: '대한바른자세걷기협회 김찬문 회장과 최영호 부회장의 학력, 경력 및 걷기 교육 분야를 소개합니다.',
   crumbs: expertCrumbs,
   schema: [
-    {'@type':'Person','@id':absolute('/about/experts/#kim'),name:'김찬문',jobTitle:'회장',affiliation:{'@id':orgId},description:'연세대학교 보건대학원 이학석사(보건행정), 저술활동가'},
+    {'@type':'Person','@id':absolute('/about/experts/#kim'),name:'김찬문',jobTitle:'회장',affiliation:{'@id':orgId},description:'연세대학교 보건대학원 이학석사(보건행정), 물리치료사'},
     {'@type':'Person','@id':absolute('/about/experts/#choi'),name:'최영호',jobTitle:'부회장',affiliation:{'@id':orgId},description:'물리치료사, 스포츠의학 석사, 재활치료학과 이학박사'}
   ],
   body: pageTop('강사진 소개','협회 강사진의 경력과 교육 분야를 소개합니다.','Our instructors',expertCrumbs)+`
@@ -104,7 +104,7 @@ await writePage({
     <div class="prose">
       <span class="pill">대한바른자세걷기협회 회장</span>
       <h2 id="kim-name" style="margin-top:15px">김찬문</h2>
-      <p>저술활동가</p>
+      <p>물리치료사</p>
       <h3>주요 학력</h3>
       <ul><li>연세대학교 보건대학원 이학석사(보건행정)</li></ul>
       <h3>주요 경력</h3>
