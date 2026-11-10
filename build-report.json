@@ -1,11 +1,12 @@
 {
   "mode": "preview",
   "origin": null,
-  "pages": 29,
+  "pages": 30,
   "indexable": 0,
   "routes": [
     "/",
     "/about/",
+    "/gallery/",
     "/about/experts/",
     "/programs/",
     "/programs/community/",

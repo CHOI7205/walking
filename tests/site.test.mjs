@@ -7,9 +7,9 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist=path.join(root,'dist');
 const list=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?list(path.join(dir,e.name)):[path.join(dir,e.name)]);
-test('all 29 static pages contain one h1, unique metadata, valid JSON-LD and real internal targets',()=>{
+test('all 30 static pages contain one h1, unique metadata, valid JSON-LD and real internal targets',()=>{
   const pages=list(dist).filter(f=>f.endsWith('.html'));
-  assert.equal(pages.length,29);
+  assert.equal(pages.length,30);
   const titles=new Set(), descriptions=new Set();
   for (const file of pages) {
     const html=fs.readFileSync(file,'utf8');
@@ -40,7 +40,8 @@ test('production build requires a domain and generates canonical URL and sitemap
   assert.match(html,/<link rel="canonical" href="https:\/\/walk.test\/">/);
   assert.match(html,/index, follow, max-image-preview:large/);
   const sitemap=fs.readFileSync(path.join(output,'sitemap.xml'),'utf8');
-  assert.equal((sitemap.match(/<loc>/g)||[]).length,27);
+  assert.equal((sitemap.match(/<loc>/g)||[]).length,28);
+  assert.ok(sitemap.includes('<loc>https://walk.test/gallery/</loc>'));
   assert.ok(!sitemap.includes('/admin/'));
   assert.ok(!sitemap.includes('404.html'));
   assert.match(fs.readFileSync(path.join(output,'robots.txt'),'utf8'),/Sitemap: https:\/\/walk.test\/sitemap.xml/);

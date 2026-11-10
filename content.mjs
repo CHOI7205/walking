@@ -26,3 +26,89 @@ export const faqs = [
  ['교육 시간과 비용은 어떻게 정하나요?','대상, 예상 인원, 지역, 회차와 측정 구성에 따라 협의합니다. 문의 양식에 희망 내용을 남기거나 전화·이메일로 연락해 주세요.'],
  ['개인이 바로 교육을 신청할 수 있나요?','기관 주관 교육은 해당 기관의 모집 안내와 접수처를 확인해 주세요. 협회 홈페이지의 문의 양식은 기관 교육과 협력 상담을 위한 창구입니다.']
 ];
+export const eventPhotoGroups = [
+  {
+    id: 'public-health', title: '보건소·복지관 교육',
+    events: [
+      {title:'권선구보건소 어르신 건강걷기', photos:[
+        ['gwonseon-bridge','다리 위 보행로에서 걷기 실습'],
+        ['gwonseon-path','숲길을 따라 걷는 참가자들'],
+      ]},
+      {title:'양천구보건소 바른자세 걷기 교육', photos:[
+        ['yangcheon-practice','의자 옆에서 동작을 따라 하는 참가자들'],
+        ['yangcheon-instruction','강사가 화면을 보며 운동 방법을 설명하는 모습'],
+        ['yangcheon-class','교육실에서 함께하는 걷기 운동'],
+      ]},
+      {title:'장안구보건소 도심 속 공원 건강 걷기', photos:[
+        ['jangan-park','공원에서 걷기와 운동을 배우는 주민들'],
+      ]},
+      {title:'서호노인복지관 걸어보자! 건강하게!', photos:[
+        ['seoho-balance','운동장에서 한 발 서기 동작을 연습하는 참가자들'],
+        ['seoho-outdoor','나무 그늘에서 함께하는 야외 운동'],
+        ['seoho-assessment','실내에서 진행한 프로그램 사전검사'],
+      ]},
+      {title:'송파구보건소 바르게 걷기 강좌', photos:[
+        ['songpa-attendees','강의실에서 바르게 걷기 강좌를 듣는 주민들'],
+        ['songpa-demonstration','강사가 교육실 앞에서 동작을 시범 보이는 모습'],
+      ]},
+      {title:'서초구청 AI 걷기 운동교실', photos:[
+        ['seocho-class','강의와 상담이 진행된 교육실'],
+        ['seocho-consultation','교육 현장에서 참가자와 상담하는 모습'],
+      ]},
+    ],
+  },
+  {
+    id: 'community-events', title: '걷기 행사·건강 체험',
+    events: [
+      {title:'김유정 실레이야기길 걷기', photos:[
+        ['sillegil-booth','걷기 행사에 마련된 협회 체험 부스'],
+      ]},
+      {title:'건강한 춘천 걷기축제', photos:[
+        ['chuncheon-walking-booth','걷기축제에서 운영한 바른자세 걷기 체험 부스'],
+      ]},
+      {title:'판교노인종합복지관 가을문화축제', photos:[
+        ['pangyo-festival','참가자들이 모인 가을문화축제 현장'],
+      ]},
+      {title:'임신출산·유아 교육전', photos:[
+        ['baby-expo-consultation','전시장 협회 부스에서 진행한 상담'],
+      ]},
+      {title:'서초구보건소 찾아가는 건강체험관', photos:[
+        ['seocho-health-measurement','야외 체험 부스에서 장비로 측정하는 모습'],
+        ['seocho-health-booth','주민이 방문한 야외 건강체험관'],
+      ]},
+      {title:'서울YWCA 시민걷기 축제', photos:[
+        ['ywca-walking-festival','축제 참가자가 찾은 족압 측정 부스'],
+      ]},
+      {title:'양천구 마라톤 대회', photos:[
+        ['yangcheon-marathon','대회 참가자가 이용한 양천구보건소 건강체험 부스'],
+      ]},
+      {title:'안성 바우덕이 축제', photos:[
+        ['anseong-booth','축제 현장에서 진행한 족압 측정과 걷기 교육'],
+      ]},
+      {title:'서울YWCA 생명살림 바자회', photos:[
+        ['ywca-bazaar-floor','바자회에 마련된 족압분석 체험 공간'],
+        ['ywca-bazaar-measurement','부스에서 측정 결과를 살펴보는 모습'],
+      ]},
+    ],
+  },
+  {
+    id: 'workshops', title: '기관·강사 교육',
+    events: [
+      {title:'대한물리치료사협회 전남지부 강사양성과정', photos:[
+        ['instructor-demo','바른자세걷기 동작을 시범 보이는 강사'],
+        ['instructor-workshop','강사양성과정 수강생들이 강의를 듣는 모습'],
+      ]},
+      {title:'춘천시 육아종합지원센터 워킹 클래스', photos:[
+        ['chuncheon-workshop-left','보육교사 대상 바른 걷기 교육 현장'],
+        ['chuncheon-workshop-right','강사가 강의실 앞에서 걷기 방법을 설명하는 모습'],
+      ]},
+      {title:'현대백화점 근골격계질환 예방보건 캠페인', photos:[
+        ['hyundai-workplace','현대백화점 임직원 대상 교육 현장'],
+      ]},
+      {title:'경찰병원 올바른 걷기 교육', photos:[
+        ['police-hospital-practice','강당에서 일어나 동작을 따라 하는 참가자들'],
+        ['police-hospital-class','강당에서 진행한 바른 걷기 강의'],
+      ]},
+    ],
+  },
+];

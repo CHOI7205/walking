@@ -13,4 +13,15 @@
 .profile h3{font-size:21px;margin:26px 0 12px}
 .profile h3+ul{margin-top:0}
 section[aria-labelledby="kim-name"],section[aria-labelledby="choi-name"]{scroll-margin-top:100px}
+.field-links{display:flex;flex-wrap:wrap;gap:10px 22px;flex-shrink:0}
+.event-photo-group{scroll-margin-top:120px}
+.event-photo-group + .event-photo-group{margin-top:72px}
+.event-photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:24px;margin-top:24px}
+.event-photo{margin:0;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--paper)}
+.event-photo a{display:block}
+.event-photo a:focus-visible{outline-offset:-4px}
+.event-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.event-photo figcaption{display:grid;gap:4px;padding:16px 18px;font-size:15px;line-height:1.5}
+.event-photo figcaption span{color:var(--muted);font-size:14px}
+@media(max-width:600px){.field-links{margin-top:15px}.event-photo-group + .event-photo-group{margin-top:50px}}
 @media print{.site-header,.site-footer,.cta-band,.sidebar,.back-top,.menu-toggle{display:none}.container{width:100%}.section{padding:25px 0}.page-grid{display:block}a{color:#111!important}.page-top{padding:20px 0}.hero-grid{min-height:0}.form{border:0}body{font-size:12pt}}
