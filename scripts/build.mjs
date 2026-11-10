@@ -33,7 +33,7 @@ const graphJson = value => JSON.stringify(value).replace(/</g, '\\u003c');
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 const link = (url, label, className = 'button') => `<a class="${className}" href="${esc(url)}">${label}${arrow}</a>`;
 const image = (name, alt, attrs = '') => {
-  const small = ['expert','logo'].includes(name);
+  const small = ['expert','expert-kim','logo'].includes(name);
   return `<img src="/assets/images/${name}-${small ? '480' : '1280'}.webp" ${small ? '' : `srcset="/assets/images/${name}-640.webp 640w, /assets/images/${name}-1280.webp 1280w" sizes="(max-width: 600px) 100vw, (max-width: 850px) 50vw, 600px"`} alt="${esc(alt)}" ${attrs || 'loading="lazy"'} decoding="async">`;
 };
 const navItems = [['/about/','협회 소개'],['/programs/','교육 프로그램'],['/stories/','활동 사례'],['/insights/','걷기 정보'],['/press/','보도자료'],['/news/','협회 소식']];
@@ -77,15 +77,58 @@ ${renderHero()}
 <section class="section soft"><div class="container feature-split"><div class="feature-photo">${image('lecture','주민들이 올바른 걷기와 근력운동 강의를 듣는 현장','width="1280" height="960" loading="lazy"')}<div class="feature-caption">실제 교육 현장에서 쌓아 온 경험을 함께 나눕니다.</div></div><div class="feature-copy"><p class="eyebrow">Why we walk</p><h2>걸음의 시작은,<br>내 몸을 이해하는 것.</h2><p>대한바른자세걷기협회는 물리치료사의 전문성을 바탕으로 걷기를 교육합니다. 발과 보행 습관을 이해하고, 일상에서 실천할 방법을 함께 찾습니다.</p><ul class="feature-list"><li><span>01</span><div><h3>전문가와 함께 배우는 걷기</h3><p>물리치료사의 지식과 현장 교육 경험을 연결합니다.</p></div></li><li><span>02</span><div><h3>측정으로 이해하는 내 걸음</h3><p>족압, 즉 발바닥에 실리는 압력과 보행 특성을 살펴봅니다.</p></div></li><li><span>03</span><div><h3>직접 움직이며 익히는 방법</h3><p>걷기와 근력·균형·유연성 운동을 함께 교육합니다.</p></div></li></ul>${link('/about/','협회 자세히 알아보기','text-link')}</div></div></section>
 <section class="section"><div class="container"><div class="section-head"><div><p class="eyebrow">Walking in the field</p><h2>바른 걸음을 만나는 현장</h2><p>지역사회에서 학교와 일터까지, 실제 교육 사례를 소개합니다.</p></div>${link('/stories/','활동 사례 모두 보기','text-link')}</div><div class="cases-grid">${cases.slice(0,3).map(caseCard).join('')}</div></div></section>
 <section class="section dark"><div class="container"><div class="section-head"><div><p class="eyebrow">Together, step by step</p><h2>우리 기관의 교육,<br>이렇게 함께 준비합니다.</h2></div><p>교육 목적부터 현장 운영까지<br>기관의 상황에 맞게 협의합니다.</p></div>${steps}</div></section>
-<section class="section"><div class="container expert-strip"><div><p class="eyebrow">People behind the steps</p><h2>전문 지식이<br>현장의 교육이 되도록.</h2><p style="margin-top:18px;color:var(--muted)">몸과 움직임을 이해하는 전문가가 함께합니다.</p></div><div class="expert-card">${image('expert','최영호 대한바른자세걷기협회 부회장','width="420" height="485" loading="lazy"')}<div><span class="pill">물리치료사 · 협회 부회장</span><h3>최영호</h3><p>스포츠의학 석사 · 이학박사<br>전 인하대학교병원 물리치료실</p>${link('/about/experts/','전문가 소개','text-link')}</div></div></div></section>
+<section class="section" id="instructors" aria-labelledby="instructors-title"><div class="container expert-strip"><div><p class="eyebrow">Our instructors</p><h2 id="instructors-title">강사진 소개</h2><p style="margin-top:18px;color:var(--muted)">바른 걷기와 운동을 가르치는 협회 강사진을 소개합니다.</p></div>
+<div class="expert-list">
+  <div class="expert-card">${image('expert-kim','김찬문 대한바른자세걷기협회 회장','width="252" height="323" loading="lazy"')}<div><span class="pill">협회 회장</span><h3>김찬문</h3><p>연세대학교 보건대학원 이학석사<br>국립재활원 물리치료실장</p>${link('/about/experts/#kim','김찬문 소개','text-link')}</div></div>
+  <div class="expert-card">${image('expert','최영호 대한바른자세걷기협회 부회장','width="420" height="485" loading="lazy"')}<div><span class="pill">물리치료사 · 협회 부회장</span><h3>최영호</h3><p>스포츠의학 석사 · 이학박사<br>전 인하대학교병원 물리치료실</p>${link('/about/experts/#choi','최영호 소개','text-link')}</div></div>
+</div></div></section>
 <section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">Walking notes</p><h2>걷기를 이해하는 작은 시작</h2></div>${link('/insights/','걷기 정보 보기','text-link')}</div><div class="info-grid">${articles.map(articleCard).join('')}</div></div></section>
 <section class="section"><div class="container"><p class="eyebrow">Questions & answers</p><h2>교육 전에 궁금한 점</h2>${faqBlock(faqs.slice(1,4))}</div></section>`});
 
-await writePage({route:'/about/',title:'협회 소개',description:'대한바른자세걷기협회의 설립 취지와 주요 교육 활동을 소개합니다. 물리치료사의 전문성을 바탕으로 지역사회·학교·기업에서 바른 걷기를 교육합니다.',crumbs:[['/about/','협회 소개']],body:pageTop('바른 걸음을 배우고,\n일상에서 함께 실천합니다.','대한바른자세걷기협회는 물리치료사의 전문성을 바탕으로 올바른 걷기와 운동을 교육합니다.','About the association',[['/about/','협회 소개']])+`<section class="section"><div class="container feature-split"><div class="prose"><h2>우리의 출발</h2><p>협회 소개자료에 따르면 대한바른자세걷기협회는 전문 물리치료사들이 모여 2023년 2월 발족했습니다. 지역사회 봉사활동, 보건소 걷기 교육과 학생 대상 사업 등 다양한 현장에서 활동합니다.</p><h2>교육으로 만나는 바른 걷기</h2><p>족압·보행 특성을 살펴보고 올바른 신발 선택과 다양한 걷기 방법을 교육합니다. 걷기에 필요한 근력·균형·유연성 운동을 함께 다룹니다.</p><p>지역사회, 학교, 기업과 협력해 대상과 현장에 맞는 교육 구성을 협의합니다.</p>${link('/about/experts/','전문가 소개','text-link')}</div><div class="feature-photo">${image('outdoor','서호노인복지관 참여자들이 강사와 야외 운동을 하는 모습','width="1280" height="960" loading="lazy"')}</div></div></section><section class="section soft"><div class="container"><p class="eyebrow">Our work</p><h2>협회가 함께하는 일</h2><div class="info-grid" style="margin-top:30px">${[['지역사회 걷기 교육','보건소·복지관과 함께하는 주민 대상 걷기 및 운동 교육'],['학교·기업 교육','학생과 임직원의 발·보행 이해를 위한 현장 교육'],['현장 체험과 봉사','지역 걷기 행사와 건강 캠페인에서 만나는 측정·교육 활동']].map(([t,p])=>`<div class="info-card"><h3>${t}</h3><p>${p}</p></div>`).join('')}</div><p class="source-note">내용 근거: 협회 소개자료 2·8쪽 및 기관별 활동 사례. 협약 체결과 교육 수행은 서로 다른 활동으로 구분합니다.</p></div></section>`});
+await writePage({route:'/about/',title:'협회 소개',description:'대한바른자세걷기협회의 설립 취지와 주요 교육 활동을 소개합니다. 물리치료사의 전문성을 바탕으로 지역사회·학교·기업에서 바른 걷기를 교육합니다.',crumbs:[['/about/','협회 소개']],body:pageTop('바른 걸음을 배우고,\n일상에서 함께 실천합니다.','대한바른자세걷기협회는 물리치료사의 전문성을 바탕으로 올바른 걷기와 운동을 교육합니다.','About the association',[['/about/','협회 소개']])+`<section class="section"><div class="container feature-split"><div class="prose"><h2>우리의 출발</h2><p>협회 소개자료에 따르면 대한바른자세걷기협회는 전문 물리치료사들이 모여 2023년 2월 발족했습니다. 지역사회 봉사활동, 보건소 걷기 교육과 학생 대상 사업 등 다양한 현장에서 활동합니다.</p><h2>교육으로 만나는 바른 걷기</h2><p>족압·보행 특성을 살펴보고 올바른 신발 선택과 다양한 걷기 방법을 교육합니다. 걷기에 필요한 근력·균형·유연성 운동을 함께 다룹니다.</p><p>지역사회, 학교, 기업과 협력해 대상과 현장에 맞는 교육 구성을 협의합니다.</p>${link('/about/experts/','강사진 소개','text-link')}</div><div class="feature-photo">${image('outdoor','서호노인복지관 참여자들이 강사와 야외 운동을 하는 모습','width="1280" height="960" loading="lazy"')}</div></div></section><section class="section soft"><div class="container"><p class="eyebrow">Our work</p><h2>협회가 함께하는 일</h2><div class="info-grid" style="margin-top:30px">${[['지역사회 걷기 교육','보건소·복지관과 함께하는 주민 대상 걷기 및 운동 교육'],['학교·기업 교육','학생과 임직원의 발·보행 이해를 위한 현장 교육'],['현장 체험과 봉사','지역 걷기 행사와 건강 캠페인에서 만나는 측정·교육 활동']].map(([t,p])=>`<div class="info-card"><h3>${t}</h3><p>${p}</p></div>`).join('')}</div><p class="source-note">내용 근거: 협회 소개자료 2·8쪽 및 기관별 활동 사례. 협약 체결과 교육 수행은 서로 다른 활동으로 구분합니다.</p></div></section>`});
 
-await writePage({route:'/about/experts/',title:'전문가 소개 · 최영호 부회장',description:'최영호 대한바른자세걷기협회 부회장의 물리치료·스포츠의학 관련 학력과 경력을 소개합니다.',crumbs:[['/about/','협회 소개'],['/about/experts/','전문가 소개']],schema:[{'@type':'Person','@id':absolute('/about/experts/#choi'),name:'최영호',jobTitle:'부회장',affiliation:{'@id':orgId},description:'물리치료사, 스포츠의학 석사, 재활치료학과 이학박사'}],body:pageTop('전문가 소개','몸과 움직임을 이해하는 지식을 교육 현장에 연결합니다.','Our expert',[['/about/','협회 소개'],['/about/experts/','전문가 소개']])+`<section class="section"><div class="container content-width profile">${image('expert','최영호 부회장','width="420" height="485" loading="eager"')}<div class="prose"><span class="pill">대한바른자세걷기협회 부회장</span><h2 style="margin-top:15px">최영호</h2><p>물리치료사</p><h2>주요 학력</h2><ul><li>1996년 신구대학교 물리치료학과</li><li>2002년 고려대학교 스포츠대학원 스포츠의학 전공 석사</li><li>2025년 한림대학교 재활치료학과 이학박사</li></ul><h2>주요 경력</h2><ul><li>전 인하대학교병원 물리치료실</li><li>물리치료 관련 대학 외래교수 경력</li><li>대한근감소증물리치료학회 부회장</li><li>몸학교(Mom School) 대표</li></ul><h2>교육 활동</h2><p>보건소, 지역사회 기관과 기업 등에서 올바른 걷기, 족압·보행 이해 및 운동 관련 교육을 진행합니다.</p><p class="source-note">자료: 첨부 「최영호_약력」. 자료 정리일: 2026년 11월 6일. 생년월일과 면허번호는 공개하지 않습니다.</p></div></div></section>`});
+const expertCrumbs = [['/about/','협회 소개'],['/about/experts/','강사진 소개']];
+await writePage({
+  route: '/about/experts/',
+  title: '강사진 소개 · 김찬문 회장과 최영호 부회장',
+  description: '대한바른자세걷기협회 김찬문 회장과 최영호 부회장의 학력, 경력 및 걷기 교육 분야를 소개합니다.',
+  crumbs: expertCrumbs,
+  schema: [
+    {'@type':'Person','@id':absolute('/about/experts/#kim'),name:'김찬문',jobTitle:'회장',affiliation:{'@id':orgId},description:'연세대학교 보건대학원 이학석사(보건행정), 저술활동가'},
+    {'@type':'Person','@id':absolute('/about/experts/#choi'),name:'최영호',jobTitle:'부회장',affiliation:{'@id':orgId},description:'물리치료사, 스포츠의학 석사, 재활치료학과 이학박사'}
+  ],
+  body: pageTop('강사진 소개','협회 강사진의 경력과 교육 분야를 소개합니다.','Our instructors',expertCrumbs)+`
+<section class="section" id="kim" aria-labelledby="kim-name">
+  <div class="container content-width profile">
+    ${image('expert-kim','김찬문 회장','width="252" height="323" loading="eager"')}
+    <div class="prose">
+      <span class="pill">대한바른자세걷기협회 회장</span>
+      <h2 id="kim-name" style="margin-top:15px">김찬문</h2>
+      <p>저술활동가</p>
+      <h3>주요 학력</h3>
+      <ul><li>연세대학교 보건대학원 이학석사(보건행정)</li></ul>
+      <h3>주요 경력</h3>
+      <ul>
+        <li>국립재활원 물리치료실장</li>
+        <li>경동대학교 작업치료학과 교수</li>
+        <li>경북대학교 물리치료과 교수</li>
+        <li>리하트병원 재활센터장</li>
+      </ul>
+      <h3>강연 주제</h3>
+      <ul>
+        <li>근감소증의 이해와 지역사회 역할</li>
+        <li>올바른 걷기와 근력운동</li>
+        <li>올바른 걷기와 스마트 족압 측정</li>
+        <li>노화와 근감소증</li>
+      </ul>
+      <p class="source-note">자료는 협회가 제공한 김찬문 강사 소개를 바탕으로 정리했습니다.</p>
+    </div>
+  </div>
+</section>
+<section class="section soft" id="choi" aria-labelledby="choi-name"><div class="container content-width profile">${image('expert','최영호 부회장','width="420" height="485" loading="lazy"')}<div class="prose"><span class="pill">대한바른자세걷기협회 부회장</span><h2 id="choi-name" style="margin-top:15px">최영호</h2><p>물리치료사</p><h3>주요 학력</h3><ul><li>1996년 신구대학교 물리치료학과</li><li>2002년 고려대학교 스포츠대학원 스포츠의학 전공 석사</li><li>2025년 한림대학교 재활치료학과 이학박사</li></ul><h3>주요 경력</h3><ul><li>전 인하대학교병원 물리치료실</li><li>물리치료 관련 대학 외래교수 경력</li><li>대한근감소증물리치료학회 부회장</li><li>몸학교(Mom School) 대표</li></ul><h3>교육 활동</h3><p>보건소, 지역사회 기관과 기업 등에서 올바른 걷기, 족압·보행 이해 및 운동 관련 교육을 진행합니다.</p><p class="source-note">자료: 첨부 「최영호_약력」. 자료 정리일: 2026년 11월 6일. 생년월일과 면허번호는 공개하지 않습니다.</p></div></div></section>`
+});
 
-await writePage({route:'/programs/',title:'교육 프로그램',description:'보건소·복지관, 학교·청소년, 기업·임직원, 건강 행사와 전문인력을 위한 걷기 교육 프로그램을 안내합니다.',crumbs:[['/programs/','교육 프로그램']],body:pageTop('대상과 현장에 맞춘 걷기 교육','보건소와 복지관, 학교, 일터와 행사 현장까지. 기관의 목적과 참여자에 맞는 프로그램을 함께 구성합니다.','Our programs',[['/programs/','교육 프로그램']])+`<section class="section"><div class="container program-list">${programs.map(p=>`<article class="program-row">${image(p.image,p.alt,'width="640" height="480" loading="lazy"')}<div><span class="pill">${p.category}</span><h2><a href="/programs/${p.slug}/">${p.title}</a></h2><p>${p.description}</p>${link('/programs/'+p.slug+'/','프로그램 자세히 보기','text-link')}</div></article>`).join('')}</div></section>`});
+await writePage({route:'/programs/',title:'교육 프로그램',description:'보건소·복지관, 학교·청소년, 기업·임직원, 건강 행사와 전문인력을 위한 걷기 교육 프로그램을 안내합니다.',crumbs:[['/programs/','교육 프로그램']],body:pageTop('대상과 현장에 맞춘 걷기 교육','보건소와 복지관, 학교, 일터와 행사 현장까지. 기관의 목적과 참여자에 맞는 프로그램을 함께 구성합니다.','Our programs',[['/programs/','교육 프로그램']])+`<section class="section"><div class="container"><div class="section-head"><h2>교육 과정</h2>${link('/about/experts/','강사진 소개','text-link')}</div><div class="program-list">${programs.map(p=>`<article class="program-row">${image(p.image,p.alt,'width="640" height="480" loading="lazy"')}<div><span class="pill">${p.category}</span><h2><a href="/programs/${p.slug}/">${p.title}</a></h2><p>${p.description}</p>${link('/programs/'+p.slug+'/','프로그램 자세히 보기','text-link')}</div></article>`).join('')}</div></div></section>`});
 for (const p of programs) await writePage({route:`/programs/${p.slug}/`,title:p.title,description:p.description,crumbs:[['/programs/','교육 프로그램'],[`/programs/${p.slug}/`,p.title]],schema:[{'@type':'Service',name:p.title,description:p.description,provider:{'@id':orgId},serviceType:'걷기 교육',audience:{'@type':'Audience',audienceType:p.audience},...(origin?{url:absolute(`/programs/${p.slug}/`)}:{})}],body:pageTop(p.title,p.description,p.category,[['/programs/','교육 프로그램'],[`/programs/${p.slug}/`,p.title]])+`<section class="section"><div class="container page-grid"><article class="prose">${image(p.image,p.alt,`class="detail-image ${p.image==='school'?'poster':''}" width="1280" height="960" loading="eager"`)}<h2>누구를 위한 교육인가요?</h2><p>${p.audience}</p><h2>어떤 내용을 배우나요?</h2><ul>${p.items.map(t=>`<li>${t}</li>`).join('')}</ul><h2>교육은 어떻게 구성하나요?</h2><p>${p.note}</p><table class="fact-table"><tbody><tr><th scope="row">운영 방식</th><td>기관 목적과 현장에 맞춰 협의</td></tr><tr><th scope="row">인원·시간</th><td>대상, 공간과 회차에 따라 협의</td></tr><tr><th scope="row">교육 비용</th><td>지역·인원·회차·측정 구성에 따라 협의</td></tr><tr><th scope="row">준비 정보</th><td>교육 대상, 지역, 예상 인원, 희망 시기와 장소</td></tr></tbody></table><div class="callout">측정과 실습, 결과 안내의 제공 범위는 과정별로 다릅니다. 구체적인 진행 내용은 사전에 확인합니다.</div>${p.cases.length?`<h2>관련 교육 사례</h2><ul>${p.cases.map(slug=>{const c=cases.find(x=>x.slug===slug);return `<li><a href="/stories/${slug}/">${c.institution} · ${c.title}</a></li>`;}).join('')}</ul>`:''}<p class="source-note">교육 내용 근거: 협회 소개자료 및 기관별 활동 기록. 프로그램 이름과 안내는 홈페이지 이용을 위해 정리했습니다.</p></article>${sidebar(p.slug)}</div></section>`});
 
 await writePage({route:'/stories/',title:'교육·활동 사례',description:'대한바른자세걷기협회의 보건소·복지관, 학교, 기업 및 지역 행사 교육·활동 사례를 기관별로 확인하세요.',crumbs:[['/stories/','활동 사례']],body:pageTop('함께 배우고 걸어온 현장','지역사회, 학교와 일터에서 진행한 교육을 소개합니다. 기관과 대상에 따른 실제 활동 내용을 살펴보세요.','Field stories',[['/stories/','활동 사례']])+`<section class="section"><div class="container"><div class="filters" role="group" aria-label="활동 분야 선택">${['all','보건소 · 복지관','학교 · 청소년','기업 · 임직원','행사 · 건강 체험'].map((cat,i)=>`<button type="button" class="filter" data-filter="${cat}" aria-pressed="${i===0}">${i===0?'전체 활동':cat}</button>`).join('')}</div><p id="result-count" class="status-filter" role="status">${cases.length}개의 활동 사례</p><div class="cases-grid">${cases.map(caseCard).join('')}</div></div></section>`});
