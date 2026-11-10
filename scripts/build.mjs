@@ -33,7 +33,7 @@ const graphJson = value => JSON.stringify(value).replace(/</g, '\\u003c');
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 const link = (url, label, className = 'button') => `<a class="${className}" href="${esc(url)}">${label}${arrow}</a>`;
 const image = (name, alt, attrs = '') => {
-  const small = ['expert','expert-kim','logo'].includes(name);
+  const small = ['expert','expert-kim-portrait','logo'].includes(name);
   return `<img src="/assets/images/${name}-${small ? '480' : '1280'}.webp" ${small ? '' : `srcset="/assets/images/${name}-640.webp 640w, /assets/images/${name}-1280.webp 1280w" sizes="(max-width: 600px) 100vw, (max-width: 850px) 50vw, 600px"`} alt="${esc(alt)}" ${attrs || 'loading="lazy"'} decoding="async">`;
 };
 const navItems = [['/about/','협회 소개'],['/programs/','교육 프로그램'],['/stories/','활동 사례'],['/insights/','걷기 정보'],['/press/','보도자료'],['/news/','협회 소식']];
@@ -79,7 +79,7 @@ ${renderHero()}
 <section class="section dark"><div class="container"><div class="section-head"><div><p class="eyebrow">Together, step by step</p><h2>우리 기관의 교육,<br>이렇게 함께 준비합니다.</h2></div><p>교육 목적부터 현장 운영까지<br>기관의 상황에 맞게 협의합니다.</p></div>${steps}</div></section>
 <section class="section" id="instructors" aria-labelledby="instructors-title"><div class="container expert-strip"><div><p class="eyebrow">Our instructors</p><h2 id="instructors-title">강사진 소개</h2><p style="margin-top:18px;color:var(--muted)">바른 걷기와 운동을 가르치는 협회 강사진을 소개합니다.</p></div>
 <div class="expert-list">
-  <div class="expert-card">${image('expert-kim','김찬문 대한바른자세걷기협회 회장','width="252" height="323" loading="lazy"')}<div><span class="pill">협회 회장</span><h3>김찬문</h3><p>연세대학교 보건대학원 이학석사<br>국립재활원 물리치료실장</p>${link('/about/experts/#kim','김찬문 소개','text-link')}</div></div>
+  <div class="expert-card">${image('expert-kim-portrait','김찬문 대한바른자세걷기협회 회장','width="480" height="613" loading="lazy"')}<div><span class="pill">협회 회장</span><h3>김찬문</h3><p>연세대학교 보건대학원 이학석사<br>국립재활원 물리치료실장</p>${link('/about/experts/#kim','김찬문 소개','text-link')}</div></div>
   <div class="expert-card">${image('expert','최영호 대한바른자세걷기협회 부회장','width="420" height="485" loading="lazy"')}<div><span class="pill">물리치료사 · 협회 부회장</span><h3>최영호</h3><p>스포츠의학 석사 · 이학박사<br>전 인하대학교병원 물리치료실</p>${link('/about/experts/#choi','최영호 소개','text-link')}</div></div>
 </div></div></section>
 <section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">Walking notes</p><h2>걷기를 이해하는 작은 시작</h2></div>${link('/insights/','걷기 정보 보기','text-link')}</div><div class="info-grid">${articles.map(articleCard).join('')}</div></div></section>
@@ -122,7 +122,7 @@ await writePage({
   body: pageTop('강사진 소개','협회 강사진의 경력과 교육 분야를 소개합니다.','Our instructors',expertCrumbs)+`
 <section class="section" id="kim" aria-labelledby="kim-name">
   <div class="container content-width profile">
-    ${image('expert-kim','김찬문 회장','width="252" height="323" loading="eager"')}
+    ${image('expert-kim-portrait','김찬문 회장','width="480" height="613" loading="eager"')}
     <div class="prose">
       <span class="pill">대한바른자세걷기협회 회장</span>
       <h2 id="kim-name" style="margin-top:15px">김찬문</h2>
