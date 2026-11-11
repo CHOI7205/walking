@@ -1,7 +1,7 @@
 {
   "mode": "preview",
   "origin": null,
-  "pages": 46,
+  "pages": 47,
   "indexable": 0,
   "routes": [
     "/",
@@ -38,6 +38,7 @@
     "/stories/gyeonggi-education/",
     "/stories/seocho-ai-walking/",
     "/stories/gunpo-fall-prevention/",
+    "/stories/jeonnam-instructor-training/",
     "/insights/",
     "/insights/plantar-pressure/",
     "/insights/walking-exercise/",
