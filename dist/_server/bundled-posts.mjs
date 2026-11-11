@@ -105,5 +105,25 @@ export const bundledPosts = [
     "status": "published",
     "published_at": "2026-11-10T09:00:00+09:00",
     "updated_at": "2026-11-10T09:00:00+09:00"
+  },
+  {
+    "id": "bundled-walking-intensity-talk-test",
+    "slug": "walking-intensity-talk-test",
+    "title": "걷기 운동 강도, 말하기로 확인하세요",
+    "excerpt": "걷는 동안 한 문장을 말해 보고 대화가 얼마나 편하게 이어지는지 살피는 방법을 소개합니다.",
+    "body": "같은 산책로를 걸어도 평지에서는 대화가 편하고, 오르막에서는 한 문장을 마치기 전에 숨을 고르게 됩니다. 몸이 느끼는 운동 강도는 걷는 속도와 길의 경사, 평소 체력에 따라 달라집니다. 오늘 산책에서는 걷는 도중에 말이 얼마나 편하게 나오는지 살펴보세요. [1][2]\n\n## 대화는 이어지고 노래는 어렵다면\n\n미국 질병통제예방센터와 영국 NHS는 중간 강도의 운동을 알아보는 방법으로 ‘말하기 검사’를 소개합니다. 평소보다 숨이 조금 차고 심장이 빨리 뛰면서도 대화가 가능하다면, 지금 속도가 중간 강도에 가까울 수 있습니다. 이 정도에서는 노래 한 소절을 이어 부르기가 어려워집니다. 노래를 직접 부르지 않아도 걷는 중 한 문장을 말해 보면 숨의 여유를 가늠할 수 있습니다. [1][2]\n\n말을 몇 마디 하고 나서 숨을 쉬느라 자꾸 멈춘다면, 그 순간에는 강도가 더 높을 수 있습니다. 중간 강도를 목표로 걷는 날에는 속도를 조금 낮춰 다시 문장이 편하게 이어지는지 확인하세요. 같은 속도로 걸어도 체력과 몸 상태가 다르면 느끼는 강도는 달라집니다. [1]\n\n## 오늘 산책에서 이렇게 해보세요\n\n1. 평탄한 구간을 골라 평소 산책 속도로 출발합니다.\n2. 걷는 리듬이 안정되면 “오늘은 이 길을 따라 공원까지 걸어 볼 거예요”처럼 짧은 문장을 평소 목소리로 말해 봅니다.\n3. 말이 편하고 조금 더 걸을 여유가 있으면 속도를 살짝 올려 봅니다. 문장 중간에 숨을 고르게 되면 속도를 줄인 뒤 다시 확인합니다.\n\n함께 걷는 사람이 있다면 가벼운 대화로 점검할 수 있습니다. 혼자라면 주변이 안전한 구간에서 한 문장을 소리 내어 말해 보세요. 오르막에 들어서거나 컨디션이 달라진 날에는 평소와 같은 속도에서도 숨이 더 찰 수 있으니, 그날의 느낌에 맞춰 조절합니다. 위 순서는 말하기 검사를 산책에 적용한 예입니다. [1][2]\n\n최근 활동량이 적었다면 편하게 걸을 수 있는 구간부터 시작하고, 익숙해지면서 걷는 거리나 시간을 서서히 늘려 보세요. 만성질환이 있고 운동 강도를 높일 계획이라면 의료진과 먼저 상의하세요. [1][2]\n\n### 참고 자료\n\n[1] [미국 질병통제예방센터 CDC · What Counts as Physical Activity for Adults](https://www.cdc.gov/physical-activity-basics/adding-adults/what-counts.html) · 2026년 11월 11일 확인.\n\n[2] [영국 국민보건서비스 NHS · Walking for health](https://www.nhs.uk/live-well/exercise/walking-for-health/) · 2026년 11월 11일 확인.",
+    "category": "걷기 정보",
+    "author": "대한바른자세걷기협회",
+    "source_name": "미국 CDC · 영국 NHS",
+    "source_url": "https://www.cdc.gov/physical-activity-basics/adding-adults/what-counts.html",
+    "cover_id": "",
+    "cover_image": "/assets/images/walking-intensity-talk-test.png",
+    "cover_alt": "가을 공원 산책로에서 대화하며 나란히 걷는 두 사람",
+    "cover_caption": "대화하며 걷는 모습을 그린 AI 생성 삽화입니다.",
+    "body_images": [],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-11T09:00:00+09:00",
+    "updated_at": "2026-11-11T09:00:00+09:00"
   }
 ];
