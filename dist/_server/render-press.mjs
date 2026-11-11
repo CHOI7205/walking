@@ -22,6 +22,16 @@ export function renderMarkdown(source,allowedIds=[],allowedImages=[]) {
 }
 function postCard(post){return `<article class="press-card"><a href="/press/${e(post.slug)}/"><div class="press-card-image">${coverUrl(post)?`<img src="${e(coverUrl(post))}" alt="${e(post.cover_alt||post.title)}" loading="lazy">`:'<div class="press-placeholder" aria-hidden="true"><span>WALKING JOURNAL</span><b>함께 걷는 이야기</b></div>'}</div><div class="press-card-copy"><span class="pill">${e(post.category)}</span><h2>${e(post.title)}</h2><p>${e(post.excerpt)}</p><span class="post-date">${readableDate(post.published_at)}</span></div></a></article>`;}
 export function pressHomeSection(posts){if(!posts.length)return '';return `<section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">Newsroom</p><h2>협회의 새로운 이야기</h2></div><a href="/press/" class="text-link">전체 글 보기 <span aria-hidden="true">↗</span></a></div><div class="press-grid">${posts.map(postCard).join('')}</div></div></section>`;}
+export function pressPromotionVideo() {
+  const src = '/assets/videos/association-promo.mp4';
+  return `<section id="promotion-video" aria-labelledby="promotion-video-title" style="margin-bottom:40px;scroll-margin-top:120px">
+    <h2 id="promotion-video-title" style="margin-bottom:16px">협회 홍보영상</h2>
+    <video controls playsinline preload="metadata" aria-labelledby="promotion-video-title" style="display:block;width:100%;max-width:760px;aspect-ratio:16/9;border-radius:8px;background:var(--deep)">
+      <source src="${src}" type="video/mp4">
+      <a href="${src}">홍보영상 파일 열기</a>
+    </video>
+  </section>`;
+}
 function pageHead(config,{title,description,path,image,type='website',schema=[],noindex=false}){
   const origin=config.origin,canonical=origin?origin+path:'';
   const full=title+' | '+config.name;
@@ -57,7 +67,8 @@ export async function renderPress(request,env,config) {
   const filters=`<form class="press-search" method="get" action="/press/"><label class="sr-only" for="press-query">기사 검색</label><input id="press-query" name="q" value="${e(q)}" placeholder="제목 또는 내용으로 검색" maxlength="100"><label class="sr-only" for="press-category">글 분류</label><select id="press-category" name="category"><option value="">전체 소식</option>${categories.map(cat=>`<option${cat===category?' selected':''}>${cat}</option>`).join('')}</select><button class="button" type="submit">검색</button></form>`;
   const content=posts.length?`<div class="press-grid">${posts.map(postCard).join('')}</div>`:`<div class="press-empty"><span class="eyebrow">Walking journal</span><h2>${unavailable?'소식을 불러오지 못했습니다':q||category?'검색 결과가 없습니다':'새로운 소식을 준비하고 있습니다'}</h2><p>${unavailable?'잠시 후 다시 확인해 주세요.':'협회의 보도자료와 현장 이야기를 이곳에서 전합니다.'}</p></div>`;
   const pagination=`<nav class="press-pagination" aria-label="페이지 이동">${page>1?`<a href="${e(pageLink(page-1))}">← 이전</a>`:''}<span>${page} 페이지</span>${hasMore?`<a href="${e(pageLink(page+1))}">다음 →</a>`:''}</nav>`;
-  return htmlResponse(shell(template,pageHead(config,{title:'보도자료와 협회 이야기',description:'대한바른자세걷기협회의 보도자료와 새로운 활동 소식을 만나보세요.',path:pageLink(page),noindex:!!q||!!category||unavailable}),top('바른 걸음으로 이어지는 이야기','협회의 보도자료와 새로운 활동 소식을 전합니다.')+`<section class="section"><div class="container">${filters}${content}${pagination}<div class="press-list-footer"><a href="/press/feed.xml">RSS로 소식 받기</a><a href="/admin/">관리자 로그인</a></div></div></section>`),config,unavailable?503:200);
+  const video = page === 1 && !q && !category ? pressPromotionVideo() : '';
+  return htmlResponse(shell(template,pageHead(config,{title:'보도자료와 협회 이야기',description:'대한바른자세걷기협회의 보도자료와 새로운 활동 소식을 만나보세요.',path:pageLink(page),noindex:!!q||!!category||unavailable}),top('바른 걸음으로 이어지는 이야기','협회의 보도자료와 새로운 활동 소식을 전합니다.')+`<section class="section"><div class="container">${video}${filters}${content}${pagination}<div class="press-list-footer"><a href="/press/feed.xml">RSS로 소식 받기</a><a href="/admin/">관리자 로그인</a></div></div></section>`),config,unavailable?503:200);
 }
 export async function dynamicSitemap(request,env,config){
   const base=await env.ASSETS.fetch(request);const text=await base.text();

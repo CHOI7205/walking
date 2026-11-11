@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { programs, cases, articles, faqs, eventPhotoGroups } from '../content.mjs';
 import { renderHero } from './hero.mjs';
+import { pressPromotionVideo } from '../server/render-press.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const config = JSON.parse(await fs.readFile(path.join(root, 'site.config.json'), 'utf8'));
@@ -16,6 +17,7 @@ await fs.mkdir(dist, { recursive: true });
 await fs.mkdir(path.join(dist, 'assets'), { recursive: true });
 await fs.cp(path.join(root, 'assets', 'images'), path.join(dist, 'assets', 'images'), { recursive: true });
 await fs.cp(path.join(root, 'assets', 'fonts'), path.join(dist, 'assets', 'fonts'), { recursive: true });
+await fs.cp(path.join(root, 'assets', 'videos'), path.join(dist, 'assets', 'videos'), { recursive: true });
 for (const file of ['styles.css', 'app.js','cms.css','admin.js','hero.css','hero-motion.js']) await fs.copyFile(path.join(root, 'assets', file), path.join(dist, 'assets', file));
 // A new asset URL prevents cached scripts from running against newer hero markup.
 const heroAssets = {};
@@ -179,7 +181,7 @@ await writePage({route:'/privacy/',title:'개인정보 수집·이용 안내',de
 await writePage({route:'/editorial/',title:'콘텐츠 작성 기준',description:'협회 자료에 근거한 콘텐츠 작성과 활동 기록, 사진 사용, 건강 정보 및 수정 요청 기준을 안내합니다.',crumbs:[['/editorial/','콘텐츠 기준']],showCta:false,body:pageTop('정보의 근거를 분명하게','협회의 활동과 교육 내용을 정확하게 전달하기 위한 기준입니다.','Editorial standards',[['/editorial/','콘텐츠 기준']])+`<section class="section"><div class="container content-width prose"><h2>협회 자료에 근거합니다</h2><p>협회 소개자료, 최영호 약력과 첨부 강의자료를 바탕으로 내용을 정리했습니다. 활동 사례에는 해당 자료의 쪽수를 표시합니다. 전체 누적 실적이나 만족도, 확인되지 않은 후기는 임의로 만들지 않습니다.</p><h2>활동과 교육 효과를 구분합니다</h2><p>활동 기록은 교육 대상과 진행 내용을 설명합니다. 사전·사후 측정을 했다는 사실을 치료 효과나 개선율이 입증됐다는 의미로 사용하지 않습니다. 개인에 대한 진단이나 치료 결과를 보장하지 않습니다.</p><h2>사진과 기관명을 구분해 표시합니다</h2><p>첨부 자료에 수록된 사진을 사용합니다. 해당 사례의 직접 사진이 아닌 경우 참고 사진이라고 표시합니다. 교육 수행기관을 모두 공식 협약기관으로 표기하지 않습니다.</p><h2>작성과 수정</h2><p>콘텐츠는 협회 자료를 홈페이지 이용 목적에 맞게 편집한 내용입니다. 별도 전문가 검수 사실이 확인되지 않은 글에 검수자 표시를 넣지 않습니다. 오류나 수정이 필요한 내용을 발견하시면 <a href="mailto:kptchoi7205@gmail.com">kptchoi7205@gmail.com</a>으로 알려주세요.</p><p class="source-note">자료 정리 기준일: 2026년 11월 6일</p></div></section>`});
 await writePage({route:'/404.html',title:'페이지를 찾을 수 없습니다',description:'요청하신 페이지가 없습니다. 대한바른자세걷기협회 홈이나 교육 프로그램을 확인해 주세요.',noindex:true,showCta:false,body:`<section class="empty-page"><div class="container"><p class="eyebrow">404 · Page not found</p><h1>페이지를 찾을 수 없습니다.</h1><p>주소가 변경되었거나 없는 페이지입니다.<br>홈에서 필요한 정보를 다시 찾아보세요.</p>${link('/','홈으로 돌아가기')}</div></section>`});
 
-await writePage({route:'/press/',title:'보도자료와 협회 이야기',description:'대한바른자세걷기협회의 보도자료와 새로운 활동 소식을 만나보세요.',crumbs:[['/press/','보도자료']],showCta:false,body:pageTop('바른 걸음으로 이어지는 이야기','협회의 보도자료와 새로운 활동 소식을 전합니다.','Newsroom',[['/press/','보도자료']])+'<section class="section"><div class="container"><div class="press-empty"><h2>새로운 소식을 준비하고 있습니다</h2><p>협회의 보도자료와 현장 이야기를 이곳에서 전합니다.</p></div><div class="press-list-footer"><a href="/news/">협회 소식</a><a href="/admin/">관리자 로그인</a></div></div></section>'});
+await writePage({route:'/press/',title:'보도자료와 협회 이야기',description:'대한바른자세걷기협회의 보도자료와 새로운 활동 소식을 만나보세요.',crumbs:[['/press/','보도자료']],showCta:false,body:pageTop('바른 걸음으로 이어지는 이야기','협회의 보도자료와 새로운 활동 소식을 전합니다.','Newsroom',[['/press/','보도자료']])+'<section class="section"><div class="container">'+pressPromotionVideo()+'<div class="press-empty"><h2>새로운 소식을 준비하고 있습니다</h2><p>협회의 보도자료와 현장 이야기를 이곳에서 전합니다.</p></div><div class="press-list-footer"><a href="/news/">협회 소식</a><a href="/admin/">관리자 로그인</a></div></div></section>'});
 await writePage({route:'/admin/',title:'보도자료 관리',description:'대한바른자세걷기협회 보도자료 관리자 로그인과 글 편집 화면입니다.',noindex:true,showCta:false,body:await fs.readFile(path.join(root,'assets','admin.html'),'utf8')});
 await fs.cp(path.join(root,'server'),path.join(dist,'_server'),{recursive:true});
 await fs.writeFile(path.join(dist,'_server','runtime-config.mjs'),'export default '+JSON.stringify({...config,origin,production})+';\n');
