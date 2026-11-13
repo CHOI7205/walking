@@ -17,7 +17,9 @@ test('bundled articles, images, list search, feed and sitemap work without datab
   assert.ok(walkingInfo.some(post=>post.slug==='walking-shoes-fit-check'));
   assert.ok(walkingInfo.every(post=>post.category==='걷기 정보'));
   assert.equal((await listPublished(null,{q:'no-match-123'})).posts.length,0);
-  assert.equal((await listPublished(null,{category:'협회소식'})).posts.length,0);
+  const associationNews=(await listPublished(null,{category:'협회소식'})).posts;
+  assert.equal(associationNews.length,bundledPosts.filter(post=>post.category==='협회소식').length);
+  assert.ok(associationNews.every(post=>post.category==='협회소식'));
   assert.equal((await listPublished(null,{page:2})).posts.length,0);
   const detail=await renderPress(new Request(config.origin+'/press/'+first.slug+'/'),env,config);
   assert.equal(detail.status,200);
