@@ -145,7 +145,8 @@ await writePage({
         <li>국립재활원 물리치료실장</li>
         <li>경동대학교 작업치료학과 교수</li>
         <li>경북대학교 물리치료과 교수</li>
-        <li>리하트병원 재활센터장</li>
+        <li>대한배구협회 의무분과위원회 자문위원</li>
+        <li>FIFA Football Medicine Diploma</li>
       </ul>
       <h3>저서</h3><ul><li>노쇠 예방을 위한 건강 운동 가이드북(2026)</li></ul>
       <h3>강연 주제</h3>
