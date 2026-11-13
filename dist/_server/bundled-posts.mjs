@@ -157,9 +157,9 @@ export const bundledPosts = [
     "source_name": "사용자 제공 교육자료 · APTA · KWGS",
     "source_url": "https://www.apta.org/patient-care/evidence-based-practice-resources/test-measures/sppb",
     "cover_id": "",
-    "cover_image": "/assets/images/choi-physical-assessment-walking-education.png",
-    "cover_alt": "2026년 7월 25일 전남지부 바른자세걷기 강사양성과정 안내와 최영호 강사의 강의 현장",
-    "cover_caption": "대한물리치료사협회 전남지부 바른자세걷기 강사양성과정 자료. 사용자 제공.",
+    "cover_image": "/assets/images/choi-physical-assessment-walking-education.webp",
+    "cover_alt": "전남지부 바른자세걷기 강사양성과정에서 족압 분석 화면을 설명하는 최영호 강사",
+    "cover_caption": "전남지부 바른자세걷기 강사양성과정 강의 현장. 사용자 제공.",
     "body_images": [
       "/assets/images/choi-gangwon-education-announcement.png",
       "/assets/images/choi-jeonnam-instructor-lecture.webp",
