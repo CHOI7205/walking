@@ -144,7 +144,7 @@ await writePage({
       <ul>
         <li>국립재활병원 물리치료실장</li>
         <li>경동대학교 작업치료학과 교수</li>
-        <li>경북대학교 물리치료학과 교수</li>
+        <li>경복대학교 물리치료학과 교수</li>
         <li>대한배구협회 의무분과위원회 자문위원</li>
         <li>FIFA Football Medicine Diploma</li>
       </ul>
