@@ -167,6 +167,7 @@ export const bundledPosts = [
     "asset_ids": "[]",
     "status": "published",
     "published_at": "2026-11-13T00:30:05.752Z",
-    "updated_at": "2026-11-13T00:43:49.845Z"
+    "updated_at": "2026-11-13T00:49:00.210Z",
+    "show_cover": false
   }
 ];
