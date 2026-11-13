@@ -202,13 +202,13 @@ export const bundledPosts = [
     "source_name": "수원시 인터넷신문 · 더코리아저널 · 더코리아 · WHO · CDC",
     "source_url": "https://news.suwon.go.kr/?mode=normal&p=26&page=9&reqIdx=202604151101544960&viewMode=view",
     "cover_id": "",
-    "cover_image": "/assets/images/gwonseon-health-center-walking-association-mou.png",
-    "cover_alt": "건강교육을 함께 준비하는 세 사람과 산책하는 어르신을 표현한 AI 생성 삽화",
-    "cover_caption": "지역사회 건강교육 협력을 표현한 AI 생성 삽화입니다. 실제 업무협약 체결 현장 사진이 아닙니다.",
+    "cover_image": "/assets/images/gwonseon-health-partnership-ceremony.png",
+    "cover_alt": "2026년 4월 14일 권선구보건소에서 열린 지역사회 건강증진 활성화 업무협약식 기념사진",
+    "cover_caption": "권선구보건소·대한바른자세걷기협회·대한근감소증물리치료학회의 업무협약식. 사용자 제공 사진.",
     "body_images": [],
     "asset_ids": "[]",
     "status": "published",
     "published_at": "2026-11-13T01:11:55.129Z",
-    "updated_at": "2026-11-13T01:11:55.129Z"
+    "updated_at": "2026-11-13T01:17:31.779Z"
   }
 ];
