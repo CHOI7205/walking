@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-16",
+  "event_date": "2026-11-13",
+  "title": "송파구보건소 바른자세걷기 교육, 내 발과 신발부터 살펴보다",
+  "category": "보도자료",
+  "summary": "송파구보건소에서 40여 명이 함께한 바른자세걷기 교육. 족압 이해와 뒤꿈치 지지, 발에 맞는 신발 선택·착용의 중요성을 소개합니다.",
+  "slug": "songpa-walking-footwear-education-20261113",
+  "cover_file": "대표사진_교육안내.png",
+  "image_alt": "송파구보건소 바르게 걷기 교육 일정과 보건교육실 위치를 알리는 안내판",
+  "image_caption": "송파구보건소 바르게 걷기 교육 안내판. 사용자 제공 사진.",
+  "source_name": "사용자 제공 행사 기록·사진 · AAOS · NHS",
+  "source_url": "https://www.orthoinfo.org/bodypart/foot-ankle/shoes-finding-the-right-fit/",
+  "sources": [
+    "https://www.orthoinfo.org/bodypart/foot-ankle/shoes-finding-the-right-fit/",
+    "https://www.bdct.nhs.uk/footwear-advice/",
+    "https://nhsforthvalley.com/health-services/az-of-services/podiatry/musculoskeletal-podiatry/footwear-advice/"
+  ],
+  "inline_images": [
+    {
+      "file": "현장사진_인물삭제편집.png",
+      "name": "songpa-20261113-classroom-edited.png"
+    },
+    {
+      "file": "참고사진_내발에맞는운동화.png",
+      "name": "songpa-20261113-shoe-fit.png"
+    },
+    {
+      "file": "참고사진_뒤꿈치지지구조.png",
+      "name": "songpa-20261113-heel-support.png"
+    },
+    {
+      "file": "점검사례_바닥마모.png",
+      "name": "songpa-20261113-worn-soles.png"
+    },
+    {
+      "file": "점검사례_착용과뒤축손상.png",
+      "name": "songpa-20261113-heel-wear.png"
+    }
+  ],
+  "paragraph_count": 6,
+  "character_count_including_spaces": 1885,
+  "character_count_basis": "제목·소제목 포함, 출처·링크·참조번호·사진 캡션·마크다운 제외, 공백·문단 구분 포함",
+  "checked_at": "2026-11-16",
+  "publication_status": "최종본 GitHub 반영 · 배포 확인 중",
+  "research_agent": "songpa_footwear_sources",
+  "date_note": "date는 원고 제작일, event_date는 실제 교육일",
+  "published_url": "https://walking-90b.pages.dev/press/songpa-walking-footwear-education-20261113/",
+  "publication_requested_at": "2026-11-16T00:14:54.811Z"
+}
