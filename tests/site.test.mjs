@@ -33,7 +33,7 @@ test('all 47 static pages contain one h1, unique metadata, valid JSON-LD and rea
   }
 });
 test('production build requires a domain and generates canonical URL and sitemap when supplied',()=>{
-  assert.throws(()=>execFileSync(process.execPath,['scripts/build.mjs','--production'],{cwd:root,stdio:'pipe',env:{...process.env,SITE_ORIGIN:''}}));
+  assert.throws(()=>execFileSync(process.execPath,['scripts/build.mjs','--production'],{cwd:root,stdio:'pipe',env:{...process.env,SITE_ORIGIN:'http://invalid.test'}}));
   execFileSync(process.execPath,['scripts/build.mjs','--production'],{cwd:root,stdio:'pipe',env:{...process.env,SITE_ORIGIN:'https://walk.test',BUILD_OUTPUT:'.test-dist'}});
   const output=path.join(root,'.test-dist');
   const html=fs.readFileSync(path.join(output,'index.html'),'utf8');

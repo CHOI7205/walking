@@ -20,7 +20,7 @@ test('bundled articles, images, list search, feed and sitemap work without datab
   const associationNews=(await listPublished(null,{category:'협회소식'})).posts;
   assert.equal(associationNews.length,bundledPosts.filter(post=>post.category==='협회소식').length);
   assert.ok(associationNews.every(post=>post.category==='협회소식'));
-  assert.equal((await listPublished(null,{page:2})).posts.length,0);
+  assert.equal((await listPublished(null,{page:2})).posts.length,Math.min(9,Math.max(0,bundledPosts.length-9)));
   const detail=await renderPress(new Request(config.origin+'/press/'+first.slug+'/'),env,config);
   assert.equal(detail.status,200);
   const html=await detail.text();
