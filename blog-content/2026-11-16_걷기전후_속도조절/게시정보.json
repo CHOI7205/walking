@@ -18,9 +18,11 @@
   "paragraph_count": 6,
   "character_count_including_spaces": 1875,
   "character_count_basis": "제목·소제목 포함, 출처 목록·링크·참조번호·마크다운 기호 제외, 문단 구분 개행 및 공백 포함",
-  "publication_status": "제작 완료 · 09시 게시 대기(미공개)",
+  "publication_status": "공개 데이터 반영 · 배포 확인 중",
   "prepared_at": "2026-11-15T23:31:59.244Z",
   "scheduled_publish_at": "2026-11-16T09:00:00+09:00",
   "research_agent": "daily_warmup_sources",
-  "show_cover": true
+  "show_cover": true,
+  "published_url": "https://walking-90b.pages.dev/press/start-and-finish-walking-slowly/",
+  "publication_requested_at": "2026-11-16T00:09:36.531Z"
 }
