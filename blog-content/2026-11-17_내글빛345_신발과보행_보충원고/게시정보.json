@@ -1,7 +1,7 @@
 {
   "title": "잘 걷는 법은 발끝에서 시작됩니다: 신발·보행·생각하며 걷기",
   "date": "2026-11-17",
-  "status": "publication_pending",
+  "status": "published",
   "requestType": "사용자 지정 내글빛 3·4·5 종합 보충 원고",
   "paragraphs": 6,
   "charactersIncludingSpaces": 1864,
@@ -22,5 +22,9 @@
   "source_name": "AAOS · NHS · Mayo Clinic · Horata 외 연구",
   "source_url": "https://pubmed.ncbi.nlm.nih.gov/33226605/",
   "publication_requested_at": "2026-11-17T06:20:12.194Z",
-  "published_url": "https://bareunwalking.org/press/walking-shoes-gait-and-dual-task/"
+  "published_url": "https://bareunwalking.org/press/walking-shoes-gait-and-dual-task/",
+  "publication_status": "홈페이지 게시 완료 · 목록·상세6개소제목·대표이미지해시·출처6개·RSS·사이트맵 확인",
+  "deployment_commit": "8a41c9074b2b9f1890267660d4c9c9e6d3c2dd5d",
+  "publication_confirmed_at": "2026-11-17T06:24:11.707Z",
+  "publication_confirmed_at_kst": "2026-11-17 15:24:11 +09:00"
 }
