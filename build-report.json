@@ -1,8 +1,8 @@
 {
   "mode": "production",
   "origin": "https://bareunwalking.org",
-  "pages": 47,
-  "indexable": 45,
+  "pages": 49,
+  "indexable": 47,
   "routes": [
     "/",
     "/about/",
@@ -15,6 +15,8 @@
     "/programs/experience/",
     "/programs/instructor/",
     "/stories/",
+    "/stories/songpa/",
+    "/stories/sinwol-center/",
     "/stories/seoho/",
     "/stories/school-project/",
     "/stories/shinsegae/",
