@@ -17,7 +17,10 @@
   "character_count_including_spaces": 1809,
   "checked_at": "2026-11-17",
   "research_agent": "balance_daily_nov17",
-  "publication_status": "제작 완료 · 배포 확인 중",
+  "publication_status": "홈페이지 게시 완료 · 목록·상세·대표이미지·출처링크 검수 완료",
   "publication_requested_at": "2026-11-17T05:43:26.101Z",
-  "published_url": "https://walking-90b.pages.dev/press/gentle-sideways-steps-for-balance/"
+  "published_url": "https://walking-90b.pages.dev/press/gentle-sideways-steps-for-balance/",
+  "deployment_commit": "da63c689af5ea3efc5e77ff795fe750565d9339d",
+  "publication_confirmed_at": "2026-11-17T05:44:45.781Z",
+  "publication_confirmed_at_kst": "2026-11-17 14:44:45 +09:00"
 }
