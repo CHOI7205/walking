@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-17",
+  "title": "걷는 힘에 균형을 더하세요, 지지대 곁에서 옆으로 한 걸음",
+  "category": "걷기 정보",
+  "summary": "벽이나 안정된 지지대 가까이에서 발을 교차하지 않고 천천히 옆으로 옮기는 균형 연습과 안전한 환경 준비를 소개합니다.",
+  "slug": "gentle-sideways-steps-for-balance",
+  "cover_image": "대표이미지.png",
+  "image_alt": "고정된 조리대에 두 손을 짚고 발을 교차하지 않은 채 균형 연습을 준비하는 중년 여성의 AI 생성 삽화",
+  "image_caption": "지지대 곁에서 하는 균형 연습을 표현한 AI 생성 삽화입니다. 실제 협회 교육 현장 사진이 아닙니다.",
+  "source_name": "CDC · NHS",
+  "source_url": "https://www.cdc.gov/falls/prevention/index.html",
+  "sources": [
+    "https://www.cdc.gov/falls/prevention/index.html",
+    "https://www.nhs.uk/live-well/exercise/balance-exercises/"
+  ],
+  "paragraph_count": 6,
+  "character_count_including_spaces": 1809,
+  "checked_at": "2026-11-17",
+  "research_agent": "balance_daily_nov17",
+  "publication_status": "제작 완료 · 배포 확인 중",
+  "publication_requested_at": "2026-11-17T05:43:26.101Z",
+  "published_url": "https://walking-90b.pages.dev/press/gentle-sideways-steps-for-balance/"
+}
