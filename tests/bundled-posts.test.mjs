@@ -12,7 +12,13 @@ test('bundled articles, images, list search, feed and sitemap work without datab
   const {posts}=await listPublished(null);
   const first=posts[0];
   assert.ok(first);
-  assert.ok(posts.some(post=>post.slug==='walking-shoes-fit-check'));
+  const shoePost=bundledPosts.find(post=>post.slug==='walking-shoes-fit-check');
+  assert.ok(shoePost);
+  assert.ok((await listPublished(null,{q:shoePost.title})).posts.some(post=>post.slug===shoePost.slug));
+  const paged=[];
+  for(let page=1;;page++){const result=await listPublished(null,{page});paged.push(...result.posts);if(!result.hasMore)break;}
+  assert.equal(paged.length,bundledPosts.length);
+  assert.equal(new Set(paged.map(post=>post.slug)).size,bundledPosts.length);
   const walkingInfo=(await listPublished(null,{category:'걷기 정보'})).posts;
   assert.ok(walkingInfo.some(post=>post.slug==='walking-shoes-fit-check'));
   assert.ok(walkingInfo.every(post=>post.category==='걷기 정보'));
