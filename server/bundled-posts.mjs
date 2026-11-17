@@ -289,13 +289,13 @@ export const bundledPosts = [
     "source_name": "AAOS · NHS · Mayo Clinic · Horata 외 연구",
     "source_url": "https://pubmed.ncbi.nlm.nih.gov/33226605/",
     "cover_id": "",
-    "cover_image": "/assets/images/walking-shoes-gait-and-dual-task.png",
-    "cover_alt": "공원에서 신발끈을 조절하고 편안한 보폭으로 걷거나 대화하며 걷는 중장년을 그린 세 장면의 AI 삽화",
-    "cover_caption": "신발 착용과 편안한 걷기, 대화하며 걷기를 표현한 AI 생성 삽화. 실제 교육 현장 사진이 아닙니다.",
+    "cover_image": "/assets/images/walking-shoes-gait-and-dual-task-user-photo.png",
+    "cover_alt": "나무 무늬 바닥 위에 놓인 양쪽 맨발의 발등과 발가락을 위에서 촬영한 사진",
+    "cover_caption": "발의 모양을 살펴보기 위한 사용자 제공 사진입니다. 사진만으로 질환이나 보행 상태를 판단할 수는 없습니다.",
     "body_images": [],
     "asset_ids": "[]",
     "status": "published",
     "published_at": "2026-11-17T06:20:12.194Z",
-    "updated_at": "2026-11-17T06:20:12.194Z"
+    "updated_at": "2026-11-17T06:28:35.107Z"
   }
 ];
