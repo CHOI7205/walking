@@ -5,10 +5,9 @@
 .kinetic-scene{position:absolute;inset:0;opacity:0;pointer-events:none}
 .kinetic-scene-3{opacity:1}
 .kinetic-photo{position:absolute;inset:0 0 0 42%;overflow:hidden;z-index:-1}
+.kinetic-photo-secondary{opacity:0}
 .kinetic-photo img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.65;filter:saturate(.65)}
 .kinetic-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#103c35 0%,#103c35b8 18%,#103c3500 58%),linear-gradient(0deg,#103c35 0%,#103c3500 30%,#103c3533 100%)}
-.kinetic-scene-2 .kinetic-photo img{object-position:60% center;filter:saturate(.4)}
-.kinetic-scene-3 .kinetic-photo img{object-position:65% center}
 .kinetic-copy{position:absolute;top:17%;left:max(40px,calc((100% - 1240px)/2));right:32px;z-index:2}
 .kinetic-kicker{display:flex;align-items:center;gap:14px;font-size:13px;letter-spacing:.02em;color:#dae6d9;margin-bottom:34px}
 .kinetic-kicker>span{font-size:11px;letter-spacing:.1em;padding-right:15px;border-right:1px solid #c5d9c555;font-variant-numeric:tabular-nums}

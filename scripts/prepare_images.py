@@ -30,6 +30,9 @@ import hashlib, json
 hero = ImageOps.exif_transpose(Image.open(root / 'assets' / 'originals' / 'home-walking-class.png')).convert('RGB')
 hero.thumbnail((1280, 960), Image.Resampling.LANCZOS)
 hero.save(out / 'hero-main-1280.webp', 'WEBP', quality=88, method=6)
+lecture = ImageOps.exif_transpose(Image.open(root / 'assets' / 'originals' / 'home-walking-lecture.png')).convert('RGB')
+lecture.thumbnail((1280, 960), Image.Resampling.LANCZOS)
+lecture.save(out / 'hero-lecture-1280.webp', 'WEBP', quality=88, method=6)
 ImageOps.fit(hero, (1200, 630), Image.Resampling.LANCZOS, centering=(0.5, 1.0)).save(out / 'social.jpg', quality=91, optimize=True)
 share_name = 'social-' + hashlib.sha256((out / 'social.jpg').read_bytes()).hexdigest()[:12] + '.jpg'
 (out / share_name).write_bytes((out / 'social.jpg').read_bytes())

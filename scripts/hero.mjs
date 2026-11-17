@@ -1,15 +1,16 @@
 export function renderHero() {
   const scenes = [
-    { n: '01', label: '바른 자세에서 시작하는 걸음', image: 'hero-main', lines: ['바른 자세,', '바른 걸음.'], detail: '작은 움직임부터, 바르게.' },
-    { n: '02', label: '측정으로 이해하는 나의 움직임', image: 'hero-main', lines: ['내 걸음을', '이해하는 시간.'], detail: '족압과 보행 습관을 함께 살펴봅니다.' },
-    { n: '03', label: '배움을 일상으로 연결하는 걷기 교육', image: 'hero-main', lines: ['함께 걷는', '건강한 일상.'], detail: '대한바른자세걷기협회가 함께합니다.' }
+    { n: '01', label: '바른 자세에서 시작하는 걸음', lines: ['바른 자세,', '바른 걸음.'], detail: '작은 움직임부터, 바르게.' },
+    { n: '02', label: '측정으로 이해하는 나의 움직임', lines: ['내 걸음을', '이해하는 시간.'], detail: '족압과 보행 습관을 함께 살펴봅니다.' },
+    { n: '03', label: '배움을 일상으로 연결하는 걷기 교육', lines: ['함께 걷는', '건강한 일상.'], detail: '대한바른자세걷기협회가 함께합니다.' }
   ];
   return `<section class="kinetic-hero" aria-labelledby="walking-hero-title" data-kinetic-hero>
     <h1 id="walking-hero-title" class="visually-hidden">바른 자세, 바른 걸음. 함께 걷는 건강한 일상.</h1>
     <div class="kinetic-stage" aria-hidden="true">
       <div class="kinetic-watermark">WALK</div>
+      <div class="kinetic-photo" data-hero-photo="0"><img src="/assets/images/hero-lecture-1280.webp" alt="" width="1280" height="960" fetchpriority="high" decoding="async"></div>
+      <div class="kinetic-photo kinetic-photo-secondary" data-hero-photo="1"><img src="/assets/images/hero-main-1280.webp" alt="" width="1280" height="960" loading="eager" decoding="async"></div>
       ${scenes.map((s, i) => `<div class="kinetic-scene kinetic-scene-${i + 1}" data-scene="${i}">
-        <div class="kinetic-photo"><img src="/assets/images/${s.image}-1280.webp" alt="" width="1280" height="960" ${i ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async"></div>
         <div class="kinetic-copy"><p class="kinetic-kicker"><span>${s.n}</span> ${s.label}</p>
           <p class="kinetic-title">${s.lines.map((line, l) => `<span class="kinetic-line ${l ? 'kinetic-line-accent' : ''}">${[...line].map((c, j) => `<span class="kinetic-char" data-order="${l * 8 + j}">${c === ' ' ? '&nbsp;' : c}</span>`).join('')}</span>`).join('')}</p>
           <p class="kinetic-detail">${s.detail}</p>

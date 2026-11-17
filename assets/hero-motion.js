@@ -12,6 +12,22 @@ if (hero && typeof Element.prototype.animate === 'function') {
     animation.pause();
     animations.push(animation);
   }
+  // Two photographs alternate evenly, independently of the three text scenes.
+  hero.querySelectorAll('[data-hero-photo]').forEach((photo, index) => {
+    const first = index === 0;
+    animate(photo, [
+      { opacity: first ? 1 : 0, offset: 0 },
+      { opacity: first ? 1 : 0, offset: at(6500) },
+      { opacity: first ? 0 : 1, offset: at(7500) },
+      { opacity: first ? 0 : 1, offset: at(14000) },
+      { opacity: first ? 1 : 0, offset: 1 }
+    ]);
+    animate(photo.querySelector('img'), [
+      { transform: 'scale(1.045)', offset: 0 },
+      { transform: 'scale(1)', offset: .5 },
+      { transform: 'scale(1.045)', offset: 1 }
+    ]);
+  });
   const windows = [[0, 4300, 4900], [4300, 8900, 9500], [8900, 15000, 15000]];
   scenes.forEach((scene, index) => {
     const [start, end, out] = windows[index];
@@ -34,12 +50,6 @@ if (hero && typeof Element.prototype.animate === 'function') {
         { transform: 'translateY(0) rotate(0deg) scaleX(1)', opacity: 1, offset: 1 }
       ]);
     });
-    animate(scene.querySelector('img'), [
-      { transform: 'scale(1.075)', offset: 0 },
-      { transform: 'scale(1.075)', offset: at(start) },
-      { transform: 'scale(1)', offset: at(out) },
-      { transform: 'scale(1)', offset: 1 }
-    ]);
     for (const selector of ['.kinetic-kicker', '.kinetic-detail']) {
       const delay = start + (selector.includes('detail') ? 900 : 0);
       animate(scene.querySelector(selector), [
