@@ -35,7 +35,7 @@ const graphJson = value => JSON.stringify(value).replace(/</g, '\\u003c');
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 const link = (url, label, className = 'button') => `<a class="${className}" href="${esc(url)}">${label}${arrow}</a>`;
 const image = (name, alt, attrs = '') => {
-  const small = ['expert','expert-kim-portrait','expert-park','logo'].includes(name);
+  const small = ['expert','expert-kim-portrait','expert-park','expert-song','logo'].includes(name);
   return `<img src="/assets/images/${name}-${small ? '480' : '1280'}.webp" ${small ? '' : `srcset="/assets/images/${name}-640.webp 640w, /assets/images/${name}-1280.webp 1280w" sizes="(max-width: 600px) 100vw, (max-width: 850px) 50vw, 600px"`} alt="${esc(alt)}" ${attrs || 'loading="lazy"'} decoding="async">`;
 };
 const navItems = [['/about/','협회 소개'],['/programs/','교육 프로그램'],['/stories/','활동 사례'],['/insights/','걷기 정보'],['/press/','보도자료'],['/news/','협회 소식']];
@@ -94,6 +94,7 @@ ${renderHero()}
   <div class="expert-card">${image('expert-kim-portrait','김찬문 대한바른자세걷기협회 회장','width="480" height="613" loading="lazy"')}<div><span class="pill">협회 회장</span><h3>김찬문</h3><p>연세대학교 보건대학원 이학석사<br>국립재활병원 물리치료실장</p>${link('/about/experts/#kim','김찬문 소개','text-link')}</div></div>
   <div class="expert-card">${image('expert','최영호 대한바른자세걷기협회 부회장','width="420" height="485" loading="lazy"')}<div><span class="pill">협회 부회장 · 몸학교 대표</span><h3>최영호</h3><p>스포츠의학 석사 · 이학박사<br>전 인하대학교병원 물리치료실</p>${link('/about/experts/#choi','최영호 소개','text-link')}</div></div>
   <div class="expert-card">${image('expert-park','박동민 대한바른자세걷기협회 강사','width="480" height="600" loading="lazy"')}<div><span class="pill">물리치료사 · 물리치료학 석사</span><h3>박동민</h3><p>제니스병원 재활센터 치료실장<br>대한근감소증물리치료학회 총무부회장</p>${link('/about/experts/#park','박동민 소개','text-link')}</div></div>
+  <div class="expert-card">${image('expert-song','송혁 대한바른자세걷기협회 강사','width="480" height="576" loading="lazy"')}<div><span class="pill">물리치료사 · 인솔 마스터</span><h3>송혁</h3><p>고려대학교대학원 스포츠의학 석사수료<br>현) 비채 컨디셔닝 센터장</p>${link('/about/experts/#song','송혁 소개','text-link')}</div></div>
 </div></div></section>
 <section class="section soft"><div class="container"><div class="section-head"><div><p class="eyebrow">Walking notes</p><h2>걷기를 이해하는 작은 시작</h2></div>${link('/insights/','걷기 정보 보기','text-link')}</div><div class="info-grid">${articles.map(articleCard).join('')}</div></div></section>
 <section class="section"><div class="container"><p class="eyebrow">Questions & answers</p><h2>교육 전에 궁금한 점</h2>${faqBlock(faqs.slice(1,4))}</div></section>`});
@@ -125,13 +126,14 @@ await writePage({
 const expertCrumbs = [['/about/','협회 소개'],['/about/experts/','강사진 소개']];
 await writePage({
   route: '/about/experts/',
-  title: '강사진 소개 · 김찬문 · 최영호 · 박동민',
-  description: '대한바른자세걷기협회 김찬문 회장, 최영호 부회장, 박동민 강사의 주요 학력과 경력, 저서 및 걷기 교육 활동을 소개합니다.',
+  title: '강사진 소개 · 김찬문 · 최영호 · 박동민 · 송혁',
+  description: '대한바른자세걷기협회 김찬문·최영호·박동민·송혁 강사진의 주요 학력과 경력, 교육 분야를 소개합니다.',
   crumbs: expertCrumbs,
   schema: [
     {'@type':'Person','@id':absolute('/about/experts/#kim'),name:'김찬문',jobTitle:'회장',affiliation:{'@id':orgId},description:'연세대학교 보건대학원 이학석사(보건행정), 물리치료사'},
     {'@type':'Person','@id':absolute('/about/experts/#choi'),name:'최영호',jobTitle:'협회 부회장 · 몸학교 대표',affiliation:{'@id':orgId},description:'물리치료사, 스포츠의학 석사, 재활치료학과 이학박사'},
-    {'@type':'Person','@id':absolute('/about/experts/#park'),name:'박동민',jobTitle:'강사',affiliation:{'@id':orgId},description:'물리치료사, 물리치료학 석사, 제니스병원 재활센터 치료실장, 대한근감소증물리치료학회 총무부회장'}
+    {'@type':'Person','@id':absolute('/about/experts/#park'),name:'박동민',jobTitle:'강사',affiliation:{'@id':orgId},description:'물리치료사, 물리치료학 석사, 제니스병원 재활센터 치료실장, 대한근감소증물리치료학회 총무부회장'},
+    {'@type':'Person','@id':absolute('/about/experts/#song'),name:'송혁',jobTitle:'강사',affiliation:{'@id':orgId},description:'물리치료사, 인솔 마스터, 고려대학교대학원 스포츠의학 석사수료, 비채 컨디셔닝 센터장'}
   ],
   body: pageTop('강사진 소개','협회 강사진의 경력과 교육 분야를 소개합니다.','Our instructors',expertCrumbs)+`
 <section class="section" id="kim" aria-labelledby="kim-name">
@@ -188,6 +190,25 @@ await writePage({
       </ul>
       <h3>교육 활동</h3>
       <p>보건소, 지역사회 기관과 기업 등에서 올바른 걷기, 족압·보행 이해 및 운동 관련 교육을 진행합니다.</p>
+    </div>
+  </div>
+</section>
+<section class="section soft" id="song" aria-labelledby="song-name">
+  <div class="container content-width profile">
+    ${image('expert-song','송혁 강사','width="480" height="576" loading="lazy"')}
+    <div class="prose">
+      <span class="pill">대한바른자세걷기협회 강사</span>
+      <h2 id="song-name" style="margin-top:15px">송혁</h2>
+      <p>물리치료사 · 인솔 마스터</p>
+      <h3>주요 학력</h3>
+      <ul><li>고려대학교대학원 스포츠의학 석사수료</li></ul>
+      <h3>주요 경력</h3>
+      <ul>
+        <li><strong>현) 비채 컨디셔닝 센터장</strong></li>
+        <li>전) JHGI Master Physio</li>
+        <li>전) 원주 정병원 도수치료센터장</li>
+        <li>전) 자생의료재단 운동치료 총괄팀장</li>
+      </ul>
     </div>
   </div>
 </section>`
