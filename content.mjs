@@ -91,10 +91,12 @@ export const cases = [
     slug:'yangcheon', category:'보건소 · 복지관', program:'community',
     title:'바른자세 걷기 교육', institution:'양천구보건소',
     date:'2025–2026', period:'2025~2026년', audience:'양천구 지역주민',
-    eventPhoto:'yangcheon-practice', alt:'양천구보건소 걷기 교육에서 의자 옆 동작을 연습하는 주민들',
+    eventPhoto:'yangcheon-group-exercise', alt:'양천구보건소 교육실에서 주민들이 원을 이루어 의자 옆 운동을 함께하는 모습',
     summary:'양천구보건소 신관, 목동보건지소, 신월보건지소에서 지역주민을 위한 걷기 교육을 진행했습니다.',
     body:'주민들과 바른 걷기 및 근력운동을 연습하고 족압 측정과 상담을 진행했습니다. 족저근막염 관리에 관한 운동과 테이핑 방법도 교육에서 다뤘습니다.',
-    items:['바른 걷기와 근력운동','족압 측정 및 상담','발 관리 운동과 테이핑 교육'], source:'협회 소개자료 35~37쪽',
+    items:['바른 걷기와 근력운동','족압 측정 및 상담','발 관리 운동과 테이핑 교육'],
+    photos:[['yangcheon-practice','의자 옆에서 걷기·운동 동작을 연습하는 참가자들'],['yangcheon-instruction','화면 자료를 활용해 운동 방법을 설명하는 강사'],['yangcheon-class','교육실에서 함께하는 걷기 운동']],
+    source:'협회 소개자료 35~37쪽 및 협회 제공 현장 사진',sourceUpdated:'2026년 11월 17일',
   },
   {
     slug:'yangcheon-marathon', category:'행사 · 건강 체험', program:'experience',
@@ -226,6 +228,7 @@ export const eventPhotoGroups = [
         ['gwonseon-path','숲길을 따라 걷는 참가자들'],
       ]},
       {title:'양천구보건소 바른자세 걷기 교육', photos:[
+        ['yangcheon-group-exercise','교육실에서 원을 이루어 함께하는 의자 옆 운동'],
         ['yangcheon-practice','의자 옆에서 동작을 따라 하는 참가자들'],
         ['yangcheon-instruction','강사가 화면을 보며 운동 방법을 설명하는 모습'],
         ['yangcheon-class','교육실에서 함께하는 걷기 운동'],
