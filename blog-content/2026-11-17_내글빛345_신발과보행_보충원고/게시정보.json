@@ -30,5 +30,7 @@
   "image_origin": "사용자 제공 사진",
   "image_replaced_at": "2026-11-17T06:28:35.107Z",
   "image_public_path": "/assets/images/walking-shoes-gait-and-dual-task-user-photo.png",
-  "image_replacement_status": "배포 확인 대기"
+  "image_replacement_status": "운영 목록·상세·첨부 원본 SHA-256 일치 확인 완료",
+  "image_deployment_commit": "3d4a71431ef7bcedac56f36170900f32202fbb22",
+  "image_verified_at": "2026-11-17T06:29:55.350Z"
 }
