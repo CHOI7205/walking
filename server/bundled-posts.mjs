@@ -297,5 +297,25 @@ export const bundledPosts = [
     "status": "published",
     "published_at": "2026-11-17T06:20:12.194Z",
     "updated_at": "2026-11-17T06:28:35.107Z"
+  },
+  {
+    "id": "bundled-safe-indoor-walking-on-cold-days",
+    "slug": "safe-indoor-walking-on-cold-days",
+    "title": "추운 날에도 걷기를 잇는 방법, 실내에서 안전하게 한 걸음",
+    "excerpt": "추운 날 실내에서 걷기를 이어갈 때 살펴볼 이동 공간과 신발, 안전한 방향 전환, 점진적으로 시작하는 방법을 소개합니다.",
+    "body": "## 밖에 나가기 망설여지는 날의 대안\n\n아침 공기가 차가워지면 운동화를 신었다가도 산책을 미루기 쉽습니다. 밖에 나가지 못한 날이 이어지면 하루 대부분을 의자나 소파에서 보내기도 합니다. 그렇다고 추위를 참고 반드시 야외에 나가야 하는 것은 아닙니다. 오늘은 이용이 허용된 건물의 넓은 복도나 집 안의 안전한 이동 공간을 살펴보세요. 미국 질병통제예방센터는 날씨 때문에 활동하기 어려울 때 실내 쇼핑몰 걷기처럼 날씨와 관계없이 할 수 있는 대안을 마련하라고 안내합니다. 장소를 바꾸어 걷는 습관을 이어가는 것이 이번 실천의 출발점입니다. [CDC — Overcoming Barriers to Physical Activity](https://www.cdc.gov/physical-activity-basics/overcoming-barriers/)\n\n## 실내도 먼저 길을 살펴야 합니다\n\n실내에는 비나 바람이 덜 들어오지만 넘어질 위험까지 없어지는 것은 아닙니다. 걷기 전 전선, 느슨한 매트, 바닥에 놓인 가방을 치우고 물기가 없는지 확인하세요. 영국 NHS는 낙상 예방을 위해 걸려 넘어질 물건과 러그를 정리하도록 권합니다. 조명도 켜 두고 방문이 갑자기 열리거나 가족과 동선이 겹치는 구간은 피합니다. 공용 건물에서는 운영 시간과 이용 규칙을 확인하고 통행을 방해하지 않는 길을 고르세요. 장애물을 피해 계속 몸을 비틀어야 한다면 그곳은 운동 장소로 적절하지 않을 수 있습니다. [NHS — Falls](https://www.nhs.uk/conditions/falls/)\n\n## 신발과 방향 전환을 함께 점검하세요\n\n집 안이라는 이유로 발에서 쉽게 벗겨지는 슬리퍼를 그대로 신고 속도를 높이지 마세요. NHS는 발에 맞고 벗겨지지 않으며 접지력이 좋은 신발을 권합니다. 복도 끝에서 돌아설 때도 한 발을 바닥에 붙인 채 몸만 빙글 돌기보다 발을 들어 옮기며 방향을 바꾸세요. NHS 낙상예방서비스의 보행 안내도 한 발을 축으로 비트는 회전을 피하라고 설명합니다. 왕복 횟수에 쫓겨 급하게 돌아서지 않는 것이 좋습니다. 보행보조기를 사용하는 분은 임의로 내려놓지 말고 평소 안내받은 사용법과 이동 공간을 먼저 확인하세요. [NHS — Falls](https://www.nhs.uk/conditions/falls/) · [Leicestershire Partnership NHS Trust — Advice on gait (walking)](https://www.leicspart.nhs.uk/wp-content/uploads/2019/02/660-Advice-on-gait-A4-folded-to-A5.pdf)\n\n## 짧고 편안하게 시작해 반응을 봅니다\n\n처음부터 야외에서 걷던 거리나 시간을 실내에서 모두 채우려고 하지 않아도 됩니다. NHS는 평소 활동량이 적었던 사람이 걸을 수 있다면 거리를 점진적으로 늘리도록 안내합니다. 익숙한 구간을 편안하게 걸어보고 호흡과 다리의 느낌을 살피세요. 몸이 편안하면 다음번에 조금 더 이어갈 수 있습니다. 좁은 공간에서 억지로 보폭을 늘리거나 무릎을 높이 들어 올릴 필요는 없습니다. 쉬었다 다시 걷는 방식도 생활에 맞게 선택할 수 있습니다. 이는 정해진 횟수의 운동 처방이 아니라 자신의 상태에 맞춰 시작하기 위한 제안입니다. [NHS — Walking for health](https://www.nhs.uk/live-well/exercise/walking-for-health/)\n\n## 걸음 수보다 안전한 움직임이 먼저입니다\n\n실내 걷기도 움직이는 활동이지만, 천천히 복도를 오가는 모든 시간이 같은 운동 강도인 것은 아닙니다. NHS는 빠르게 걸을 때 대화는 가능하지만 노래는 어려운 정도를 강도 판단의 한 방법으로 설명합니다. 다만 좁은 길이나 회전이 많은 장소에서 그 강도를 억지로 만들지는 마세요. 속도를 높이려다 휘청거리면 안정적인 보행이 먼저입니다. 휴대전화는 멈춘 뒤 확인하고, 걸으면서 물건을 나르는 과제도 더하지 않습니다. 통증이나 어지럼이 생기면 멈추고, 최근 넘어졌거나 균형이 걱정된다면 혼자 연습량을 늘리기 전에 의료진과 상의하세요. [NHS — Walking for health](https://www.nhs.uk/live-well/exercise/walking-for-health/) · [NHS — Falls](https://www.nhs.uk/conditions/falls/)\n\n## 오늘의 계획은 장소 하나, 시간 하나\n\n오늘 해볼 일은 거창한 실내 운동 코스를 만드는 것이 아닙니다. 안전하게 이용할 장소 하나를 고르고, 일과 중 언제 걸을지 정해 보세요. 점심을 먹고 잠깐 쉬었다 걷거나 일을 마친 뒤 복도를 천천히 오가는 식으로 시작할 수 있습니다. 돌아와서는 걸은 양뿐 아니라 발이 편했는지, 방향을 바꿀 때 안정적이었는지도 적어 두세요. CDC는 실천할 활동을 일정에 넣고 안전하게 할 수 있는 범위에서 조금씩 늘리도록 권합니다. 실내 걷기가 모든 운동을 대신하는 것은 아니지만, 날씨 때문에 움직임을 완전히 멈추지 않도록 돕는 선택지가 될 수 있습니다. [CDC — Overcoming Barriers to Physical Activity](https://www.cdc.gov/physical-activity-basics/overcoming-barriers/)",
+    "category": "걷기 정보",
+    "author": "대한바른자세걷기협회",
+    "source_name": "CDC · NHS · Leicestershire Partnership NHS Trust",
+    "source_url": "https://www.cdc.gov/physical-activity-basics/overcoming-barriers/",
+    "cover_id": "",
+    "cover_image": "/assets/images/safe-indoor-walking-on-cold-days.png",
+    "cover_alt": "장애물 없이 넓고 밝은 실내 복도에서 편안한 보폭으로 걷는 중장년 여성의 AI 생성 삽화",
+    "cover_caption": "추운 날 실내 걷기를 표현한 AI 생성 삽화입니다. 실제 협회 교육 현장 사진이 아닙니다.",
+    "body_images": [],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-18T00:02:11.026Z",
+    "updated_at": "2026-11-18T00:02:11.026Z"
   }
 ];
