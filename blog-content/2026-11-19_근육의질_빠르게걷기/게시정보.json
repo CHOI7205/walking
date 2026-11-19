@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-19",
+  "title": "근육량만큼 중요한 근육의 질, 걷기에 적절한 속도를 더하세요",
+  "slug": "muscle-quality-and-brisk-walking",
+  "category": "걷기 정보",
+  "summary": "근육량뿐 아니라 지방화 정도도 살펴야 하는 이유와, 몸 상태에 맞는 빠른 걷기·근력운동 병행 방법을 소개합니다.",
+  "status": "draft",
+  "publication_status": "사용자 추가 요청 원고 제작 완료 · 공개 전",
+  "cover_image": "대표이미지.png",
+  "image_alt": "서울아산병원이 소개한 대사적으로 건강한 예와 건강하지 않은 예의 복부 CT 비교 영상. 빨강은 질 좋은 근육, 청록은 지방화된 근육, 노랑은 근육 사이 지방 영역을 나타냄.",
+  "image_caption": "서울아산병원이 소개한 복부 CT 비교 영상입니다. 사용자 제공 이미지이며 운동 전후 사진이 아닙니다. 사진 출처: 서울아산병원 뉴스룸(2021-08-30).",
+  "image_source_url": "https://news.amc.seoul.kr/news/con/detail.do?cntId=3856",
+  "image_origin": "사용자 제공 서울아산병원 자료 화면",
+  "source_name": "서울아산병원 · CDC",
+  "source_url": "https://news.amc.seoul.kr/news/con/detail.do?cntId=3856",
+  "sources": [
+    "https://www.amc.seoul.kr/asan/depts/nm/K/noticeDetail.do?menuId=5014&contentId=6228",
+    "https://news.amc.seoul.kr/news/con/detail.do?cntId=3856",
+    "https://www.cdc.gov/physical-activity-basics/measuring/index.html",
+    "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html"
+  ],
+  "paragraph_count": 6,
+  "character_count_including_spaces": 1850,
+  "checked_at": "2026-11-19",
+  "research_agent": "muscle_quality_brisk",
+  "published_url": null
+}
