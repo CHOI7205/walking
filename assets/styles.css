@@ -27,7 +27,7 @@ section[aria-labelledby="kim-name"],section[aria-labelledby="choi-name"],section
 @media print{.site-header,.site-footer,.cta-band,.sidebar,.back-top,.menu-toggle{display:none}.container{width:100%}.section{padding:25px 0}.page-grid{display:block}a{color:#111!important}.page-top{padding:20px 0}.hero-grid{min-height:0}.form{border:0}body{font-size:12pt}}
 
 /* External site banners: reserved side rail on desktop, in-flow cards on mobile. */
-.external-banners{width:min(1240px,calc(100% - 40px));margin:28px auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.external-banners{width:min(1240px,calc(100% - 40px));margin:28px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
 .external-banners-label{grid-column:1/-1;font-size:12px;letter-spacing:.06em;color:var(--muted);margin:0}
 .external-banner{display:flex;flex-direction:column;min-width:0;padding:18px 16px;background:#fff;border:1px solid var(--line);border-radius:10px;transition:border-color .2s,box-shadow .2s}
 .external-banner:hover{border-color:var(--teal);box-shadow:0 5px 18px #153f3c12}
@@ -37,8 +37,10 @@ section[aria-labelledby="kim-name"],section[aria-labelledby="choi-name"],section
 .external-banner strong{font-size:15px;line-height:1.5;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .external-banner strong span{font-size:17px;color:var(--teal)}
 .external-banner small{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
-@media(min-width:1100px){.with-external-banners>main,.with-external-banners>.cta-band,.with-external-banners>.site-footer{margin-right:152px}.external-banners{position:fixed;top:180px;right:12px;width:128px;margin:0;grid-template-columns:1fr;gap:10px;z-index:15}.external-banner{padding:16px 12px}.external-banner-logo{height:36px;margin-bottom:12px}.external-banner-logo img{max-height:36px}.external-banner strong{font-size:14px}.external-banner small{font-size:11px}}
+@media(min-width:1100px){.with-external-banners>main,.with-external-banners>.cta-band,.with-external-banners>.site-footer{margin-right:152px}.external-banners{position:fixed;top:180px;right:12px;width:128px;margin:0;grid-template-columns:1fr;gap:10px;z-index:15;max-height:calc(100dvh - 200px);overflow-y:auto;scrollbar-width:thin}.external-banner{padding:16px 12px}.external-banner-logo{height:36px;margin-bottom:12px}.external-banner-logo img{max-height:36px}.external-banner strong{font-size:14px}.external-banner small{font-size:11px}}
 @media(max-width:360px){.external-banners{width:calc(100% - 32px);gap:10px}.external-banner{padding:14px 12px}.external-banner strong{font-size:14px}}
 @media print{.external-banners{display:none}.with-external-banners>main,.with-external-banners>.cta-band,.with-external-banners>.site-footer{margin-right:0}}
 
 .external-banner-wordmark{font-size:20px;font-weight:850;letter-spacing:.025em;color:#dc6d1c;line-height:1.2}
+
+.external-banner-wordmark-fitto{color:#5743a5}
