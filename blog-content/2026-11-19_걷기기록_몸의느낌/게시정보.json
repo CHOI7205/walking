@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-19",
+  "title": "걷기 기록, 걸음 수와 함께 몸의 느낌도 남겨보세요",
+  "slug": "walking-journal-time-and-how-you-feel",
+  "category": "걷기 정보",
+  "summary": "걸음 수와 함께 걸은 시간·장소·몸의 느낌을 짧게 기록하고, 다음 걷기 계획을 무리 없이 조정하는 방법을 소개합니다.",
+  "cover_image": "대표이미지.png",
+  "image_alt": "공원 벤치에 안전하게 앉아 걷기를 마친 느낌을 수첩에 기록하는 중장년 여성의 AI 생성 삽화",
+  "image_caption": "산책 후 걷기 기록을 남기는 모습을 표현한 AI 생성 삽화입니다. 실제 협회 교육 현장 사진이 아닙니다.",
+  "source_name": "Mayo Clinic · NIDDK",
+  "source_url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/walking/art-20046261",
+  "sources": [
+    "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/walking/art-20046261",
+    "https://www.niddk.nih.gov/health-information/weight-management/tips-get-active/tips-keep-moving"
+  ],
+  "paragraph_count": 6,
+  "character_count_including_spaces": 1858,
+  "checked_at": "2026-11-19",
+  "research_agent": "nov19_walking_log",
+  "publication_status": "공개 요청 · 운영 검수 대기",
+  "publication_requested_at": "2026-11-19T00:10:41.052Z"
+}
