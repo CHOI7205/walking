@@ -19,7 +19,9 @@ test('bundled articles, images, list search, feed and sitemap work without datab
   for(let page=1;;page++){const result=await listPublished(null,{page});paged.push(...result.posts);if(!result.hasMore)break;}
   assert.equal(paged.length,bundledPosts.length);
   assert.equal(new Set(paged.map(post=>post.slug)).size,bundledPosts.length);
-  const walkingInfo=(await listPublished(null,{category:'걷기 정보'})).posts;
+  const walkingInfo=[];
+  for(let page=1;;page++){const result=await listPublished(null,{category:'걷기 정보',page});walkingInfo.push(...result.posts);if(!result.hasMore)break;}
+  assert.equal(walkingInfo.length,bundledPosts.filter(post=>post.category==='걷기 정보').length);
   assert.ok(walkingInfo.some(post=>post.slug==='walking-shoes-fit-check'));
   assert.ok(walkingInfo.every(post=>post.category==='걷기 정보'));
   assert.equal((await listPublished(null,{q:'no-match-123'})).posts.length,0);
