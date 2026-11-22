@@ -113,7 +113,7 @@ applicationForm?.addEventListener('submit', async event => {
     if (!response.ok || !result.reference) throw new Error(result.message || '접수를 완료하지 못했습니다.');
     applicationForm.dataset.complete = 'true';
     button.textContent = '신청 완료';
-    status.textContent = '신청이 접수되었습니다. 접수번호: ' + result.reference + ' · 일정 안내는 협회에서 연락드립니다.';
+    status.textContent = '신청이 접수되었습니다. 접수번호: ' + result.reference + (result.notification === 'sent' ? ' · 협회 이메일로 신청 알림을 전송했습니다.' : ' · 신청은 저장되었습니다. 이메일 알림은 미전송 상태이며 협회에서 관리자 화면으로 확인할 수 있습니다.') + ' 일정 안내는 협회에서 연락드립니다.';
     status.className = 'status success';
   } catch (error) {
     status.className = 'status error';

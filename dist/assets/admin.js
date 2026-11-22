@@ -9,6 +9,20 @@ async function api(path,options={}){
   if(!response.ok){if(response.status===401&&path!=='/api/admin/login')showLogin();throw new Error(data.message||'요청을 완료하지 못했습니다.');}
   return data;
 }
+$('#load-applications').addEventListener('click', async () => {
+  const list=$('#applications-list');
+  list.textContent='불러오는 중…';
+  try {
+    const {applications}=await api('/api/admin/applications');
+    list.replaceChildren();
+    if (!applications.length) list.textContent='접수된 신청이 없습니다.';
+    for (const row of applications) {
+      const item=document.createElement('p');
+      item.textContent=[new Date(row.created_at*1000).toLocaleString('ko-KR',{timeZone:'Asia/Seoul'}),row.program,row.name,row.phone,row.email,row.id].join(' · ');
+      list.append(item);
+    }
+  } catch(error) { list.textContent=error.message; }
+});
 function jsonRequest(method,data){return {method,headers:{'Content-Type':'application/json'},body:JSON.stringify(data)};}
 function showLogin(){$('#login-panel').hidden=false;$('#cms-workspace').hidden=true;}
 function showWorkspace(){$('#login-panel').hidden=true;$('#cms-workspace').hidden=false;}
