@@ -73,3 +73,22 @@ if (form) {
     status.append(retry);
   });
 }
+
+const classNotice = document.querySelector('.class-notice');
+if (classNotice && typeof classNotice.showModal === 'function') {
+  const noticeKey = 'slow-jogging-park-notice-v1';
+  const today = () => new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Seoul' });
+  let hiddenToday = false;
+  try { hiddenToday = localStorage.getItem(noticeKey) === today(); } catch {}
+  classNotice.querySelector('[data-notice-close]').addEventListener('click', () => classNotice.close());
+  classNotice.querySelector('[data-notice-today]').addEventListener('click', () => {
+    try { localStorage.setItem(noticeKey, today()); } catch {}
+    classNotice.close();
+  });
+  classNotice.addEventListener('click', event => {
+    if (event.target !== classNotice) return;
+    const rect = classNotice.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) classNotice.close();
+  });
+  if (!hiddenToday) classNotice.showModal();
+}
