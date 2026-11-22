@@ -93,27 +93,35 @@ if (classNotice && typeof classNotice.showModal === 'function') {
   if (!hiddenToday) classNotice.showModal();
 }
 
-function createApplicationMailUrl(data) {
-  const url = new URL('https://mail.google.com/mail/');
-  url.search = new URLSearchParams({view:'cm', fs:'1', to:'kptchoi7205@gmail.com',
-    su:'[슬로우조깅 신청] ' + data.name,
-    body:['대한바른자세걷기협회 프로그램 신청', '', '이름: ' + data.name,
-      '전화번호: ' + data.phone, '이메일: ' + data.email,
-      '프로그램: 슬로우조깅', '', '신청 상담을 위한 개인정보 전달에 동의합니다.'].join('\n')});
-  return url.href;
-}
 const applicationForm = document.querySelector('#application-form');
-applicationForm?.addEventListener('submit', event => {
+applicationForm?.addEventListener('submit', async event => {
   event.preventDefault();
-  if (!applicationForm.reportValidity()) return;
-  const url = createApplicationMailUrl(Object.fromEntries(new FormData(applicationForm)));
-  window.open(url, '_blank', 'noopener,noreferrer');
+  if (applicationForm.dataset.submitting || applicationForm.dataset.complete || !applicationForm.reportValidity()) return;
+  const button = applicationForm.querySelector('[type="submit"]');
   const status = document.querySelector('#application-status');
-  status.textContent = '아직 신청 메일이 발송되지 않았습니다. Gmail에서 내용을 확인하고 ‘보내기’를 눌러 주세요. ';
-  const retry = document.createElement('a');
-  retry.href = url;
-  retry.target = '_blank';
-  retry.rel = 'noopener noreferrer';
-  retry.textContent = '신청 메일 작성창 다시 열기';
-  status.append(retry);
+  applicationForm.dataset.submitting = 'true';
+  button.disabled = true;
+  button.textContent = '접수 중…';
+  status.textContent = '';
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20000);
+  try {
+    const data = Object.fromEntries(new FormData(applicationForm));
+    data.consent = applicationForm.elements.consent.checked;
+    const response = await fetch('/api/applications', {method:'POST', credentials:'same-origin', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data), signal:controller.signal});
+    const result = await response.json();
+    if (!response.ok || !result.reference) throw new Error(result.message || '접수를 완료하지 못했습니다.');
+    applicationForm.dataset.complete = 'true';
+    button.textContent = '신청 완료';
+    status.textContent = '신청이 접수되었습니다. 접수번호: ' + result.reference + ' · 일정 안내는 협회에서 연락드립니다.';
+    status.className = 'status success';
+  } catch (error) {
+    status.className = 'status error';
+    status.textContent = error.name === 'AbortError' ? '접수 결과를 확인하지 못했습니다. 중복 신청을 피하려면 협회에 확인해 주세요. 입력 내용은 유지됩니다.' : (error.message + ' 입력 내용은 유지됩니다. 다시 시도해 주세요.');
+    button.disabled = false;
+    button.textContent = '신청하기';
+  } finally {
+    clearTimeout(timeout);
+    delete applicationForm.dataset.submitting;
+  }
 });

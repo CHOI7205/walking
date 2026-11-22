@@ -1,3 +1,4 @@
+import { handleApplications } from './applications.mjs';
 import { handleInquiry, purgeExpired } from './inquiries.mjs';
 import { normalizeEnv, apiJson } from './storage.mjs';
 import { handleAuth } from './auth.mjs';
@@ -12,6 +13,7 @@ export default {
     if(url.pathname.startsWith('/_server/')||url.pathname.startsWith('/_worker.js')||url.pathname.startsWith('/.'))return new Response('Not found',{status:404});
     try {
     if(['/api/admin/login','/api/admin/logout','/api/admin/session'].includes(url.pathname))return await handleAuth(request,env);
+    if(['/api/applications','/api/admin/applications'].includes(url.pathname))return await handleApplications(request,env);
     if(url.pathname.startsWith('/api/admin/'))return await handlePressAdmin(request,env);
     if(url.pathname.startsWith('/media/'))return await serveMedia(request,env);
     if(url.pathname==='/press/feed.xml')return await pressFeed(request,env,config);

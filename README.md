@@ -115,3 +115,7 @@ Node.js 22 이상에서 추가 패키지 설치 없이 실행합니다.
 - [Cloudflare Pages Advanced mode](https://developers.cloudflare.com/pages/functions/advanced-mode/)
 - [Cloudflare R2 Workers API](https://developers.cloudflare.com/r2/api/workers/workers-api-reference/)
 - [Google AI 검색 안내](https://developers.google.com/search/docs/appearance/ai-features)
+
+## 슬로우조깅 간편 신청
+
+`/apply/`에서 인적사항과 동의를 입력하고 신청하기를 누르면 `/api/applications`가 D1에 저장한 후 접수번호를 반환합니다. Gmail 로그인이나 별도 메일 전송은 필요하지 않습니다. 기존 walking-db 또는 DB 바인딩을 사용하고 테이블을 자동 생성합니다. 메일 알림은 발송하지 않으며, `/admin/` 로그인 후 ‘신청 내역 확인’에서 최근 200건을 확인합니다. 신청 데이터는 89일 후 만료되며 신청·목록 조회 시 만료 데이터를 정리합니다.
