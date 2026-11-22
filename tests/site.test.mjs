@@ -7,9 +7,9 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist=path.join(root,'dist');
 const list=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?list(path.join(dir,e.name)):[path.join(dir,e.name)]);
-test('all 49 static pages contain one h1, unique metadata, valid JSON-LD and real internal targets',()=>{
+test('all 50 static pages contain one h1, unique metadata, valid JSON-LD and real internal targets',()=>{
   const pages=list(dist).filter(f=>f.endsWith('.html'));
-  assert.equal(pages.length,49);
+  assert.equal(pages.length,50);
   const titles=new Set(), descriptions=new Set();
   for (const file of pages) {
     const html=fs.readFileSync(file,'utf8');

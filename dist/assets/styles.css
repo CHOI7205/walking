@@ -54,3 +54,5 @@ section[aria-labelledby="kim-name"],section[aria-labelledby="choi-name"],section
 .class-notice-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;font-size:14px}
 .class-notice-actions a{background:#153f3c;color:white;border-radius:8px;padding:12px;text-decoration:none}
 html:has(.class-notice[open]){overflow:hidden}
+
+.application-container{max-width:680px}.application-container .form{background:#fff;border:1px solid #dce2e8;border-radius:20px}.application-container .field{font-size:17px;color:#19334d}.application-container .field input,.application-container .field select{min-height:64px;border:1px solid #cbd2da;border-radius:12px;padding:16px}.application-container .form-grid{gap:28px}.class-notice-actions{flex-wrap:wrap}.class-notice-actions a{flex:1;text-align:center;white-space:nowrap}.class-notice-actions button{flex-basis:100%;text-align:left}.application-container .status a{text-decoration:underline}

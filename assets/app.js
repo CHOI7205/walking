@@ -92,3 +92,28 @@ if (classNotice && typeof classNotice.showModal === 'function') {
   });
   if (!hiddenToday) classNotice.showModal();
 }
+
+function createApplicationMailUrl(data) {
+  const url = new URL('https://mail.google.com/mail/');
+  url.search = new URLSearchParams({view:'cm', fs:'1', to:'kptchoi7205@gmail.com',
+    su:'[슬로우조깅 신청] ' + data.name,
+    body:['대한바른자세걷기협회 프로그램 신청', '', '이름: ' + data.name,
+      '전화번호: ' + data.phone, '이메일: ' + data.email,
+      '프로그램: 슬로우조깅', '', '신청 상담을 위한 개인정보 전달에 동의합니다.'].join('\n')});
+  return url.href;
+}
+const applicationForm = document.querySelector('#application-form');
+applicationForm?.addEventListener('submit', event => {
+  event.preventDefault();
+  if (!applicationForm.reportValidity()) return;
+  const url = createApplicationMailUrl(Object.fromEntries(new FormData(applicationForm)));
+  window.open(url, '_blank', 'noopener,noreferrer');
+  const status = document.querySelector('#application-status');
+  status.textContent = '아직 신청 메일이 발송되지 않았습니다. Gmail에서 내용을 확인하고 ‘보내기’를 눌러 주세요. ';
+  const retry = document.createElement('a');
+  retry.href = url;
+  retry.target = '_blank';
+  retry.rel = 'noopener noreferrer';
+  retry.textContent = '신청 메일 작성창 다시 열기';
+  status.append(retry);
+});

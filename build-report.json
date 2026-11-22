@@ -1,7 +1,7 @@
 {
   "mode": "production",
   "origin": "https://bareunwalking.org",
-  "pages": 49,
+  "pages": 50,
   "indexable": 47,
   "routes": [
     "/",
@@ -47,6 +47,7 @@
     "/insights/prepare-class/",
     "/faq/",
     "/news/",
+    "/apply/",
     "/contact/",
     "/privacy/",
     "/editorial/",
