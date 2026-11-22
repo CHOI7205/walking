@@ -44,3 +44,13 @@ section[aria-labelledby="kim-name"],section[aria-labelledby="choi-name"],section
 .external-banner-wordmark{font-size:20px;font-weight:850;letter-spacing:.025em;color:#dc6d1c;line-height:1.2}
 
 .external-banner-wordmark-fitto{color:#5743a5}
+
+.class-notice{width:min(540px,calc(100vw - 24px));max-height:calc(100dvh - 32px);padding:0;border:0;border-radius:18px;background:#fff;color:#153f3c;box-shadow:0 20px 80px #0005;overflow:auto}
+.class-notice::backdrop{background:rgb(0 0 0 / .6)}
+.class-notice-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}
+.class-notice-toolbar h2{font-size:16px;margin:0}
+.class-notice button{font:inherit;cursor:pointer;border:0;background:transparent;color:inherit;padding:10px}
+.class-notice>img{display:block;width:100%;height:auto}
+.class-notice-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;font-size:14px}
+.class-notice-actions a{background:#153f3c;color:white;border-radius:8px;padding:12px;text-decoration:none}
+html:has(.class-notice[open]){overflow:hidden}
