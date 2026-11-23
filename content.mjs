@@ -24,7 +24,7 @@ export const cases = [
   "articleUrl": "https://bareunwalking.org/press/dongjak-foot-pressure-footwear-event-20261123/",
   "category": "행사 · 건강 체험",
   "program": "experience",
-  "title": "동작구청에서 만난 발 건강 · 족압 측정과 운동화 선택 안내",
+  "title": "동작구청에서 진행한 발 건강 · 족압 측정과 운동화 선택 안내",
   "institution": "동작구청",
   "date": "2026.11.23",
   "period": "2026년 11월 23일",
