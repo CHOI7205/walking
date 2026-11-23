@@ -21,6 +21,7 @@ export const programs = [
 export const cases = [
 {
   "slug": "dongjak-foot-health",
+  "articleUrl": "https://bareunwalking.org/press/dongjak-foot-pressure-footwear-event-20261123/",
   "category": "행사 · 건강 체험",
   "program": "experience",
   "title": "동작구청에서 만난 발 건강 · 족압 측정과 운동화 선택 안내",
