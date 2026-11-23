@@ -1,8 +1,8 @@
 export const programs = [
-  {slug:'community',num:'01',category:'보건소 · 복지관',title:'지역사회 바른 걷기',short:'주민의 일상에 가까운 걷기 교육',description:'보건소와 복지관의 지역주민을 위한 교육입니다. 족압과 보행 습관을 이해하고, 걷기와 근력·균형·유연성 운동을 함께 배웁니다.',audience:'보건소·지자체·노인복지관·지역 건강증진기관',image:'community',alt:'서호노인복지관 참여자들이 야외에서 균형운동을 배우는 모습',items:['올바른 걷기와 신발 선택에 관한 이론','족압·보행 특성을 살펴보는 측정 구성 협의','유연성·균형·근력운동과 걷기 실습','과정에 따른 사전·사후 측정 구성 협의'],cases:['songpa','sinwol-center','seoho','gwonseon','jangan','yangju','pangyo','yangcheon','seocho-ai-walking','gunpo-fall-prevention'],note:'실내 강의와 야외 실습을 조합할 수 있습니다. 대상자의 특성, 현장 환경과 회차에 따라 내용을 협의합니다.'},
+  {slug:'community',num:'01',category:'보건소 · 복지관',title:'지역사회 바른 걷기',short:'주민의 일상에 가까운 걷기 교육',description:'보건소와 복지관의 지역주민을 위한 교육입니다. 족압과 보행 습관을 이해하고, 걷기와 근력·균형·유연성 운동을 함께 배웁니다.',audience:'보건소·지자체·노인복지관·지역 건강증진기관',image:'community',alt:'서호노인복지관 참여자들이 야외에서 균형운동을 배우는 모습',items:['올바른 걷기와 신발 선택에 관한 이론','족압·보행 특성을 살펴보는 측정 구성 협의','유연성·균형·근력운동과 걷기 실습','과정에 따른 사전·사후 측정 구성 협의'],cases:['dongjak-foot-health','songpa','sinwol-center','seoho','gwonseon','jangan','yangju','pangyo','yangcheon','seocho-ai-walking','gunpo-fall-prevention'],note:'실내 강의와 야외 실습을 조합할 수 있습니다. 대상자의 특성, 현장 환경과 회차에 따라 내용을 협의합니다.'},
   {slug:'school',num:'02',category:'학교 · 청소년',title:'학생 바른자세·보행 교육',short:'자신의 발과 걸음을 이해하는 시간',description:'성장기 학생이 자신의 발과 보행 습관을 이해하도록 돕는 교육입니다. 학교 현장에서 족압 측정과 올바른 보행 교육을 진행하는 방식으로 구성합니다.',audience:'초·중·고등학교·교육기관·학생 건강증진 담당기관',image:'school',alt:'권선구보건소와 협회의 학생 바른 성장 프로젝트 안내문',items:['학생 눈높이에 맞춘 발과 보행 습관 이해','학교 방문 족압 측정 구성 협의','바른 자세와 올바른 보행을 위한 교육','학급 규모·장소에 맞춘 진행 방식 협의'],cases:['school-project','gyeonggi-education'],note:'학년, 학급 수, 교육 공간과 측정 장비 운영 여건을 먼저 확인합니다. 자세나 성장의 결과를 보장하는 과정은 아닙니다.'},
   {slug:'workplace',num:'03',category:'기업 · 임직원',title:'직장인 발 건강·걷기 교육',short:'일터에서 시작하는 바른 걷기 습관',description:'기업 임직원이 발과 보행을 이해하고 일상에서 활용할 걷기 방법을 배우는 교육입니다. 족압 분석과 걷기 교육을 기관의 운영 목적에 맞게 구성합니다.',audience:'기업 인사·복지·안전보건 담당 부서',image:'workplace',alt:'신세계 남산캠퍼스의 스마트 족압분석을 통한 올바른 보행 강의 안내',items:['족압과 보행 습관을 이해하는 강의','발 건강과 운동화 선택에 관한 교육','올바른 걷기 및 운동 실습 구성 협의','사내 강의·캠페인에 맞춘 현장 운영'],cases:['shinsegae','sbs','samsung','hyundai'],note:'근무 환경과 참여 인원에 따라 강의형 또는 측정·체험형으로 협의합니다. 구체적인 시간과 비용은 교육 구성에 따라 달라집니다.'},
-  {slug:'experience',num:'04',category:'행사 · 건강 체험',title:'찾아가는 걷기·족압 체험',short:'현장에서 만나고, 직접 살펴보는 내 걸음',description:'지역 걷기축제와 건강 행사에서 족압 측정 및 보행 교육을 진행합니다. 행사 동선과 참여 규모를 고려해 체험 운영을 협의합니다.',audience:'지자체·지역 행사 주최기관·건강 캠페인 운영기관',image:'lecture',alt:'참여자들을 대상으로 진행하는 바른 걷기 교육 현장',items:['행사 공간과 예상 참여 인원 사전 협의','족압 측정 및 보행 특성 설명','올바른 걷기와 운동 방법 교육','현장 동선과 장비 운영 방식 협의'],cases:['yangcheon-marathon','ywca','anseong-festival','seocho-health','baby-expo','seongnam-senior','chuncheon-walking-festival','chuncheon-childcare','sillegil-walk'],note:'측정 가능 인원과 운영 방식은 행사 시간, 장비 수와 공간에 따라 결정합니다.'},
+  {slug:'experience',num:'04',category:'행사 · 건강 체험',title:'찾아가는 걷기·족압 체험',short:'현장에서 만나고, 직접 살펴보는 내 걸음',description:'지역 걷기축제와 건강 행사에서 족압 측정 및 보행 교육을 진행합니다. 행사 동선과 참여 규모를 고려해 체험 운영을 협의합니다.',audience:'지자체·지역 행사 주최기관·건강 캠페인 운영기관',image:'lecture',alt:'참여자들을 대상으로 진행하는 바른 걷기 교육 현장',items:['행사 공간과 예상 참여 인원 사전 협의','족압 측정 및 보행 특성 설명','올바른 걷기와 운동 방법 교육','현장 동선과 장비 운영 방식 협의'],cases:['dongjak-foot-health','yangcheon-marathon','ywca','anseong-festival','seocho-health','baby-expo','seongnam-senior','chuncheon-walking-festival','chuncheon-childcare','sillegil-walk'],note:'측정 가능 인원과 운영 방식은 행사 시간, 장비 수와 공간에 따라 결정합니다.'},
   {
     slug:'instructor', num:'05', category:'전문인력 교육', title:'바른자세걷기 강사 교육',
     short:'족압 분석을 바탕으로 배우는 올바른 보행 지도',
@@ -19,6 +19,47 @@ export const programs = [
   },
 ];
 export const cases = [
+{
+  "slug": "dongjak-foot-health",
+  "category": "행사 · 건강 체험",
+  "program": "experience",
+  "title": "동작구청에서 만난 발 건강 · 족압 측정과 운동화 선택 안내",
+  "institution": "동작구청",
+  "date": "2026.11.23",
+  "period": "2026년 11월 23일",
+  "audience": "구청장을 포함한 행사 참여자 약 90명(협회 제공 집계)",
+  "eventPhoto": "dongjak-20261123-consultation",
+  "alt": "동작구청 건강측정 체험 부스에서 참여자와 족압 측정 결과지를 살펴보며 상담하는 모습",
+  "summary": "동작구청에서 구청장을 포함한 약 90명을 대상으로 족압 측정과 발 형태 분석을 진행하고, 운동화 선택·착용·관리와 무릎·고관절·허리 건강을 위한 예방 안내를 나눴습니다.",
+  "body": "2026년 11월 23일 동작구청에서 진행된 건강측정 체험 행사에 참여해 족압 측정과 발 건강 상담을 진행했습니다. 협회 제공 집계에 따르면 구청장을 포함해 약 90명이 검사를 받았습니다. 발바닥 압력 분포와 발의 형태를 살펴본 뒤 참여자별로 결과를 설명하고, 발에 맞는 운동화를 고르는 방법과 착용·세척·관리 방법을 안내했습니다. 발의 형태와 하지 정렬, 무릎·고관절·허리의 불편을 함께 살펴보며 일상에서 점검할 점과 예방을 위한 관리 방법도 설명했습니다. 현장 포스터에는 동작구보건소의 ‘몸과 마음 건강측정 체험 부스’로 스트레스 검사와 족압 측정이 소개돼 있습니다. 협회가 진행한 내용은 족압 측정과 발·보행 상담 및 교육입니다. 족압 측정만으로 관절·척추 질환을 확진하거나 예방 효과를 확인한 것은 아닙니다.",
+  "items": [
+    "스마트 족압 측정과 발바닥 압력 분포 확인",
+    "측정 결과와 발 형태에 대한 개별 설명",
+    "발에 맞는 운동화 선택과 올바른 착용 안내",
+    "운동화 세척·관리 방법과 사용 상태 점검 안내",
+    "발 형태·하지 정렬과 무릎·고관절·허리 불편을 함께 살피는 예방 상담"
+  ],
+  "photos": [
+    [
+      "dongjak-20261123-results",
+      "측정 결과지를 함께 살펴보며 발 건강을 안내하는 현장"
+    ],
+    [
+      "dongjak-20261123-guidance",
+      "참여자에게 측정 결과와 생활 속 관리 방법을 설명하는 모습"
+    ],
+    [
+      "dongjak-20261123-booth",
+      "동작구청 대강당 앞 족압 측정 장비와 상담 부스"
+    ],
+    [
+      "dongjak-20261123-poster",
+      "동작구보건소 몸과 마음 건강측정 체험 부스 안내: 스트레스 검사와 족압 측정"
+    ]
+  ],
+  "source": "협회 제공 행사 설명·참여 인원 집계 및 현장 사진 5장, 동작구보건소 체험 부스 포스터",
+  "sourceUpdated": "2026년 11월 23일"
+},
   {
     slug:'songpa',category:'보건소 · 복지관',program:'community',
     title:'내 발과 신발부터 살펴보는 바른자세걷기 교육',institution:'송파구보건소',
@@ -254,6 +295,31 @@ export const eventPhotoGroups = [
   {
     id: 'community-events', title: '걷기 행사·건강 체험',
     events: [
+{
+  "title": "동작구청 발 건강·족압 측정 체험",
+  "photos": [
+    [
+      "dongjak-20261123-consultation",
+      "동작구청 건강측정 체험 부스에서 참여자와 족압 측정 결과지를 살펴보며 상담하는 모습"
+    ],
+    [
+      "dongjak-20261123-results",
+      "측정 결과지를 함께 살펴보며 발 건강을 안내하는 현장"
+    ],
+    [
+      "dongjak-20261123-guidance",
+      "참여자에게 측정 결과와 생활 속 관리 방법을 설명하는 모습"
+    ],
+    [
+      "dongjak-20261123-booth",
+      "동작구청 대강당 앞 족압 측정 장비와 상담 부스"
+    ],
+    [
+      "dongjak-20261123-poster",
+      "동작구보건소 몸과 마음 건강측정 체험 부스 안내: 스트레스 검사와 족압 측정"
+    ]
+  ]
+},
       {title:'김유정 실레이야기길 걷기', photos:[
         ['sillegil-booth','걷기 행사에 마련된 협회 체험 부스'],
       ]},
