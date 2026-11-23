@@ -48,7 +48,7 @@ export const cases = [
     ],
     [
       "dongjak-20261123-booth",
-      "동작구 보건소 마음건강과 대강당 앞 족압 측정 장비와 상담 부스"
+      "동작구청 대강당 앞 족압 측정 장비와 상담 부스"
     ],
     [
       "dongjak-20261123-poster",
@@ -303,7 +303,7 @@ export const eventPhotoGroups = [
     ],
     [
       "dongjak-20261123-booth",
-      "동작구 보건소 마음건강과 대강당 앞 족압 측정 장비와 상담 부스"
+      "동작구청 대강당 앞 족압 측정 장비와 상담 부스"
     ],
     [
       "dongjak-20261123-poster",
