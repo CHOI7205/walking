@@ -17,12 +17,15 @@
   "character_count_including_spaces": 1854,
   "checked_at": "2026-11-23",
   "research_agent": "nov23_walking_buddy",
-  "publication_status": "게시용 복제본 검수 중 · 오전9시 이후 푸시",
-  "published_url": null,
+  "publication_status": "홈페이지 게시 완료 · 목록·6개소제목·본문일치·대표이미지 원본 일치·출처2개·RSS·사이트맵 확인",
+  "published_url": "https://bareunwalking.org/press/walking-buddy-respect-each-others-pace/",
   "publication_not_before": "2026-11-23T09:00:00+09:00",
   "prepared_at": "2026-11-22T23:51:58.551Z",
   "image_review": "두여성·넓은길·자연스러운보폭과인체·문자없음 확인",
   "image_width": 1536,
   "image_height": 1024,
-  "publication_requested_at": "2026-11-23T00:00:00.000Z"
+  "publication_requested_at": "2026-11-23T00:00:00.000Z",
+  "deployment_commit": "c7b61ea1407317ad4964eeac8c645ef26f31c2d0",
+  "publication_confirmed_at": "2026-11-23T00:01:38.767Z",
+  "publication_confirmed_at_kst": "2026-11-23 09:01:38 +09:00"
 }
