@@ -1,0 +1,94 @@
+{
+  "status": "research_only_unpublished",
+  "checked_on": "2026-11-23",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "한국형 전투화와 운동화의 족저압 비교, ORS 2024",
+      "url": "https://www.ors.org/wp-content/uploads/AM24/776.pdf",
+      "checked_on": "2026-11-23",
+      "access": "원문 학회 초록 PDF 직접 열람",
+      "limitations": "30명 보행 압력 실험; 질환 발생률 아님"
+    },
+    {
+      "id": "S2",
+      "title": "Factors Influencing Musculoskeletal Symptoms in Military Personnel during Basic Combat Training, 2016",
+      "url": "https://jkan.or.kr/journal/view.php?number=2701",
+      "checked_on": "2026-11-23",
+      "access": "학술지 공개 초록 직접 열람",
+      "limitations": "415명 편의표본; 자가보고 증상"
+    },
+    {
+      "id": "S3",
+      "title": "신형 전투화에서 발생하는 소와각질융해증 유병율 연구, 2016",
+      "url": "https://kiss.kstudy.com/Detail/Ar?key=4017121",
+      "checked_on": "2026-11-23",
+      "access": "조사 팀원이 공개 연구 요약 확인",
+      "limitations": "피부질환; 족저근막염 아님"
+    },
+    {
+      "id": "S4",
+      "title": "Burden and risk factors for plantar fasciopathy in the military population from 2006 to 2015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39904534/",
+      "checked_on": "2026-11-23",
+      "access": "PubMed 원연구 초록 직접 열람",
+      "limitations": "미군 발생률; 한국군에 직접 적용 불가; 초록 인원 합계 불일치"
+    },
+    {
+      "id": "S5",
+      "title": "질병관리청 국가건강정보포털: 족저근막염",
+      "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5975",
+      "checked_on": "2026-11-23",
+      "access": "공식 본문 직접 열람",
+      "limitations": "일반 임상 안내; 군인 발생률 아님"
+    },
+    {
+      "id": "S6",
+      "title": "Low fitness, low body mass and prior injury predict injury risk during military recruit training, 2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5117064/",
+      "checked_on": "2026-11-23",
+      "access": "원문 검색 전문 확인; 직접 URL은 CAPTCHA, 출판사 403",
+      "limitations": "발 손상 비중과 전체 손상 제한 기간을 구분"
+    },
+    {
+      "id": "S7",
+      "title": "Incidence of Musculoskeletal Injury in US Army Unit Types, 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29787695/",
+      "checked_on": "2026-11-23",
+      "access": "조사 팀원이 공개 원연구 초록 직접 확인",
+      "limitations": "전체 근골격계 손상; 발·족저근막염 전용 수치 아님"
+    },
+    {
+      "id": "S8",
+      "title": "육군훈련소 30연대 Q&A, 2026-11-07 답변",
+      "url": "https://www.katc.mil.kr/katc/corner/c30/qna.jsp?article_no=22345798&board_no=47&board_wrapper=%2Fkatc%2Fcorner%2Fc30%2Fqna.jsp&mode=view&pager.offset=0",
+      "checked_on": "2026-11-23",
+      "access": "공식 답변 검색 본문 확인; 직접 열기 타임아웃",
+      "limitations": "해당 훈련소 지급 안내; 전군 착용률·구매율 아님"
+    },
+    {
+      "id": "S9",
+      "title": "Effectiveness of foot orthoses for the prevention of lower limb overuse injuries in naval recruits, 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29056595/",
+      "checked_on": "2026-11-23",
+      "access": "PubMed 원연구 초록 직접 열람",
+      "limitations": "306명 RCT 복합결과; 통계적으로 확실한 예방 효과 아님"
+    },
+    {
+      "id": "S10",
+      "title": "Prescribed footwear and orthoses are not prophylactic in preventing lower extremity injuries in military tactical athletes, 2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34785586/",
+      "checked_on": "2026-11-23",
+      "access": "공개 출판 초록 검색 본문 확인; 직접 열기 제한",
+      "limitations": "22개 RCT 종합; 예방과 증상 치료를 구분"
+    },
+    {
+      "id": "S11",
+      "title": "충격흡수 및 통기기능 인솔을 적용한 개발 전투화의 족저압력 및 온도변화 연구, 2018",
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002334140",
+      "checked_on": "2026-11-23",
+      "access": "KCI 공개 초록 직접 열람",
+      "limitations": "11명 실험; 임상 예방 효과나 특정 브랜드 효과 아님"
+    }
+  ]
+}
