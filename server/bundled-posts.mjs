@@ -397,5 +397,50 @@ export const bundledPosts = [
     "status": "published",
     "published_at": "2026-11-23T00:00:00.000Z",
     "updated_at": "2026-11-23T00:00:00.000Z"
+  },
+  {
+    "id": "bundled-military-foot-health-combat-boots-and-insoles",
+    "slug": "military-foot-health-combat-boots-and-insoles",
+    "title": "행군을 버티는 발, 군인의 전투준비태세를 지키다",
+    "excerpt": "전투화와 군 훈련 중 발 통증을 국내외 연구로 살펴보고, 족저근막염 통계의 한계와 깔창·훈련 부하·조기 진료의 역할을 소개합니다.",
+    "body": "## 행군 뒤 발 통증, 참고 넘겨도 될까요\n\n전투화를 신고 행군하거나 오래 서 있다가 발바닥이 아프면 훈련에 적응하는 과정이라며 넘기기 쉽습니다. 하지만 발의 불편은 다음 훈련에 참여하고 임무를 이어가는 데 영향을 줄 수 있습니다. 국내 두 부대 훈련병 415명 조사에서는 발·발가락의 지속적인 통증이나 불편을 보고한 비율이 5.6%였습니다. 이는 족저근막염 진단률이 아닌 자가보고 증상입니다. 이 글은 군 복무 중인 장병과 가족을 위해, 전투화와 훈련 부하를 함께 살피는 방법을 소개합니다. 발 통증을 단순히 의지의 문제로 판단하기보다 원인을 확인하는 출발점이 필요합니다. [Factors Influencing Musculoskeletal Symptoms in Military Personnel during Basic Combat Training, 2016](https://jkan.or.kr/journal/view.php?number=2701)\n\n## 전투화의 압력 차이와 질병 발생은 다릅니다\n\n한국형 전투화와 운동화를 비교한 남성 30명의 보행 실험에서는 전투화의 발 앞쪽 중앙과 바깥쪽 압력이 더 높았습니다. 발에 가해지는 압력을 분산하고 맞음새를 개선할 필요성을 보여주지만, 장거리 행군이나 족저근막염 발생을 추적한 결과는 아닙니다. 전투화 때문에 병이 생겼다고 단정할 수는 없습니다. 미군의 2006~2015년 진료자료에서는 족저근막병증 발생률이 1,000인년당 12.85건이었습니다. 장병 1,000명을 각각 1년 관찰한 양에 해당하는 수치이며, 12.85%나 한국군의 발병 확률이라는 뜻은 아닙니다. [한국형 전투화와 운동화의 족저압 비교, ORS 2024](https://www.ors.org/wp-content/uploads/AM24/776.pdf) · [Burden and risk factors for plantar fasciopathy in the military population from 2006 to 2015](https://pubmed.ncbi.nlm.nih.gov/39904534/)\n\n## 발 건강은 훈련을 지속하는 기반입니다\n\n영국 보병훈련생 연구에서 손상 1,785건 중 발 부위가 차지한 비중은 26%였습니다. 근무 제한을 초래한 전체 손상의 제한 기간 중앙값은 24일이었습니다. 다만 24일은 족저근막염이나 발 손상만의 기간이 아닙니다. 한국군의 족저근막염 발생률과 이 질환에 한정한 훈련 손실 규모는 이번 공개 자료 조사로 확인하지 못했습니다. 해외 숫자로 국내 전투력이 몇 퍼센트 줄어든다고 계산해서도 안 됩니다. 그래도 발 손상을 일찍 살피는 일이 훈련 참여와 인력 운용에 중요하다는 점은 생각해볼 수 있습니다. [Low fitness, low body mass and prior injury predict injury risk during military recruit training, 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5117064/)\n\n## 깔창은 보급되지만 예방 효과는 따져야 합니다\n\n육군훈련소 공식 안내에는 전투화 보급 시 깔창도 지급한다고 나옵니다. 그러나 전군의 실제 착용률이나 사제 구매율은 확인하지 못했습니다. 호주 해군 신병 306명의 11주 시험에서는 여러 하지 과사용 손상의 복합 발생이 평면 깔창군 26.1%, 기성 발보조기군 17.6%였습니다. 수치는 낮았지만 통계적으로 확실한 차이는 아니었고 족저근막염 단독 결과도 아닙니다. 쿠션 깔창과 아치 지지 발보조기를 같은 제품으로 취급하거나 특정 제품이 질환을 예방한다고 광고할 근거로 삼기 어렵습니다. [육군훈련소 30연대 Q&A, 2026-11-07 답변](https://www.katc.mil.kr/katc/corner/c30/qna.jsp?article_no=22345798&board_no=47&board_wrapper=%2Fkatc%2Fcorner%2Fc30%2Fqna.jsp&mode=view&pager.offset=0) · [Effectiveness of foot orthoses for the prevention of lower limb overuse injuries in naval recruits, 2018](https://pubmed.ncbi.nlm.nih.gov/29056595/)\n\n## 장비 점검과 훈련 부하 조절을 함께 합니다\n\n발에 맞는 전투화인지, 특정 부위가 눌리거나 뒤꿈치가 불편하지 않은지 먼저 살펴보세요. 깔창을 바꿨다면 신발 안 공간과 착용감을 다시 확인해야 합니다. 질병관리청은 운동량을 갑자기 늘리지 않고 증상이 있을 때 활동을 조절하며 족저근막과 종아리 스트레칭을 시행하도록 안내합니다. 군에서는 통증을 보고하고 의무체계를 통해 훈련 조정과 치료 여부를 판단하는 것이 필요합니다. 깔창이나 뒤꿈치 쿠션은 필요한 경우 보조적으로 적용하되, 통증을 가린 채 같은 훈련을 계속하는 해결책으로 여기지 마세요. [질병관리청 국가건강정보포털: 족저근막염](https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5975)\n\n## 오늘은 통증 위치와 발생 시점을 기록하세요\n\n아침 첫발이나 쉬었다가 일어설 때 뒤꿈치가 아프다면 언제, 어디가 아픈지 적어두고 진료 때 전달해보세요. 행군 뒤 뒤꿈치 안팎까지 통증이 있거나 걷기 어려울 정도라면 족저근막염으로 자가 판단하지 말아야 합니다. 질병관리청은 행군이 많은 군인의 뒤꿈치 통증에서 종골 피로골절도 구분해야 한다고 설명합니다. 오늘 할 일은 무조건 더 걷는 것이 아니라 전투화의 맞음새와 통증 양상을 살피는 것입니다. 일찍 알리고 적절히 회복하는 과정이 다음 걸음을 준비하는 데 도움이 됩니다. [질병관리청 국가건강정보포털: 족저근막염](https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5975)",
+    "category": "걷기 정보",
+    "author": "대한바른자세걷기협회",
+    "source_name": "국내 군 훈련 연구 · ORS · BMJ · 육군훈련소 · 질병관리청",
+    "source_url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5975",
+    "cover_id": "",
+    "cover_image": "/assets/images/military-foot-health-combat-boots-and-insoles.png",
+    "cover_alt": "나무 벤치 위 전투화 한 켤레와 깔창, 양말을 그린 군인 발 건강 주제의 AI 생성 삽화",
+    "cover_caption": "전투화와 깔창 점검을 표현한 AI 생성 삽화입니다. 실제 군부대 촬영 사진이나 특정 제품 광고가 아닙니다.",
+    "body_images": [],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-23T01:08:35.949Z",
+    "updated_at": "2026-11-23T01:08:35.949Z"
+  },
+  {
+    "id": "bundled-dongjak-foot-pressure-footwear-event-20261123",
+    "slug": "dongjak-foot-pressure-footwear-event-20261123",
+    "title": "동작구청에서 진행한 내 발 이야기, 족압 측정에서 운동화 선택까지",
+    "excerpt": "동작구청에서 구청장을 포함한 동작구민 90여 명과 함께한 족압 측정·발 형태 분석 및 운동화 선택·착용·관리 상담 현장을 소개합니다.",
+    "body": "## 동작구민 90여 명과 함께 살펴본 발 건강\n\n매일 신고 걷는 운동화가 내 발에 맞는지, 오래 서 있으면 왜 무릎이나 허리가 불편한지 궁금할 때가 있습니다. 대한바른자세걷기협회는 2026년 11월 23일 동작구청 건강측정 체험 행사에서 이런 질문을 나누는 족압 측정과 상담을 진행했습니다. 협회 제공 집계에 따르면 구청장을 포함한 동작구민 90여 명이 검사를 받았습니다. 참여자들은 자신의 측정 결과를 함께 살펴보며 발의 형태와 평소 신발 사용 습관을 돌아봤습니다. 이번 현장은 발 건강을 멀리 있는 지식보다 일상에서 확인할 수 있는 문제로 만나는 시간이었습니다. [협회 제공 동작구청 행사 설명과 현장 사진 5장](https://bareunwalking.org/stories/dongjak-foot-health/)\n\n## 포스터 속 체험을 개별 설명으로 연결했습니다\n\n현장 포스터에는 동작구보건소의 ‘몸과 마음 건강측정 체험 부스’가 안내돼 있었습니다. 스트레스 검사와 족압 측정을 소개하고, 족압 측정은 몸의 균형과 긴장 패턴을 확인하는 체험으로 설명했습니다. 협회는 이 가운데 족압 측정과 발·보행 상담 및 교육을 진행했습니다. 발바닥 압력 분포와 발의 형태를 살펴보고 결과지를 보며 설명하는 방식으로 운영했습니다. 행사 전체 안내와 협회가 맡은 활동은 구분해 기록합니다. 사진에는 측정 장비와 상담 테이블, 참여자에게 결과를 안내하는 실제 현장이 담겨 있습니다. [협회 제공 동작구청 행사 설명과 현장 사진 5장](https://bareunwalking.org/stories/dongjak-foot-health/)\n\n![측정 결과지를 함께 살펴보며 발 건강을 설명하는 현장](/assets/images/dongjak-20261123-results.webp)\n\n## 운동화는 이름보다 발에 맞는지가 중요합니다\n\n상담에서는 운동화를 고르는 방법과 올바르게 착용하는 방법, 세척과 관리 방법을 함께 안내했습니다. 발의 모양과 신발 안 공간이 맞는지, 신었을 때 특정 부위가 불편하지 않은지 살피는 것이 출발점입니다. 영국 공공의료기관 NHS도 걷기 신발은 편안하고 충분히 지지해 주며 물집을 유발하지 않는 것을 권합니다. 이는 일반적인 신발 선택 안내이며 이번 행사에서 특정 제품의 효과를 검증했다는 뜻은 아닙니다. 집에서도 운동화를 신은 상태와 벗어둔 상태를 번갈아 살펴보며 내 발에 잘 맞는지 확인해보세요. [협회 제공 동작구청 행사 설명과 현장 사진 5장](https://bareunwalking.org/stories/dongjak-foot-health/) · [NHS — Walking for health](https://www.nhs.uk/live-well/exercise/walking-for-health/)\n\n![참여자에게 측정 결과와 생활 속 관리 방법을 안내하는 모습](/assets/images/dongjak-20261123-guidance.webp)\n\n## 발에서 무릎·고관절·허리까지 함께 이야기했습니다\n\n현장에서는 발의 형태와 하지 정렬을 살피고, 참여자가 평소 느끼는 무릎·고관절·허리의 불편도 함께 이야기하며 예방을 위한 생활 속 점검과 관리 방법을 안내했습니다. 발만 따로 보기보다 어떤 신발을 신고 언제 불편한지 돌아보는 과정입니다. 다만 족압 측정만으로 관절이나 척추 질환을 확진하거나, 발 형태가 모든 통증의 원인이라고 판단한 것은 아닙니다. 질병관리청도 발 통증을 평가할 때 증상과 병력, 신체검사를 살피고 다른 원인과 구분해야 한다고 설명합니다. 지속되는 불편은 별도의 진료가 필요할 수 있습니다. [협회 제공 동작구청 행사 설명과 현장 사진 5장](https://bareunwalking.org/stories/dongjak-foot-health/) · [질병관리청 — 족저근막염](https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5975)\n\n![동작구청 대강당 앞 족압 측정 장비와 상담 부스](/assets/images/dongjak-20261123-booth.webp)\n\n## 측정에서 배운 내용을 일상으로 가져갑니다\n\n검사 결과를 한 번 보는 데서 그치지 않고 평소 신는 운동화와 걷는 습관을 돌아보는 일이 중요합니다. 어떤 신발을 신을 때 불편한지, 오래 서 있거나 걸은 뒤 어디가 아픈지 간단히 기록해두면 이후 상담에서 자신의 상태를 설명하기 좋습니다. 운동화 세척과 관리는 제품의 소재와 관리 표시를 확인하고, 착용할 때의 편안함도 함께 점검해보세요. 이러한 점검은 행사 내용을 일상에 적용하기 위한 제안입니다. 이번 기록은 측정·상담의 진행 내용을 소개하며, 통증 개선률이나 질환 예방 효과를 나타내는 자료는 아닙니다.\n\n![동작구보건소 몸과 마음 건강측정 체험 부스 안내 포스터](/assets/images/dongjak-20261123-poster.webp)\n\n## 오늘은 내 운동화 한 켤레부터 살펴보세요\n\n오늘은 자주 신는 운동화 한 켤레를 꺼내 어느 부위가 눌리는지, 발이 신발 안에서 불편하지 않은지 확인해보세요. 발바닥이나 무릎·고관절·허리의 불편이 반복된다면 참으며 걷는 양을 늘리기보다 증상을 기록하고 필요한 평가를 받는 것이 좋습니다. 협회는 이번 동작구청 현장에서 족압 측정 결과를 설명하고 신발 선택과 관리, 예방을 위한 점검 방법을 나눴습니다. 행사 사진과 운영 내용은 [홈페이지 활동 사례](https://bareunwalking.org/stories/dongjak-foot-health/)에서도 볼 수 있습니다. 우리 발을 이해하는 작은 확인이 생활 속 건강 관리의 출발점이 되기를 바랍니다. [협회 제공 동작구청 행사 설명과 현장 사진 5장](https://bareunwalking.org/stories/dongjak-foot-health/)",
+    "category": "협회소식",
+    "author": "대한바른자세걷기협회",
+    "source_name": "협회 제공 행사 기록·현장 사진 및 NHS·질병관리청 일반 건강 안내",
+    "source_url": "https://bareunwalking.org/stories/dongjak-foot-health/",
+    "cover_id": "",
+    "cover_image": "/assets/images/dongjak-foot-pressure-footwear-event-20261123.png",
+    "cover_alt": "동작구청 건강측정 체험 부스에서 참여자와 족압 결과지를 함께 보며 설명하는 실제 행사 현장",
+    "cover_caption": "2026년 11월 23일 동작구청 족압 측정·발 건강 상담 현장. 사진: 협회 제공.",
+    "body_images": [
+      "/assets/images/dongjak-20261123-results.webp",
+      "/assets/images/dongjak-20261123-guidance.webp",
+      "/assets/images/dongjak-20261123-booth.webp",
+      "/assets/images/dongjak-20261123-poster.webp"
+    ],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-23T08:29:56.531Z",
+    "updated_at": "2026-11-23T08:33:55.448Z"
   }
 ];

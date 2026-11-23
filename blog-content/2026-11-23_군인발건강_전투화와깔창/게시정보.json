@@ -1,0 +1,46 @@
+{
+  "title": "행군을 버티는 발, 군인의 전투준비태세를 지키다",
+  "slug": "military-foot-health-combat-boots-and-insoles",
+  "date": "2026-11-23",
+  "category": "걷기 정보",
+  "summary": "전투화와 군 훈련 중 발 통증을 국내외 연구로 살펴보고, 족저근막염 통계의 한계와 깔창·훈련 부하·조기 진료의 역할을 소개합니다.",
+  "image_alt": "나무 벤치 위 전투화 한 켤레와 깔창, 양말을 그린 군인 발 건강 주제의 AI 생성 삽화",
+  "image_caption": "전투화와 깔창 점검을 표현한 AI 생성 삽화입니다. 실제 군부대 촬영 사진이나 특정 제품 광고가 아닙니다.",
+  "cover_file": "대표이미지.png",
+  "source_name": "국내 군 훈련 연구 · ORS · BMJ · 육군훈련소 · 질병관리청",
+  "source_url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5975",
+  "sources": [
+    "https://www.ors.org/wp-content/uploads/AM24/776.pdf",
+    "https://jkan.or.kr/journal/view.php?number=2701",
+    "https://pubmed.ncbi.nlm.nih.gov/39904534/",
+    "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5975",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5117064/",
+    "https://www.katc.mil.kr/katc/corner/c30/qna.jsp?article_no=22345798&board_no=47&board_wrapper=%2Fkatc%2Fcorner%2Fc30%2Fqna.jsp&mode=view&pager.offset=0",
+    "https://pubmed.ncbi.nlm.nih.gov/29056595/"
+  ],
+  "paragraph_count": 6,
+  "character_count_including_spaces": 1852,
+  "checked_at": "2026-11-23",
+  "research_agents": [
+    "korean_military_feet",
+    "military_pf_incidence",
+    "military_insoles"
+  ],
+  "publication_status": "홈페이지 공개 및 운영 검수 완료",
+  "prepared_at": "2026-11-23T01:08:35.949Z",
+  "image_width": 1536,
+  "image_height": 1024,
+  "image_review": "부츠 한 켤레·깔창·양말의 형태, 문자·브랜드·무기·군 표식 없음, 삽화 표시 확인",
+  "published_url": "https://bareunwalking.org/press/military-foot-health-combat-boots-and-insoles/",
+  "deployment_commit": "e47e450bf738f322eef4ea277bb1cc01684e375c",
+  "publication_confirmed_at": "2026-11-23T01:11:00.428Z",
+  "publication_confirmed_at_kst": "2026-11-23 10:11:00 +09:00",
+  "publication_checks": [
+    "Cloudflare Pages 배포 검사 성공",
+    "걷기 정보 분류 목록 HTTP 200",
+    "상세 본문·소제목·출처 링크 확인",
+    "대표 이미지 HTTP 200 및 원본 일치",
+    "사이트맵·RSS 수록 확인",
+    "walking-90b.pages.dev 상세 HTTP 200"
+  ]
+}
