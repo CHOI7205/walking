@@ -16,6 +16,7 @@ const dist = path.resolve(root, process.env.BUILD_OUTPUT || 'dist');
 await fs.mkdir(dist, { recursive: true });
 await fs.mkdir(path.join(dist, 'assets'), { recursive: true });
 await fs.cp(path.join(root, 'assets', 'images'), path.join(dist, 'assets', 'images'), { recursive: true });
+await fs.copyFile(path.join(root, 'assets', 'images', 'favicon.ico'), path.join(dist, 'favicon.ico'));
 await fs.cp(path.join(root, 'assets', 'fonts'), path.join(dist, 'assets', 'fonts'), { recursive: true });
 await fs.cp(path.join(root, 'assets', 'videos'), path.join(dist, 'assets', 'videos'), { recursive: true });
 for (const file of ['styles.css', 'app.js','cms.css','admin.js','hero.css','hero-motion.js']) await fs.copyFile(path.join(root, 'assets', file), path.join(dist, 'assets', file));

@@ -8,8 +8,8 @@ export function renderHero() {
     <h1 id="walking-hero-title" class="visually-hidden">바른 자세, 바른 걸음. 함께 걷는 건강한 일상.</h1>
     <div class="kinetic-stage" aria-hidden="true">
       <div class="kinetic-watermark">WALK</div>
-      <div class="kinetic-photo" data-hero-photo="0"><img src="/assets/images/hero-lecture-1280.webp" alt="" width="1280" height="960" fetchpriority="high" decoding="async"></div>
-      <div class="kinetic-photo kinetic-photo-secondary" data-hero-photo="1"><img src="/assets/images/hero-main-1280.webp" alt="" width="1280" height="960" loading="eager" decoding="async"></div>
+      <div class="kinetic-photo" data-hero-photo="0"><img src="/assets/images/hero-lecture-1280.webp" alt="신발을 활용해 올바른 걷기를 설명하는 협회 강사" width="1280" height="960" fetchpriority="high" decoding="async"></div>
+      <div class="kinetic-photo kinetic-photo-secondary" data-hero-photo="1"><img src="/assets/images/hero-main-1280.webp" alt="실내에서 바른자세와 균형 운동을 실습하는 교육 참여자들" width="1280" height="960" loading="eager" decoding="async"></div>
       ${scenes.map((s, i) => `<div class="kinetic-scene kinetic-scene-${i + 1}" data-scene="${i}">
         <div class="kinetic-copy"><p class="kinetic-kicker"><span>${s.n}</span> ${s.label}</p>
           <p class="kinetic-title">${s.lines.map((line, l) => `<span class="kinetic-line ${l ? 'kinetic-line-accent' : ''}">${[...line].map((c, j) => `<span class="kinetic-char" data-order="${l * 8 + j}">${c === ' ' ? '&nbsp;' : c}</span>`).join('')}</span>`).join('')}</p>
