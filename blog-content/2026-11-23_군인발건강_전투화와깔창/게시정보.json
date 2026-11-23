@@ -26,10 +26,21 @@
     "military_pf_incidence",
     "military_insoles"
   ],
-  "publication_status": "기사·이미지 검수 완료 / 배포 대기",
+  "publication_status": "홈페이지 공개 및 운영 검수 완료",
   "prepared_at": "2026-11-23T01:08:35.949Z",
   "image_width": 1536,
   "image_height": 1024,
   "image_review": "부츠 한 켤레·깔창·양말의 형태, 문자·브랜드·무기·군 표식 없음, 삽화 표시 확인",
-  "published_url": "https://bareunwalking.org/press/military-foot-health-combat-boots-and-insoles/"
+  "published_url": "https://bareunwalking.org/press/military-foot-health-combat-boots-and-insoles/",
+  "deployment_commit": "e47e450bf738f322eef4ea277bb1cc01684e375c",
+  "publication_confirmed_at": "2026-11-23T01:11:00.428Z",
+  "publication_confirmed_at_kst": "2026-11-23 10:11:00 +09:00",
+  "publication_checks": [
+    "Cloudflare Pages 배포 검사 성공",
+    "걷기 정보 분류 목록 HTTP 200",
+    "상세 본문·소제목·출처 링크 확인",
+    "대표 이미지 HTTP 200 및 원본 일치",
+    "사이트맵·RSS 수록 확인",
+    "walking-90b.pages.dev 상세 HTTP 200"
+  ]
 }
