@@ -4,9 +4,9 @@
   "date": "2026-11-23",
   "category": "협회소식",
   "summary": "동작구청에서 구청장을 포함한 동작구민 90여 명과 함께한 족압 측정·발 형태 분석 및 운동화 선택·착용·관리 상담 현장을 소개합니다.",
-  "image_alt": "동작구청 건강측정 체험 부스에서 참여자와 족압 결과지를 함께 보며 설명하는 실제 행사 현장",
+  "image_alt": "참석자의 신발 상태를 살펴보며 올바른 착용과 관리 방법을 안내하는 모습",
   "image_caption": "2026년 11월 23일 동작구청 족압 측정·발 건강 상담 현장. 사진: 협회 제공.",
-  "cover_file": "대표이미지.png",
+  "cover_file": "dongjak-20261123-footwear.webp",
   "source_name": "협회 제공 행사 기록·현장 사진 및 NHS·질병관리청 일반 건강 안내",
   "source_url": "https://bareunwalking.org/stories/dongjak-foot-health/",
   "sources": [
@@ -15,11 +15,6 @@
     "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5975"
   ],
   "inline_images": [
-    {
-      "file": "dongjak-20261123-results.webp",
-      "name": "dongjak-20261123-results.webp",
-      "alt": "측정 결과지를 함께 살펴보며 발 건강을 설명하는 현장"
-    },
     {
       "file": "dongjak-20261123-guidance.webp",
       "name": "dongjak-20261123-guidance.webp",
@@ -34,6 +29,11 @@
       "file": "dongjak-20261123-poster.webp",
       "name": "dongjak-20261123-poster.webp",
       "alt": "동작구보건소 몸과 마음 건강측정 체험 부스 안내 포스터"
+    },
+    {
+      "file": "dongjak-20261123-footwear.webp",
+      "name": "dongjak-20261123-footwear.webp",
+      "alt": "참석자의 신발 상태를 살펴보며 올바른 착용과 관리 방법을 안내하는 모습"
     }
   ],
   "paragraph_count": 6,
