@@ -80,7 +80,17 @@ export async function dynamicSitemap(request,env,config){
 }
 export async function pressFeed(request,env,config){
   const origin=config.origin||new URL(request.url).origin;
-  let posts;try{posts=(await listPublished(env.DB,{limit:30})).posts;}catch{posts=(await listPublished(null,{limit:30})).posts;}
-  const xml=`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${e(config.name)} 보도자료</title><link>${e(origin+'/press/')}</link><description>협회의 보도자료와 새로운 소식</description><language>ko</language>${posts.map(post=>`<item><title>${e(post.title)}</title><link>${e(origin+'/press/'+post.slug+'/')}</link><guid>${e(origin+'/press/'+post.slug+'/')}</guid><description>${e(post.excerpt)}</description><pubDate>${new Date(post.published_at).toUTCString()}</pubDate></item>`).join('')}</channel></rss>`;
+  let posts;try{posts=(await listPublished(env.DB,{limit:30,includeBody:true})).posts;}catch{posts=(await listPublished(null,{limit:30,includeBody:true})).posts;}
+  const items=posts.map(post=>{
+    const ids=Array.isArray(post.asset_ids)?post.asset_ids:JSON.parse(post.asset_ids||'[]');
+    const cover=coverUrl(post);
+    const html=(cover?`<figure><img src="${e(cover)}" alt="${e(post.cover_alt||post.title)}"></figure>`:'')
+      +renderMarkdown(post.body||post.excerpt,ids,post.body_images||[])
+      +(post.source_url?`<p>자료 출처: <a href="${e(post.source_url)}">${e(post.source_name||'원문 보기')}</a></p>`:'')
+      +`<p><a href="${e(origin+'/press/'+post.slug+'/')}">협회 홈페이지에서 원문 보기</a></p>`;
+    const absoluteHtml=html.replace(/\b(src|href)="(\/[^"\s]*)"/g,(_,attr,url)=>`${attr}="${e(origin)}${url}"`);
+    return `<item><title>${e(post.title)}</title><link>${e(origin+'/press/'+post.slug+'/')}</link><guid isPermaLink="true">${e(origin+'/press/'+post.slug+'/')}</guid><description>${e(absoluteHtml)}</description><pubDate>${new Date(post.published_at).toUTCString()}</pubDate></item>`;
+  }).join('');
+  const xml=`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${e(config.name)} 보도자료</title><link>${e(origin+'/press/')}</link><description>협회의 보도자료와 새로운 소식</description><language>ko</language>${items}</channel></rss>`;
   return new Response(xml,{headers:{'Content-Type':'application/rss+xml; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex'}});
 }

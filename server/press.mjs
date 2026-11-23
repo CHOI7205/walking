@@ -22,13 +22,13 @@ export function validatePost(raw) {
   return post;
 }
 export const publicPost = post => ({...post,asset_ids:JSON.parse(post.asset_ids||'[]')});
-export async function listPublished(db,{q='',category='',page=1,limit=9}={}) {
+export async function listPublished(db,{q='',category='',page=1,limit=9,includeBody=false}={}) {
   const bundled=bundledPosts.filter(post=>(!q||(post.title+' '+post.excerpt).includes(q))&&(!categories.includes(category)||post.category===category));
   const where=['status = ?'],args=['published'];
   if(q){where.push('(title LIKE ? OR excerpt LIKE ?)');args.push('%'+q+'%','%'+q+'%');}
   if(categories.includes(category)){where.push('category = ?');args.push(category);}
   let rows=[];
-  if(db){await ensurePressSchema(db);const result=await db.prepare(`SELECT id,slug,title,excerpt,category,author,cover_id,cover_alt,published_at,updated_at FROM press_posts WHERE ${where.join(' AND ')} ORDER BY published_at DESC,id DESC LIMIT ? OFFSET ?`).bind(...args,page*limit+1,0).all();rows=result.results;}
+  if(db){await ensurePressSchema(db);const result=await db.prepare(`SELECT id,slug,title,excerpt,category,author,cover_id,cover_alt,published_at,updated_at${includeBody?',body,asset_ids,source_name,source_url':''} FROM press_posts WHERE ${where.join(' AND ')} ORDER BY published_at DESC,id DESC LIMIT ? OFFSET ?`).bind(...args,page*limit+1,0).all();rows=result.results;}
   const slugs=new Set(rows.map(post=>post.slug));
   const posts=[...rows,...bundled.filter(post=>!slugs.has(post.slug))].sort((a,b)=>b.published_at.localeCompare(a.published_at)||b.id.localeCompare(a.id));
   return {posts:posts.slice((page-1)*limit,page*limit),hasMore:posts.length>page*limit};

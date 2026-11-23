@@ -58,3 +58,18 @@ test('source photographs render only from the bundled article image allowlist',a
   assert.ok(!renderMarkdown(marker).includes('<img'));
   assert.ok(!renderMarkdown('![caption](https://unapproved.example/photo.jpg)',[],photoPost.body_images).includes('<img'));
 });
+
+test('RSS includes full public article bodies and absolute image URLs as escaped HTML',async()=>{
+  const response=await pressFeed(new Request(config.origin+'/press/feed.xml'),env,config);
+  assert.equal(response.status,200);
+  const xml=await response.text();
+  const {posts}=await listPublished(null,{limit:30});
+  const post=posts.find(p=>p.body_images?.length);
+  assert.ok(post,'feed contains a photographed activity article');
+  assert.ok(xml.includes('src=&quot;'+config.origin+post.body_images[0]+'&quot;'));
+  assert.ok(!xml.includes('src=&quot;/'));
+  assert.ok(xml.includes('&lt;h2&gt;'));
+  assert.ok(xml.includes('&lt;a href=&quot;'+config.origin+'/press/'+post.slug+'/&quot;'));
+  assert.ok(!xml.includes('<script'));
+  assert.ok(xml.includes('<guid isPermaLink="true">'));
+});
