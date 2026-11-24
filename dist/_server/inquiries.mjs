@@ -46,9 +46,11 @@ async function readLimitedBody(request) {
 
 export async function notifyInquiry(env, reference, data) {
   // Optional transactional email. A successful inquiry never depends on email delivery.
-  if (!env.RESEND_API_KEY || !env.CONTACT_FROM) return;
+  if (!env.RESEND_API_KEY || !env.CONTACT_FROM) return 'not_configured';
+  let status = 'failed';
+  const programs = {community:'지역사회 바른 걷기',school:'학생·청소년',workplace:'기업·임직원',experience:'행사·건강 체험',instructor:'강사 교육',other:'기타·프로그램 상담'};
   const labels = {organization:'기관명',name:'담당자',phone:'연락처',email:'이메일',program:'희망 프로그램',region:'교육 지역',participants:'예상 인원',schedule:'희망 시기',message:'문의 내용'};
-  const text = `기관 교육 문의가 접수되었습니다.\n접수번호: ${reference}\n\n` + Object.entries(labels).map(([key,label])=>`${label}: ${data[key] ?? '미정'}`).join('\n');
+  const text = `기관 교육 문의가 접수되었습니다.\n접수번호: ${reference}\n\n` + Object.entries(labels).map(([key,label])=>`${label}: ${key==='program'?programs[data[key]]:data[key] || '미정'}`).join('\n');
   try {
     const response = await fetch('https://api.resend.com/emails', {
       method:'POST',
@@ -56,10 +58,10 @@ export async function notifyInquiry(env, reference, data) {
       body:JSON.stringify({from:env.CONTACT_FROM,to:[env.CONTACT_TO || 'kptchoi7205@gmail.com'],subject:'[대한바른자세걷기협회] 기관 교육 문의 '+reference,text,...(data.email?{reply_to:data.email}:{})}),
       signal:AbortSignal.timeout(10000)
     });
-    await env.DB.prepare('UPDATE inquiries SET notification_status = ? WHERE id = ?').bind(response.ok?'sent':'failed',reference).run();
-  } catch {
-    await env.DB.prepare('UPDATE inquiries SET notification_status = ? WHERE id = ?').bind('failed',reference).run();
-  }
+    status = response.ok ? 'sent' : 'failed';
+  } catch {}
+  try { await env.DB.prepare('UPDATE inquiries SET notification_status = ? WHERE id = ?').bind(status,reference).run(); } catch {}
+  return status;
 }
 
 export async function handleInquiry(request, env, ctx = {}) {
@@ -81,6 +83,11 @@ export async function handleInquiry(request, env, ctx = {}) {
   const hashBuffer = await crypto.subtle.digest('SHA-256',new TextEncoder().encode(env.INQUIRY_HASH_SALT+':'+ip));
   const ipHash = Array.from(new Uint8Array(hashBuffer),b=>b.toString(16).padStart(2,'0')).join('');
   try {
+    await env.DB.batch([
+      `CREATE TABLE IF NOT EXISTS inquiries (id TEXT PRIMARY KEY, created_at INTEGER NOT NULL, expires_at INTEGER NOT NULL, ip_hash TEXT NOT NULL, payload TEXT NOT NULL CHECK(json_valid(payload)), notification_status TEXT NOT NULL DEFAULT 'pending')`,
+      'CREATE INDEX IF NOT EXISTS inquiries_rate ON inquiries(ip_hash, created_at)',
+      'CREATE INDEX IF NOT EXISTS inquiries_expiry ON inquiries(expires_at)'
+    ].map(sql=>env.DB.prepare(sql)));
     const operations = [
       env.DB.prepare('DELETE FROM inquiries WHERE expires_at <= ?').bind(now),
       env.DB.prepare(`INSERT INTO inquiries (id, created_at, expires_at, ip_hash, payload, notification_status)
@@ -93,9 +100,8 @@ export async function handleInquiry(request, env, ctx = {}) {
   } catch {
     return failure(503,'접수를 저장하지 못했습니다. 입력 내용은 그대로 유지됩니다. 잠시 후 다시 시도하거나 전화·이메일로 문의해 주세요.');
   }
-  if (ctx.waitUntil) ctx.waitUntil(notifyInquiry(env,reference,result.data));
-  else await notifyInquiry(env,reference,result.data);
-  return json(201,{reference,message:'문의가 접수되었습니다.'});
+  const notification = await notifyInquiry(env,reference,result.data);
+  return json(201,{reference,notification,message:'문의가 접수되었습니다.'});
 }
 
 export async function purgeExpired(env, timestamp = Date.now()) {

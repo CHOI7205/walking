@@ -6,9 +6,9 @@ import {handleInquiry,validateInquiry,purgeExpired} from '../server/inquiries.mj
 
 const valid = {organization:'교육 검증용 기관',name:'테스트 담당자',phone:'02-0000-0000',email:'test@example.org',program:'community',region:'서울',participants:'20',schedule:'미정',message:'테스트를 위한 기관 교육 문의입니다.',consent:true,website:''};
 const request = (data=valid,extra={})=>new Request('https://walk.test/api/inquiries',{method:'POST',headers:{Origin:'https://walk.test','Content-Type':'application/json','CF-Connecting-IP':'192.0.2.20',...extra.headers},body:JSON.stringify(data),...extra});
-function database() {
+function database(initialize=true) {
   const sqlite = new DatabaseSync(':memory:');
-  sqlite.exec(fs.readFileSync(new URL('../migrations/0001_inquiries.sql',import.meta.url),'utf8'));
+  if(initialize)sqlite.exec(fs.readFileSync(new URL('../migrations/0001_inquiries.sql',import.meta.url),'utf8'));
   const wrap = (sql,args=[])=>({bind(...values){return wrap(sql,values);},async run(){const r=sqlite.prepare(sql).run(...args);return {meta:{changes:Number(r.changes)}};}});
   return {sqlite,prepare:wrap,async batch(statements){sqlite.exec('BEGIN');try{const results=[];for(const s of statements)results.push(await s.run());sqlite.exec('COMMIT');return results;}catch(e){sqlite.exec('ROLLBACK');throw e;}}};
 }
@@ -53,4 +53,27 @@ test('expired personal data is removed by scheduled cleanup',async()=>{
   await purgeExpired({DB:db},Date.now()+90*86400*1000);
   assert.equal(db.sqlite.prepare('SELECT COUNT(*) AS n FROM inquiries').get().n,0);
   db.sqlite.close();
+});
+
+test('inquiry initializes storage and sends to the configured inbox with any reply address',async()=>{
+  const db=database(false),original=globalThis.fetch;
+  try{
+    globalThis.fetch=async(url,options)=>{
+      assert.equal(url,'https://api.resend.com/emails');
+      const payload=JSON.parse(options.body);
+      assert.deepEqual(payload.to,['association@example.org']);
+      assert.equal(payload.reply_to,'visitor@naver.com');
+      assert.ok(payload.text.includes(valid.message));
+      assert.ok(payload.text.includes('지역사회 바른 걷기'));
+      return new Response('{}',{status:200});
+    };
+    const env={DB:db,INQUIRY_HASH_SALT:'test-only-secret',RESEND_API_KEY:'test-key',CONTACT_FROM:'notice@example.org',CONTACT_TO:'association@example.org'};
+    const result=await (await handleInquiry(request({...valid,email:'visitor@naver.com'}),env)).json();
+    assert.equal(result.notification,'sent');
+    assert.equal(db.sqlite.prepare('SELECT notification_status FROM inquiries WHERE id=?').get(result.reference).notification_status,'sent');
+    globalThis.fetch=async()=>new Response('{}',{status:500});
+    const failed=await (await handleInquiry(request(),env)).json();
+    assert.equal(failed.notification,'failed');
+    assert.ok(db.sqlite.prepare('SELECT id FROM inquiries WHERE id=?').get(failed.reference));
+  }finally{globalThis.fetch=original;db.sqlite.close();}
 });
