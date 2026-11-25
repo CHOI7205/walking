@@ -19,9 +19,12 @@
   "checked_at": "2026-11-25",
   "research_agent": "nov25_strength_review",
   "prepared_at": "2026-11-25T00:02:31.771Z",
-  "publication_status": "원고·이미지 검수 완료 / 배포 대기",
+  "publication_status": "홈페이지 공개·본문·이미지·출처·목록·RSS·사이트맵 확인 완료",
   "published_url": "https://bareunwalking.org/press/walking-and-strength-weekly-plan/",
   "image_width": 1536,
   "image_height": 1024,
-  "image_review": "보행 및 벽 짚기 자세·사지·손·신발·배경 확인. 문구·로고 없음. AI 삽화 표시."
+  "image_review": "보행 및 벽 짚기 자세·사지·손·신발·배경 확인. 문구·로고 없음. AI 삽화 표시.",
+  "deployment_commit": "83ce7ab73097eccfc91fa34a120f8d2c54afe923",
+  "publication_confirmed_at": "2026-11-25T00:04:12.049Z",
+  "publication_confirmed_at_kst": "2026-11-25 09:04:12 +09:00"
 }
