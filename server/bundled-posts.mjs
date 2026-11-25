@@ -474,13 +474,13 @@ export const bundledPosts = [
     "source_name": "CDC · WHO",
     "source_url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
     "cover_id": "",
-    "cover_image": "/assets/images/walking-and-strength-weekly-plan.png",
-    "cover_alt": "공원에서 걷는 중장년 남성과 집에서 벽을 짚고 근력운동을 하는 모습을 나란히 표현한 AI 생성 삽화",
-    "cover_caption": "걷기와 근력운동을 함께 계획하는 생활을 표현한 AI 생성 삽화입니다. 실제 협회 교육 현장 사진이 아닙니다.",
+    "cover_image": "/assets/images/walking-and-strength-resistance-photo.jpg",
+    "cover_alt": "실내 운동 공간에서 탄력밴드를 이용해 운동하는 두 성인의 실제 사진",
+    "cover_caption": "탄력밴드를 활용한 운동 참고 사진. 사진: Yan Krukau / Pexels, Pexels License. 협회 교육 현장 사진이 아닙니다.",
     "body_images": [],
     "asset_ids": "[]",
     "status": "published",
     "published_at": "2026-11-25T00:02:31.771Z",
-    "updated_at": "2026-11-25T00:02:31.771Z"
+    "updated_at": "2026-11-25T01:13:03.471Z"
   }
 ];
