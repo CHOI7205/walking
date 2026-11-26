@@ -1,8 +1,8 @@
 {
   "mode": "production",
   "origin": "https://bareunwalking.org",
-  "pages": 51,
-  "indexable": 48,
+  "pages": 52,
+  "indexable": 49,
   "routes": [
     "/",
     "/about/",
@@ -54,6 +54,7 @@
     "/editorial/",
     "/404.html",
     "/press/",
+    "/reviews/",
     "/admin/"
   ]
 }

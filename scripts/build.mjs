@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { programs, cases, articles, faqs, eventPhotoGroups } from '../content.mjs';
 import { renderHero } from './hero.mjs';
+import { renderReviews } from './reviews.mjs';
 import { pressPromotionVideo } from '../server/render-press.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -39,7 +40,7 @@ const image = (name, alt, attrs = '') => {
   const small = ['expert','expert-kim-portrait','expert-park','expert-song','logo'].includes(name);
   return `<img src="/assets/images/${name}-${small ? '480' : '1280'}.webp" ${small ? '' : `srcset="/assets/images/${name}-640.webp 640w, /assets/images/${name}-1280.webp 1280w" sizes="(max-width: 600px) 100vw, (max-width: 850px) 50vw, 600px"`} alt="${esc(alt)}" ${attrs || 'loading="lazy"'} decoding="async">`;
 };
-const navItems = [['/about/','협회 소개'],['/programs/','교육 프로그램'],['/stories/','활동 사례'],['/insights/','걷기 정보'],['/press/','보도자료'],['/news/','협회 소식']];
+const navItems = [['/about/','협회 소개'],['/programs/','교육 프로그램'],['/stories/','활동 사례'],['/insights/','걷기 정보'],['/press/','보도자료'],['/reviews/','강의후기'],['/news/','협회 소식']];
 function header(route) {
   return `<a class="skip" href="#main">본문 바로가기</a><header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="대한바른자세걷기협회 홈">${image('logo','', 'width="56" height="56"')}<span><strong>대한바른자세걷기협회</strong><small>KOREA UPRIGHT WALKING ASSOCIATION</small></span></a><nav id="main-nav" class="nav" aria-label="주 메뉴">${navItems.map(([url,label])=>`<a href="${url}"${route.startsWith(url)?' aria-current="page"':''}>${label}</a>`).join('')}</nav><a class="header-contact" href="/contact/">기관 교육 문의 <span aria-hidden="true">↗</span></a><button type="button" class="menu-toggle" aria-controls="main-nav" aria-expanded="false">메뉴</button></div></header>`;
 }
@@ -240,6 +241,7 @@ await writePage({route:'/editorial/',title:'콘텐츠 작성 기준',description
 await writePage({route:'/404.html',title:'페이지를 찾을 수 없습니다',description:'요청하신 페이지가 없습니다. 대한바른자세걷기협회 홈이나 교육 프로그램을 확인해 주세요.',noindex:true,showCta:false,body:`<section class="empty-page"><div class="container"><p class="eyebrow">404 · Page not found</p><h1>페이지를 찾을 수 없습니다.</h1><p>주소가 변경되었거나 없는 페이지입니다.<br>홈에서 필요한 정보를 다시 찾아보세요.</p>${link('/','홈으로 돌아가기')}</div></section>`});
 
 await writePage({route:'/press/',title:'보도자료와 협회 이야기',description:'대한바른자세걷기협회의 보도자료와 새로운 활동 소식을 만나보세요.',crumbs:[['/press/','보도자료']],showCta:false,body:pageTop('바른 걸음으로 이어지는 이야기','협회의 보도자료와 새로운 활동 소식을 전합니다.','Newsroom',[['/press/','보도자료']])+'<section class="section"><div class="container">'+pressPromotionVideo()+'<div class="press-empty"><h2>새로운 소식을 준비하고 있습니다</h2><p>협회의 보도자료와 현장 이야기를 이곳에서 전합니다.</p></div><div class="press-list-footer"><a href="/news/">협회 소식</a><a href="/admin/">관리자 로그인</a></div></div></section>'});
+await writePage({route:'/reviews/',title:'강의후기',description:'대한바른자세걷기협회 걷기교육 참여자들이 남긴 소감과 프로그램 만족도 조사 내용을 이름 없이 소개합니다.',crumbs:[['/reviews/','강의후기']],body:pageTop('배움 뒤에 남은 목소리','걷기교육에 참여한 분들이 직접 남겨주신 강의후기를 전합니다.','Participant stories',[['/reviews/','강의후기']])+renderReviews()});
 await writePage({route:'/admin/',title:'보도자료 관리',description:'대한바른자세걷기협회 보도자료 관리자 로그인과 글 편집 화면입니다.',noindex:true,showCta:false,body:await fs.readFile(path.join(root,'assets','admin.html'),'utf8')});
 await fs.cp(path.join(root,'server'),path.join(dist,'_server'),{recursive:true});
 await fs.writeFile(path.join(dist,'_server','runtime-config.mjs'),'export default '+JSON.stringify({...config,origin,production})+';\n');
