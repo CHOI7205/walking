@@ -482,5 +482,25 @@ export const bundledPosts = [
     "status": "published",
     "published_at": "2026-11-25T00:02:31.771Z",
     "updated_at": "2026-11-25T01:13:03.471Z"
+  },
+  {
+    "id": "bundled-walking-for-a-mental-break",
+    "slug": "walking-for-a-mental-break",
+    "title": "마음이 복잡한 날, 짧은 걷기로 일상에 쉼표를",
+    "excerpt": "마음이 복잡한 날, 가까운 안전한 길을 잠깐 걸으며 일상에 휴식을 넣는 방법을 소개합니다. CDC·NHS의 안내를 바탕으로 걷기의 가능성과 한계를 함께 살펴봅니다.",
+    "body": "## 해결할 일이 많을수록 잠깐 자리를 바꿔봅니다\n\n해야 할 일이 쌓이거나 같은 생각이 머릿속을 맴돌 때, 앉아 있는 자리에서 계속 답을 찾게 됩니다. 이럴 때 가까운 길을 잠깐 걸으며 일상의 흐름을 바꿔보면 어떨까요. 오늘의 목표는 운동 기록을 채우거나 고민을 반드시 해결하는 것이 아닙니다. 걷는 시간을 하루 사이에 작은 휴식으로 넣어보자는 제안입니다. 영국 공공의료기관 NHS도 일과 전후나 중간의 짧은 걷기가 일상에서 정신적인 휴식이 될 수 있다고 안내합니다. 여유가 적은 날에도 가까운 곳을 다녀올 수 있습니다. [NHS — Be active for your mental health](https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/be-active-for-your-mental-health/)\n\n## 기분 전환의 가능성과 치료는 구분합니다\n\n미국 질병통제예방센터 CDC는 중강도 이상의 신체활동을 한 차례 했을 때 성인의 단기적인 불안감 감소 같은 이점이 나타날 수 있다고 설명합니다. 이는 모든 속도의 짧은 산책에서 누구나 즉시 같은 변화를 느낀다는 뜻은 아닙니다. NHS 역시 활동을 마음 건강을 돌보는 방법 중 하나로 소개합니다. 걷고도 마음이 가볍지 않을 수 있으며, 그 결과를 의지의 부족으로 해석할 필요는 없습니다. 걷기는 우울감이나 불안에 대한 전문적인 평가와 치료를 대신하지 않습니다. 마음의 어려움이 오래 이어져 생활을 방해한다면 도움을 구하는 일도 함께 생각하세요. [CDC — Benefits of Physical Activity](https://www.cdc.gov/physical-activity-basics/benefits/index.html) · [NHS — Be active for your mental health](https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/be-active-for-your-mental-health/)\n\n## 멀리 가기보다 돌아오기 쉬운 길을 고릅니다\n\n출발 전에는 몸 상태와 날씨, 밝기와 길의 상태부터 확인합니다. 익숙하고 평탄하며 통행이 안전한 가까운 길을 고르면 되돌아오기도 수월합니다. 먼 공원이나 특별한 코스를 찾아야만 기분 전환이 되는 것은 아닙니다. 오늘 일정에 부담이 되지 않는 범위에서 잠깐 걸어보세요. 비나 추위 때문에 바깥 활동이 어렵다면 안전하게 움직일 수 있는 실내 공간을 고를 수도 있습니다. 이런 경로 선택은 일상에서 시도하기 쉽도록 정리한 실천 예시이며, 특정 거리나 시간이 마음 건강의 효과를 보장한다는 처방은 아닙니다.\n\n## 생각을 없애려 애쓰기보다 주변을 살펴봅니다\n\n걷는 동안 고민이 다시 떠올라도 억지로 밀어내야 하는 것은 아닙니다. 앞의 길을 확인하면서 나무의 색이나 주변의 소리처럼 지금 만나는 풍경에 잠깐 관심을 옮겨보세요. NHS는 야외에서 움직이며 주변에서 보고 듣는 것 등에 주의를 기울이는 방법을 소개합니다. 이 글에서는 안전한 보행을 우선해, 차도와 횡단 구간에서는 차량과 신호를 먼저 확인하도록 제안합니다. 눈을 감거나 휴대전화에 몰입한 채 걸을 필요는 없습니다. 자연을 찾아가기 어려운 날에는 익숙한 길의 작은 변화를 살피는 것만으로 시작해도 좋습니다. [NHS — Be active for your mental health](https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/be-active-for-your-mental-health/)\n\n## 걷고 난 뒤의 느낌을 성적표로 만들지 마세요\n\n돌아와서는 발과 호흡이 편안했는지, 잠깐 자리를 바꾸는 일이 어땠는지 살펴봅니다. 기분이 좋아졌는지를 점수로 매기거나 어제보다 나아져야 한다고 재촉하지 않아도 됩니다. 피곤했다면 다음에는 덜 걷거나 쉬는 쪽으로 조정할 수 있습니다. 걷는 중 통증이나 어지럼이 생기면 중단하고 상태를 확인하세요. 건강 문제로 활동 범위를 정하기 어렵다면 의료진과 상의하는 것이 좋습니다. 주변 사람에게 마음을 이야기하거나 필요한 상담을 받는 선택도 걷기와 경쟁하지 않습니다. 자신에게 도움이 되는 방법을 하나씩 알아가는 과정으로 생각해보세요.\n\n## 오늘은 잠깐 걸을 틈 하나를 정해보세요\n\n점심 뒤나 일을 마친 뒤처럼 잠깐 움직일 여유가 있는 때를 떠올려보세요. 출발할 수 있는 날에는 편한 신발을 신고 가까운 안전한 길을 다녀옵니다. 오늘 바깥에 나가기 어렵다면 다른 날로 바꾸어도 괜찮습니다. 돌아온 뒤 다음에 또 걸을지, 어느 길이 편했는지 정도만 생각해두세요. 짧은 걷기의 의미를 늘 밝은 기분으로 돌아오는 데에만 둘 필요는 없습니다. 하던 일을 잠시 멈추고 몸과 주변을 살피는 시간도 일상의 한 부분이 될 수 있습니다. 오늘은 더 많은 걸음보다 자신에게 부담 없는 쉼표 하나를 만들어보면 어떨까요. [NHS — Be active for your mental health](https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/be-active-for-your-mental-health/)",
+    "category": "걷기 정보",
+    "author": "대한바른자세걷기협회",
+    "source_name": "CDC · NHS",
+    "source_url": "https://www.cdc.gov/physical-activity-basics/benefits/index.html",
+    "cover_id": "",
+    "cover_image": "/assets/images/walking-for-a-mental-break.jpg",
+    "cover_alt": "햇빛이 드는 공원 길을 나란히 걷는 두 사람의 뒷모습을 담은 실제 참고 사진",
+    "cover_caption": "공원 걷기 참고 사진. 사진: SHVETS production / Pexels, Pexels License. 협회 교육 현장이나 사진 속 인물의 건강 상태를 나타내는 자료가 아닙니다.",
+    "body_images": [],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-26T00:42:17.598Z",
+    "updated_at": "2026-11-26T00:42:17.598Z"
   }
 ];
