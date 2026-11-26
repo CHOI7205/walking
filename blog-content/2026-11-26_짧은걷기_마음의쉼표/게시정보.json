@@ -18,12 +18,15 @@
   "checked_at": "2026-11-26",
   "research_agent": "nov26_walk_mood",
   "prepared_at": "2026-11-26T00:42:17.598Z",
-  "publication_status": "원고·공개 사진 검수 완료 / 배포 대기",
+  "publication_status": "공개 목록·상세6문단·실제사진·출처·canonical·검색허용·사이트맵·RSS 확인 완료",
   "published_url": "https://bareunwalking.org/press/walking-for-a-mental-break/",
   "image_source_url": "https://www.pexels.com/photo/a-couple-walking-in-the-park-8972498/",
   "image_license_url": "https://www.pexels.com/license/",
   "image_author": "SHVETS production",
   "image_width": 1600,
   "image_height": 1067,
-  "image_review": "밝은 공원 걷기 장면·원본 가로 비율·사진 설명 확인. 사진 인물을 환자나 협회 참여자로 표시하지 않음."
+  "image_review": "밝은 공원 걷기 장면·원본 가로 비율·사진 설명 확인. 사진 인물을 환자나 협회 참여자로 표시하지 않음.",
+  "deployment_commit": "8f8a53a416aacdf497e82eddb558f87ce8798cd6",
+  "publication_confirmed_at": "2026-11-26T00:43:47.496Z",
+  "publication_confirmed_at_kst": "2026-11-26 09:43:47 +09:00"
 }
