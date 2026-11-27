@@ -8,7 +8,7 @@
   "character_count_including_spaces": 1946,
   "cover_file": "대표이미지.png",
   "image_alt": "기억과 뇌 건강을 상징적으로 표현한 사용자 제공 참고 그림",
-  "image_caption": "사용자 제공 치매 주제 참고 그림입니다. 실제 뇌 영상이나 진단 자료가 아닙니다.",
+  "image_caption": "그림: Andreus / 123RF, 이미지 번호 31970629. 기억과 뇌 건강을 표현한 개념 삽화이며 실제 뇌 영상이나 진단 자료가 아닙니다.",
   "inline_images": [
     {
       "file": "치매위험요인_2017_참고.png",
@@ -43,5 +43,13 @@
   "public_url": "https://bareunwalking.org/press/walking-dementia-risk-and-gait-assessment/",
   "deployment_commit": "48fc5d9",
   "published_verified_at": "2026-11-27T01:18:30.492Z",
-  "deployment_status": "Cloudflare Pages success; 공개 목록·본문·대표/본문 이미지·출처 링크·사이트맵 확인"
+  "deployment_status": "Cloudflare Pages success; 공개 목록·본문·대표/본문 이미지·출처 링크·사이트맵 확인",
+  "image_credit": {
+    "creator": "Andreus",
+    "provider": "123RF",
+    "image_id": "31970629",
+    "url": "https://www.123rf.com/photo_31970629_someone-is-erasing-a-drawing-of-the-human-brain-conceptual-image-relating-to-dementia-and-memory.html",
+    "checked_on": "2026-11-27",
+    "license_status": "판매 페이지 확인; 사용자 보유 이용권은 확인하지 않음"
+  }
 }
