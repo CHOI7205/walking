@@ -522,5 +522,25 @@ export const bundledPosts = [
     "status": "published",
     "published_at": "2026-11-26T08:22:11.860Z",
     "updated_at": "2026-11-26T08:31:07.654Z"
+  },
+  {
+    "id": "bundled-daytime-walking-and-sleep",
+    "slug": "daytime-walking-and-sleep",
+    "title": "잠을 위한 낮의 걷기, 생활 리듬부터 살펴보세요",
+    "excerpt": "낮의 걷기와 야외 활동을 수면 습관과 함께 살펴봅니다. CDC·NHLBI의 안내를 바탕으로 활동과 휴식을 무리 없이 배치하는 방법을 소개합니다.",
+    "body": "## 잠들기 어려운 밤, 낮의 생활도 돌아봅니다\n\n밤에 잠이 오지 않으면 침대에 누워 내일 얼마나 피곤할지 걱정하게 됩니다. 이때 낮에 덜 움직인 탓이라고 자신을 탓하거나, 피곤해질 때까지 무리하게 걸을 필요는 없습니다. 수면은 걷기 하나로 결정되지 않으며 활동 시간과 잠자리 습관을 함께 살펴볼 수 있습니다. 오늘은 걷기를 잠을 억지로 끌어오는 수단보다 규칙적인 하루를 만드는 한 부분으로 생각해봅니다. 낮에 실천할 작은 움직임과 밤에 쉴 여유를 나누어 준비해보세요. 특별한 장비보다 자신의 일정에서 가능한 시간을 찾는 데서 시작합니다.\n\n## 규칙적인 활동은 수면을 돕는 방법입니다\n\n미국 질병통제예방센터 CDC는 규칙적인 신체활동이 더 나은 수면에 도움이 될 수 있다고 안내합니다. 다만 이것은 오늘 특정 걸음 수를 채우면 반드시 깊이 잔다는 약속이 아닙니다. 개인의 건강 상태와 생활 일정에 따라 반응은 다를 수 있습니다. 걷기를 시작한 뒤 어느 날 잠이 잘 오지 않았더라도 바로 실패로 판단하지 마세요. 잠을 줄여 운동 시간을 만들기보다 충분히 잘 시간을 먼저 확보하는 것이 중요합니다. 낮의 활동과 밤의 휴식을 서로 빼앗는 목표로 만들지 않는 편이 좋습니다. [CDC — Benefits of Physical Activity](https://www.cdc.gov/physical-activity-basics/benefits/index.html)\n\n## 햇빛이 있는 시간에 가까운 길을 걸어보세요\n\n미국 국립심장폐혈액연구소 NHLBI는 가능하면 매일 야외에서 시간을 보내고 신체활동을 하도록 권합니다. 하루 종일 실내에 있었다면 일과 중 잠깐 밖에 나갈 기회를 찾아보세요. 점심 뒤 익숙한 길을 다녀오거나 가까운 볼일에 걷기를 넣는 방법이 있습니다. 이는 공식 안내를 일상에 적용한 예시이며 특정 시간대의 걷기 효과를 검증한 처방은 아닙니다. 빛을 쬐려고 해를 직접 바라보지 말고 날씨와 미끄럼, 차량 통행부터 확인합니다. 야외 활동이 어렵다면 무리해서 나가기보다 안전하게 움직일 수 있는 방법을 고르세요. [NHLBI — Healthy Sleep Habits](https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits)\n\n## 저녁 활동은 잠자리와의 간격을 살핍니다\n\nNHLBI는 잠들기 전 조용한 시간을 두고 격렬한 운동과 밝은 인공조명을 피하도록 안내합니다. 그렇다고 해가 진 뒤의 모든 걷기를 금지한다는 뜻은 아닙니다. 저녁에만 시간이 난다면 자신의 몸 상태와 잠자리 준비 시간을 함께 살펴보세요. 늦은 시간에 운동량을 보충하려고 강도를 갑자기 높이기보다 마무리할 여유를 남깁니다. 걷고 나서 몸이 지나치게 들뜨거나 피곤하다면 다음에는 시간과 양을 조정해볼 수 있습니다. 모두에게 같은 시각을 정하기보다 자신의 하루에 맞는 배치를 찾는 과정입니다. [NHLBI — Healthy Sleep Habits](https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits)\n\n## 기상·취침 시간도 걷기와 함께 점검합니다\n\n수면을 돌보려면 운동 외의 습관도 함께 봐야 합니다. NHLBI는 매일 비슷한 시각에 잠들고 일어나며, 침실을 조용하고 어둡고 쾌적하게 유지하는 방법을 제시합니다. 주말에 일정이 크게 바뀌는지, 밤늦게 밝은 화면을 오래 보는지도 돌아보세요. 걷기를 했다는 이유로 잠자리 준비를 생략하지 않는 것입니다. 잠들기 어렵거나 낮의 졸림이 계속돼 생활에 지장이 있다면 걷는 양만 늘리며 버티지 말고 의료진과 상담하세요. 수면장애가 있는지는 별도 평가가 필요하며 일반적인 생활 안내가 진료를 대신하지 않습니다. [NHLBI — Healthy Sleep Habits](https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits) · [NHLBI — What Are Sleep Deprivation and Deficiency?](https://www.nhlbi.nih.gov/health/sleep-deprivation)\n\n## 오늘은 낮의 걷기와 밤의 휴식을 한 쌍으로\n\n오늘 일정에서 가까운 안전한 길을 잠깐 걸을 수 있는 때를 하나 골라보세요. 이어 저녁에는 하던 일을 정리하고 잠자리를 준비할 여유도 남겨둡니다. 하루 만에 잠이 달라졌는지를 성적처럼 매기지 않아도 됩니다. 걷는 동안 몸이 편안했는지, 다음날 일상에 무리가 없었는지를 살피며 지속 가능한 양으로 조정해보세요. 통증이나 어지럼이 생기면 중단하고 몸 상태를 확인합니다. 오늘의 목표는 더 지칠 때까지 걷는 것이 아니라 낮에는 알맞게 움직이고 밤에는 충분히 쉴 수 있는 하루를 만드는 것입니다. [CDC — Benefits of Physical Activity](https://www.cdc.gov/physical-activity-basics/benefits/index.html)",
+    "category": "걷기 정보",
+    "author": "대한바른자세걷기협회",
+    "source_name": "CDC · NHLBI",
+    "source_url": "https://www.cdc.gov/physical-activity-basics/benefits/index.html",
+    "cover_id": "",
+    "cover_image": "/assets/images/daytime-walking-sleep-photo.jpg",
+    "cover_alt": "햇빛이 드는 공원에서 신발을 신고 산책하는 두 사람의 실제 참고 사진",
+    "cover_caption": "낮의 산책 참고 사진. 사진: Filipe Silva da Rosa / Pexels, Pexels License. 협회 교육 현장이나 사진 속 인물의 수면 상태를 나타내는 자료가 아닙니다.",
+    "body_images": [],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-27T00:20:01.131Z",
+    "updated_at": "2026-11-27T00:20:01.131Z"
   }
 ];
