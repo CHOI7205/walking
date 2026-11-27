@@ -19,12 +19,15 @@
   "checked_at": "2026-11-27",
   "research_agent": "nov27_sleep_walk",
   "prepared_at": "2026-11-27T00:20:01.131Z",
-  "publication_status": "원고·실제사진 검수 완료 / 배포 대기",
+  "publication_status": "공개 목록·본문6문단·사진·출처·검색설정·사이트맵·RSS 검수 완료",
   "published_url": "https://bareunwalking.org/press/daytime-walking-and-sleep/",
   "image_source_url": "https://www.pexels.com/photo/elderly-couple-strolling-in-park-during-spring-30144254/",
   "image_license_url": "https://www.pexels.com/license/",
   "image_author": "Filipe Silva da Rosa",
   "image_width": 1200,
   "image_height": 1843,
-  "image_review": "밝은 공원 산책, 신발 착용·인물·원본비율 확인. 사진 속 인물을 환자·협회참여자로 표시하지 않음."
+  "image_review": "밝은 공원 산책, 신발 착용·인물·원본비율 확인. 사진 속 인물을 환자·협회참여자로 표시하지 않음.",
+  "deployment_commit": "3d5421297a149a82b9fc9711fe62449cd9d9e13f",
+  "publication_confirmed_at": "2026-11-27T00:21:20.493Z",
+  "publication_confirmed_at_kst": "2026-11-27 09:21:20 +09:00"
 }
