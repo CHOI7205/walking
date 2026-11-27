@@ -3,7 +3,7 @@
   "slug": "walking-dementia-risk-and-gait-assessment",
   "date": "2026-11-27",
   "category": "걷기 정보",
-  "publication_status": "추가 블로그 초안 작성·근거 검토 / 홈페이지 미게시",
+  "publication_status": "홈페이지 공개 완료",
   "paragraph_count": 6,
   "character_count_including_spaces": 1946,
   "cover_file": "대표이미지.png",
@@ -39,5 +39,9 @@
   ],
   "book_reference_scope": "두 책의 공개 서지·소개·목차 확인. 전체 본문·쪽수 직접 대조 미완료. 책의 치료 표현을 의학적 근거와 구분.",
   "cover_source_file": "C:/Users/멋진초이/AppData/Local/Temp/codex-clipboard-615fe9ff-b006-4c42-8dd4-b76c0494b5ad.png",
-  "updated_on": "2026-11-27"
+  "updated_on": "2026-11-27",
+  "public_url": "https://bareunwalking.org/press/walking-dementia-risk-and-gait-assessment/",
+  "deployment_commit": "48fc5d9",
+  "published_verified_at": "2026-11-27T01:18:30.492Z",
+  "deployment_status": "Cloudflare Pages success; 공개 목록·본문·대표/본문 이미지·출처 링크·사이트맵 확인"
 }
