@@ -1,0 +1,125 @@
+[
+  {
+    "id": "gait2008",
+    "title": "김춘옥 외, 걸음걸이 속도와 인지기능의 연관성, 2008",
+    "url": "https://www.riss.kr/link?id=A100140907",
+    "access": "원저 초록 검색 제공 본문 확인; PDF 미확인",
+    "limit": "126명 단면 연관; 치매 예측 성능을 입증하지 않음",
+    "checked_on": "2026-11-27",
+    "role": "이전 주장 검토 기록 — 수정 본문 인용에서는 제외"
+  },
+  {
+    "id": "tug",
+    "title": "Lee 외, Association Between Timed Up and Go Test and Future Dementia Onset, 2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29346523/",
+    "access": "PubMed 원저 초록 직접 열람",
+    "limit": "49,283명·평균3.8년·10초 초과·보정 HR1.34(1.14–1.57). 관찰 연관",
+    "checked_on": "2026-11-27",
+    "role": "이전 주장 검토 기록 — 수정 본문 인용에서는 제외"
+  },
+  {
+    "id": "steps",
+    "title": "del Pozo Cruz 외, JAMA Neurology 2022",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9449869/",
+    "access": "PMC 원문 직접 열람",
+    "limit": "78,430명·추적중앙6.9년; 잔여교란·역인과 가능",
+    "checked_on": "2026-11-27"
+  },
+  {
+    "id": "who",
+    "title": "WHO, Risk reduction of cognitive decline and dementia, 2nd ed.,2026",
+    "url": "https://www.ncbi.nlm.nih.gov/books/NBK623908/",
+    "access": "조사 팀원이 WHO원문 호스팅 자료 확인; 주 에이전트 직접 URL은 CAPTCHA",
+    "limit": "인지 정상 성인 신체활동 권고. 특정거리 효과보장 아님",
+    "checked_on": "2026-11-27",
+    "official_publication_url": "https://www.who.int/publications/i/item/9789240123557"
+  },
+  {
+    "id": "lancet",
+    "title": "Livingston 외, Lancet Commission 2024",
+    "url": "https://doi.org/10.1016/S0140-6736(24)01296-0",
+    "access": "조사 팀원 원저 검토; 출판사 직접접속403",
+    "limit": "14개 요인·약45%는 인구집단 잠재기여 추정; 개인 예방확률 아님",
+    "checked_on": "2026-11-27",
+    "full_text_pdf": "https://chronicdisease.org/wp-content/uploads/2024/12/Lancet-2024.pdf"
+  },
+  {
+    "id": "book",
+    "title": "치매와 싸우지 마세요, 나가오 가즈히로·곤도 마코토, 윤출판,2017",
+    "url": "https://www.yes24.com/product/goods/45094366",
+    "access": "서지·공개 출판사 소개 확인; 책 전체·관련쪽수 미확인",
+    "limit": "돌봄·삶·관계 관점만 참고; 의학적효과 근거로 사용하지 않음",
+    "checked_on": "2026-11-27"
+  },
+  {
+    "id": "dream",
+    "title": "일본 내각부2013 고령사회백서 꿈의호수마을",
+    "url": "https://www8.cao.go.jp/kourei/whitepaper/w-2013/zenbun/s1_2_clm1.html",
+    "access": "공식 본문 직접 열람",
+    "limit": "자기선택과 생활능력 지원 사례; 정량 예방효과 연구 아님",
+    "checked_on": "2026-11-27"
+  },
+  {
+    "id": "dreamsite",
+    "title": "꿈의호수마을 공식 운영 소개",
+    "url": "https://yumenomizuumi.com/feature/",
+    "access": "공식 본문 직접 열람",
+    "limit": "즐거움·선택권을 참고; 가정에 장애물을 만들라는 지침 아님",
+    "checked_on": "2026-11-27"
+  },
+  {
+    "id": "mit",
+    "title": "Hsu 외, WiGait CHI2017",
+    "url": "https://dspace.mit.edu/entities/publication/cb262500-e0eb-45cd-a10b-fa6c6d944aaf",
+    "access": "조사 팀원 MIT 공식 논문저장소 열람",
+    "limit": "측정기술 검증; 치매상관 직접 임상연구 아님",
+    "checked_on": "2026-11-27"
+  },
+  {
+    "id": "laurin",
+    "title": "Laurin 외, Physical activity and risk of cognitive impairment and dementia,2001",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/11255456/",
+    "access": "PubMed 원저 초록 직접 열람",
+    "limit": "인지장애 OR0.58 수치를 치매 예방확률42%로 바꾸지 않음",
+    "checked_on": "2026-11-27"
+  },
+  {
+    "id": "abbott",
+    "title": "Abbott 외, Walking and dementia in physically capable elderly men,2004",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15383515/",
+    "access": "PubMed 원저 초록 직접 열람",
+    "limit": "걷기 관찰연구; 3km70%보장수치와 불일치",
+    "checked_on": "2026-11-27"
+  },
+  {
+    "id": "anu",
+    "title": "Shaw 외 BMI와 대뇌피질 두께, IJO2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28993708/",
+    "checked_on": "2026-11-27",
+    "limit": "근육량 또는 치매예방 중재시험 아님"
+  },
+  {
+    "id": "book_walking",
+    "title": "걷기만 해도 치매는 개선된다, 나가오 가즈히로,2017",
+    "url": "https://m.yes24.com/goods/detail/54532341",
+    "checked_on": "2026-11-27",
+    "access": "공개서지·소개·목차",
+    "limit": "전체본문미확인; 책제목·저자주장과 임상연구결론을구분"
+  },
+  {
+    "id": "gait2025",
+    "title": "Jiang 외, Trajectories of muscle strength and physical performance preceding dementia in older US and European populations, 2025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40675919/",
+    "access": "PubMed 원저 초록 직접 열람",
+    "limit": "보행 분석 60세 이상 11,690명. 중첩 환자-대조 관찰연구. 발표 2025년, 자료 수집 2004~2018년. 개인별 예측·인과 효과 입증 아님",
+    "checked_on": "2026-11-27"
+  },
+  {
+    "id": "gait2024",
+    "title": "An 외, Can motor decline be a modifiable marker of clinical progression in subjective cognitive decline?, 2024",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38422939/",
+    "access": "PubMed 원저 초록 직접 열람",
+    "limit": "주관적 인지저하 노인 4,880명, 5년 추적. 진행 1,239명은 모두 치매 발생이라는 뜻 아님. 속도 단위 불명확하여 HR 본문 미인용",
+    "checked_on": "2026-11-27"
+  }
+]

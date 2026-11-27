@@ -1,0 +1,43 @@
+{
+  "title": "걷기를 통한 치매 위험 줄이기, 걸음의 변화도 함께 살펴보세요",
+  "slug": "walking-dementia-risk-and-gait-assessment",
+  "date": "2026-11-27",
+  "category": "걷기 정보",
+  "publication_status": "추가 블로그 초안 작성·근거 검토 / 홈페이지 미게시",
+  "paragraph_count": 6,
+  "character_count_including_spaces": 1946,
+  "cover_file": "대표이미지.png",
+  "image_alt": "기억과 뇌 건강을 상징적으로 표현한 사용자 제공 참고 그림",
+  "image_caption": "사용자 제공 치매 주제 참고 그림입니다. 실제 뇌 영상이나 진단 자료가 아닙니다.",
+  "inline_images": [
+    {
+      "file": "치매위험요인_2017_참고.png",
+      "caption": "2017년 자료이며 최신 위험요인 모형과 다름"
+    }
+  ],
+  "checked_at": "2026-11-27",
+  "research_agents": [
+    "dementia_gait_verify",
+    "dementia_exercise_verify",
+    "dementia_book_verify",
+    "recent_gait_dementia"
+  ],
+  "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9449869/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK623908/",
+    "https://doi.org/10.1016/S0140-6736(24)01296-0",
+    "https://www.yes24.com/product/goods/45094366",
+    "https://www8.cao.go.jp/kourei/whitepaper/w-2013/zenbun/s1_2_clm1.html",
+    "https://yumenomizuumi.com/feature/",
+    "https://dspace.mit.edu/entities/publication/cb262500-e0eb-45cd-a10b-fa6c6d944aaf",
+    "https://pubmed.ncbi.nlm.nih.gov/11255456/",
+    "https://pubmed.ncbi.nlm.nih.gov/15383515/",
+    "https://pubmed.ncbi.nlm.nih.gov/28993708/",
+    "https://m.yes24.com/goods/detail/54532341",
+    "https://pubmed.ncbi.nlm.nih.gov/40675919/",
+    "https://pubmed.ncbi.nlm.nih.gov/38422939/"
+  ],
+  "book_reference_scope": "두 책의 공개 서지·소개·목차 확인. 전체 본문·쪽수 직접 대조 미완료. 책의 치료 표현을 의학적 근거와 구분.",
+  "cover_source_file": "C:/Users/멋진초이/AppData/Local/Temp/codex-clipboard-615fe9ff-b006-4c42-8dd4-b76c0494b5ad.png",
+  "updated_on": "2026-11-27"
+}
