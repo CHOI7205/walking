@@ -522,5 +522,47 @@ export const bundledPosts = [
     "status": "published",
     "published_at": "2026-11-26T08:22:11.860Z",
     "updated_at": "2026-11-26T08:31:07.654Z"
+  },
+  {
+    "id": "bundled-daytime-walking-and-sleep",
+    "slug": "daytime-walking-and-sleep",
+    "title": "잠을 위한 낮의 걷기, 생활 리듬부터 살펴보세요",
+    "excerpt": "낮의 걷기와 야외 활동을 수면 습관과 함께 살펴봅니다. CDC·NHLBI의 안내를 바탕으로 활동과 휴식을 무리 없이 배치하는 방법을 소개합니다.",
+    "body": "## 잠들기 어려운 밤, 낮의 생활도 돌아봅니다\n\n밤에 잠이 오지 않으면 침대에 누워 내일 얼마나 피곤할지 걱정하게 됩니다. 이때 낮에 덜 움직인 탓이라고 자신을 탓하거나, 피곤해질 때까지 무리하게 걸을 필요는 없습니다. 수면은 걷기 하나로 결정되지 않으며 활동 시간과 잠자리 습관을 함께 살펴볼 수 있습니다. 오늘은 걷기를 잠을 억지로 끌어오는 수단보다 규칙적인 하루를 만드는 한 부분으로 생각해봅니다. 낮에 실천할 작은 움직임과 밤에 쉴 여유를 나누어 준비해보세요. 특별한 장비보다 자신의 일정에서 가능한 시간을 찾는 데서 시작합니다.\n\n## 규칙적인 활동은 수면을 돕는 방법입니다\n\n미국 질병통제예방센터 CDC는 규칙적인 신체활동이 더 나은 수면에 도움이 될 수 있다고 안내합니다. 다만 이것은 오늘 특정 걸음 수를 채우면 반드시 깊이 잔다는 약속이 아닙니다. 개인의 건강 상태와 생활 일정에 따라 반응은 다를 수 있습니다. 걷기를 시작한 뒤 어느 날 잠이 잘 오지 않았더라도 바로 실패로 판단하지 마세요. 잠을 줄여 운동 시간을 만들기보다 충분히 잘 시간을 먼저 확보하는 것이 중요합니다. 낮의 활동과 밤의 휴식을 서로 빼앗는 목표로 만들지 않는 편이 좋습니다. [CDC — Benefits of Physical Activity](https://www.cdc.gov/physical-activity-basics/benefits/index.html)\n\n## 햇빛이 있는 시간에 가까운 길을 걸어보세요\n\n미국 국립심장폐혈액연구소 NHLBI는 가능하면 매일 야외에서 시간을 보내고 신체활동을 하도록 권합니다. 하루 종일 실내에 있었다면 일과 중 잠깐 밖에 나갈 기회를 찾아보세요. 점심 뒤 익숙한 길을 다녀오거나 가까운 볼일에 걷기를 넣는 방법이 있습니다. 이는 공식 안내를 일상에 적용한 예시이며 특정 시간대의 걷기 효과를 검증한 처방은 아닙니다. 빛을 쬐려고 해를 직접 바라보지 말고 날씨와 미끄럼, 차량 통행부터 확인합니다. 야외 활동이 어렵다면 무리해서 나가기보다 안전하게 움직일 수 있는 방법을 고르세요. [NHLBI — Healthy Sleep Habits](https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits)\n\n## 저녁 활동은 잠자리와의 간격을 살핍니다\n\nNHLBI는 잠들기 전 조용한 시간을 두고 격렬한 운동과 밝은 인공조명을 피하도록 안내합니다. 그렇다고 해가 진 뒤의 모든 걷기를 금지한다는 뜻은 아닙니다. 저녁에만 시간이 난다면 자신의 몸 상태와 잠자리 준비 시간을 함께 살펴보세요. 늦은 시간에 운동량을 보충하려고 강도를 갑자기 높이기보다 마무리할 여유를 남깁니다. 걷고 나서 몸이 지나치게 들뜨거나 피곤하다면 다음에는 시간과 양을 조정해볼 수 있습니다. 모두에게 같은 시각을 정하기보다 자신의 하루에 맞는 배치를 찾는 과정입니다. [NHLBI — Healthy Sleep Habits](https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits)\n\n## 기상·취침 시간도 걷기와 함께 점검합니다\n\n수면을 돌보려면 운동 외의 습관도 함께 봐야 합니다. NHLBI는 매일 비슷한 시각에 잠들고 일어나며, 침실을 조용하고 어둡고 쾌적하게 유지하는 방법을 제시합니다. 주말에 일정이 크게 바뀌는지, 밤늦게 밝은 화면을 오래 보는지도 돌아보세요. 걷기를 했다는 이유로 잠자리 준비를 생략하지 않는 것입니다. 잠들기 어렵거나 낮의 졸림이 계속돼 생활에 지장이 있다면 걷는 양만 늘리며 버티지 말고 의료진과 상담하세요. 수면장애가 있는지는 별도 평가가 필요하며 일반적인 생활 안내가 진료를 대신하지 않습니다. [NHLBI — Healthy Sleep Habits](https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits) · [NHLBI — What Are Sleep Deprivation and Deficiency?](https://www.nhlbi.nih.gov/health/sleep-deprivation)\n\n## 오늘은 낮의 걷기와 밤의 휴식을 한 쌍으로\n\n오늘 일정에서 가까운 안전한 길을 잠깐 걸을 수 있는 때를 하나 골라보세요. 이어 저녁에는 하던 일을 정리하고 잠자리를 준비할 여유도 남겨둡니다. 하루 만에 잠이 달라졌는지를 성적처럼 매기지 않아도 됩니다. 걷는 동안 몸이 편안했는지, 다음날 일상에 무리가 없었는지를 살피며 지속 가능한 양으로 조정해보세요. 통증이나 어지럼이 생기면 중단하고 몸 상태를 확인합니다. 오늘의 목표는 더 지칠 때까지 걷는 것이 아니라 낮에는 알맞게 움직이고 밤에는 충분히 쉴 수 있는 하루를 만드는 것입니다. [CDC — Benefits of Physical Activity](https://www.cdc.gov/physical-activity-basics/benefits/index.html)",
+    "category": "걷기 정보",
+    "author": "대한바른자세걷기협회",
+    "source_name": "CDC · NHLBI",
+    "source_url": "https://www.cdc.gov/physical-activity-basics/benefits/index.html",
+    "cover_id": "",
+    "cover_image": "/assets/images/daytime-walking-sleep-photo.jpg",
+    "cover_alt": "햇빛이 드는 공원에서 신발을 신고 산책하는 두 사람의 실제 참고 사진",
+    "cover_caption": "낮의 산책 참고 사진. 사진: Filipe Silva da Rosa / Pexels, Pexels License. 협회 교육 현장이나 사진 속 인물의 수면 상태를 나타내는 자료가 아닙니다.",
+    "body_images": [],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-27T00:20:01.131Z",
+    "updated_at": "2026-11-27T00:20:01.131Z"
+  },
+  {
+    "id": "bundled-walking-dementia-risk-and-gait-assessment",
+    "slug": "walking-dementia-risk-and-gait-assessment",
+    "title": "걷기를 통한 치매 위험 줄이기, 걸음의 변화도 함께 살펴보세요",
+    "excerpt": "최근 보행·인지 연구와 치매 위험요인 자료를 바탕으로 걷기의 의미와 한계, 일상에서 안전하게 활동을 이어가는 방법을 살펴봅니다.",
+    "body": "## 걸음이 달라졌다면 몸과 기억을 함께 살핍니다\n\n부모님이 전보다 천천히 걷고 외출을 꺼리면 나이 탓으로 넘기기 쉽습니다. 걷기는 뇌의 계획과 주의, 균형 조절이 함께 필요한 활동입니다. 걸음의 변화는 몸과 인지 상태를 함께 살펴볼 단서가 될 수 있습니다. 그러나 보행이 느려졌다고 곧바로 치매라는 뜻은 아닙니다. 관절 통증, 근력 저하와 여러 질환도 영향을 줄 수 있으므로 기억력과 일상생활의 변화까지 확인해야 합니다. 치매 예방을 위해 걷기를 권하는 일과, 보행검사로 위험 신호를 살피는 일은 서로 다른 질문에서 출발합니다. [Jiang 외, 2025](https://pubmed.ncbi.nlm.nih.gov/40675919/)\n\n## 보행검사는 확진이 아닌 추가 평가의 단서입니다\n\n2025년 발표된 연구는 60세 이상 11,690명의 보행 자료를 분석해 치매 진단에 앞서 보행속도가 더 빠르게 떨어지는 양상을 관찰했습니다. 2024년 주관적 인지저하가 있는 노인 4,880명을 5년간 추적한 연구에서도 보행속도·근력·지구력과 인지저하의 진행 사이에 연관성이 나타났습니다. 다만 모두 관찰연구이며, 인지저하의 진행이 모두 치매 발생을 뜻하지도 않습니다. 한 번의 보행검사로 치매를 확진하거나 개인의 발병 시기를 예측할 수는 없습니다. 평소보다 걸음이 느려지고 기억력이나 일상생활의 변화가 함께 나타난다면 의료진과 상의해 원인을 평가하는 것이 좋습니다. [Jiang 외, Trajectories of muscle strength and physical performance preceding dementia in older US and European populations, 2025](https://pubmed.ncbi.nlm.nih.gov/40675919/) · [An 외, Can motor decline be a modifiable marker of clinical progression in subjective cognitive decline?, 2024](https://pubmed.ncbi.nlm.nih.gov/38422939/)\n\n## 얼마나 걷느냐보다 근거를 읽는 방법이 먼저입니다\n\n영국 성인 78,430명을 추적한 2022년 연구에서는 걸음 수가 많고 보행 강도가 높은 경우 치매 발생이 적은 연관성이 나타났습니다. 하지만 걷기를 무작위로 배정한 시험은 아니어서 다른 건강 습관이나 치매 초기의 활동 감소가 영향을 줬을 가능성이 남습니다. “매일 3km를 걸으면 치매가 70% 예방된다”는 약속으로 바꿀 수 없습니다. 세계보건기구는 인지 저하 위험을 줄이기 위한 신체활동을 권하지만, 특정 거리만 채우면 모든 사람에게 같은 결과가 생긴다는 뜻은 아닙니다. [del Pozo Cruz 외, JAMA Neurology 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9449869/) · [WHO, Risk reduction of cognitive decline and dementia, 2nd ed.,2026](https://www.ncbi.nlm.nih.gov/books/NBK623908/)\n\n## 근육과 혈관 건강, 사회적 관계를 함께 돌봅니다\n\n걷기를 이어가려면 근력과 균형도 필요하므로 자신의 상태에 맞는 근력운동을 함께 고려합니다. 그렇다고 근육량이나 체질량지수 하나로 치매를 판단하지는 않습니다. 원치 않는 체중 감소나 의욕 저하가 지속되면 원인을 평가받아야 합니다. 첨부 도표는 2024년 란셋 치매위원회의 14개 위험요인 모형으로 갱신했습니다. 2024년 란셋 위원회는 14개 조절 가능한 요인을 다루면 전체 치매 사례의 약 45%를 예방하거나 늦출 잠재력이 있다고 추정했습니다. 이는 개인의 예방 확률이 아니며, 신체활동뿐 아니라 혈압·청력·시력과 사회적 관계 등을 함께 살펴야 한다는 의미입니다. [Livingston 외, Lancet Commission 2024](https://doi.org/10.1016/S0140-6736(24)01296-0)\n\n![2024 란셋 치매위원회: 생애주기별 14개 조절 가능한 위험요인과 전체 치매 사례 약 45%의 예방·지연 잠재력](/assets/images/dementia-risk-factors-2024.png)\n\n## 두 책에서 살필 점은 활동과 돌봄의 연결입니다\n\n나가오 가즈히로의 『걷기만 해도 치매는 개선된다』는 공개 목차에서 시 읊기·계산·노래와 걷기를 결합하고, 실내나 앉은 자세에서도 활동을 이어가는 방법을 다룹니다. 다만 책 제목은 저자의 설명이지 걷기만으로 치매가 치료된다는 임상 결론은 아닙니다. 『치매와 싸우지 마세요』의 공개 소개에서 강조하는 삶과 관계를 살피는 돌봄도 함께 참고할 수 있습니다. 일본 ‘꿈의 호수마을’의 공식 운영 사례처럼 본인이 즐길 활동을 선택하도록 돕는 것입니다. 걸으며 다른 과제를 더하는 방법은 인지·균형 상태에 따라 부담이 될 수 있으므로 안전과 개인의 뜻을 먼저 살핍니다. [걷기만 해도 치매는 개선된다 — 공개 서지·목차](https://m.yes24.com/goods/detail/54532341) · [치매와 싸우지 마세요 — 공개 소개](https://www.yes24.com/product/goods/45094366) · [꿈의 호수마을 — 일본 내각부 공식 소개](https://www8.cao.go.jp/kourei/whitepaper/w-2013/zenbun/s1_2_clm1.html)\n\n## 오늘은 함께 정한 짧은 걸음부터 시작하세요\n\n오늘은 걷는 사람의 뜻을 묻고 익숙하고 안전한 길을 골라보세요. 체력에 맞게 시작해 편안하면 조금씩 늘리고, 통증이나 어지럼이 생기면 멈춥니다. 인지 저하가 있으면 길을 잃을 위험과 동행 필요성도 살펴야 합니다. 걷기 속도만 재촉하거나 걷는 동안 어려운 과제를 무리하게 시킬 필요는 없습니다. 기억력과 보행, 일상 기능의 변화가 함께 보이면 치매안심센터나 의료기관에서 상담받으세요. 목표는 치매에 걸리지 않을 책임을 개인에게 지우는 것이 아니라 움직임과 즐거움, 관계를 가능한 만큼 오래 지키는 것입니다. [WHO, Risk reduction of cognitive decline and dementia, 2nd ed.,2026](https://www.ncbi.nlm.nih.gov/books/NBK623908/)",
+    "category": "걷기 정보",
+    "author": "대한바른자세걷기협회",
+    "source_name": "Jiang 외 2025 · An 외 2024 · WHO · Lancet Commission",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/40675919/",
+    "cover_id": "",
+    "cover_image": "/assets/images/dementia-risk-factors-2024.png",
+    "cover_alt": "2024 란셋 치매위원회: 생애주기별 14개 조절 가능한 위험요인과 전체 치매 사례 약 45%의 예방·지연 잠재력",
+    "cover_caption": "2024년 란셋 치매위원회 보고서를 바탕으로 대한바른자세걷기협회가 재구성했습니다. 14개 위험요인을 다룰 때 전체 치매 사례의 약 45%를 예방하거나 늦출 잠재력이 있다는 인구집단 추정치이며, 개인의 예방 확률이나 걷기만의 효과가 아닙니다.",
+    "body_images": [
+      "/assets/images/dementia-risk-factors-2024.png"
+    ],
+    "asset_ids": "[]",
+    "status": "published",
+    "published_at": "2026-11-27T01:16:47.538Z",
+    "updated_at": "2026-11-27T01:37:45.496Z"
   }
 ];

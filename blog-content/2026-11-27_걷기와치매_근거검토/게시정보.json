@@ -7,12 +7,13 @@
   "paragraph_count": 6,
   "character_count_including_spaces": 1946,
   "cover_file": "대표이미지.png",
-  "image_alt": "생애주기별 치매 위험요인과 조절 가능한 요인을 나타낸 2017년 연합뉴스 도표",
-  "image_caption": "사용자 제공 연합뉴스 도표(자료: 2017년 란셋 치매위원회). 9개 위험요인·35%를 제시한 과거 모형이며 개인의 예방 확률이 아닙니다. 2024년 위원회는 14개 요인·약 45% 모형으로 갱신했습니다.",
+  "image_alt": "2024 란셋 치매위원회: 생애주기별 14개 조절 가능한 위험요인과 전체 치매 사례 약 45%의 예방·지연 잠재력",
+  "image_caption": "2024년 란셋 치매위원회 보고서를 바탕으로 대한바른자세걷기협회가 재구성했습니다. 14개 위험요인을 다룰 때 전체 치매 사례의 약 45%를 예방하거나 늦출 잠재력이 있다는 인구집단 추정치이며, 개인의 예방 확률이나 걷기만의 효과가 아닙니다.",
   "inline_images": [
     {
-      "file": "치매위험요인_2017_참고.png",
-      "caption": "2017년 자료이며 최신 위험요인 모형과 다름"
+      "file": "치매위험요인_2024.png",
+      "name": "dementia-risk-factors-2024.png",
+      "caption": "2024년 란셋 치매위원회 보고서를 바탕으로 대한바른자세걷기협회가 재구성했습니다. 14개 위험요인을 다룰 때 전체 치매 사례의 약 45%를 예방하거나 늦출 잠재력이 있다는 인구집단 추정치이며, 개인의 예방 확률이나 걷기만의 효과가 아닙니다."
     }
   ],
   "checked_at": "2026-11-27",
@@ -38,16 +39,13 @@
     "https://pubmed.ncbi.nlm.nih.gov/38422939/"
   ],
   "book_reference_scope": "두 책의 공개 서지·소개·목차 확인. 전체 본문·쪽수 직접 대조 미완료. 책의 치료 표현을 의학적 근거와 구분.",
-  "cover_source_file": "C:/Users/멋진초이/AppData/Local/Temp/codex-clipboard-689f43c0-ec29-47f0-9df9-85be105558ea.png",
   "updated_on": "2026-11-27",
   "public_url": "https://bareunwalking.org/press/walking-dementia-risk-and-gait-assessment/",
   "deployment_commit": "48fc5d9",
   "published_verified_at": "2026-11-27T01:18:30.492Z",
-  "deployment_status": "Cloudflare Pages success; 공개 목록·본문·대표/본문 이미지·출처 링크·사이트맵 확인",
   "image_credit": {
-    "provider": "연합뉴스 표시의 사용자 제공 도표",
-    "underlying_data": "2017 Lancet Commission",
-    "license_status": "사용자 지정 이미지; 재사용 허락 여부 별도 확인 필요",
+    "provider": "대한바른자세걷기협회 자체 재구성",
+    "underlying_data": "Livingston et al., Lancet Commission 2024",
     "checked_on": "2026-11-27"
   }
 }
