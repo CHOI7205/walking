@@ -1,8 +1,8 @@
 {
   "mode": "production",
   "origin": "https://bareunwalking.org",
-  "pages": 52,
-  "indexable": 49,
+  "pages": 53,
+  "indexable": 50,
   "routes": [
     "/",
     "/about/",
@@ -55,6 +55,7 @@
     "/404.html",
     "/press/",
     "/reviews/",
-    "/admin/"
+    "/admin/",
+    "/products/liqua-care/"
   ]
 }
