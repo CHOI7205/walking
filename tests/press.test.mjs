@@ -44,7 +44,7 @@ test('draft → publish → edit → unpublish persists and public output exclud
   let list=await(await f.call('/press/')).text();assert.ok(!list.includes('href="/press/community-walking-news/"'));
   const publish=await f.admin('/api/admin/posts/'+data.id,'PUT',{...f.post,status:'published',version:1});assert.equal(publish.status,200);
   const article=await f.call('/press/'+data.slug+'/');assert.equal(article.status,200);const html=await article.text();
-  assert.ok(html.includes('<h2>현장 이야기</h2>'));assert.ok(html.includes('"@type":"NewsArticle"'));assert.ok(html.includes('datePublished'));
+  assert.match(html, /<h2 id="article-section-1">현장 이야기<\/h2>/);assert.ok(html.includes('"@type":"NewsArticle"'));assert.ok(html.includes('datePublished'));
   list=await(await f.call('/press/')).text();assert.ok(list.includes('href="/press/community-walking-news/"'));
   assert.equal((await f.admin('/api/admin/posts/'+data.id,'PUT',{...f.post,version:1})).status,409);
   assert.equal((await f.admin('/api/admin/posts/'+data.id,'PUT',{...f.post,slug:'changed-url',version:2})).status,409);

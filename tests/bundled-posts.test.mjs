@@ -73,3 +73,31 @@ test('RSS includes full public article bodies and absolute image URLs as escaped
   assert.ok(!xml.includes('<script'));
   assert.ok(xml.includes('<guid isPermaLink="true">'));
 });
+
+test('every public blog article has consistent branded metadata, valid outline, topic links and preserved publication dates',async()=>{
+  const descriptions=new Set();
+  for(const post of bundledPosts){
+    const html=await (await renderPress(new Request(config.origin+'/press/'+post.slug+'/'),env,config)).text();
+    const title=html.match(/<title>(.*?)<\/title>/s)[1];
+    assert.equal(title.split(config.name).length-1,1,post.slug);
+    assert.equal((html.match(/<h1[ >]/g)||[]).length,1,post.slug);
+    assert.ok(html.includes('rel="canonical" href="'+config.origin+'/press/'+post.slug+'/"'));
+    assert.match(html,/content="index, follow, max-image-preview:large"/);
+    const description=html.match(/name="description" content="([^"]*)"/)[1];
+    assert.ok(description.includes(config.name));
+    assert.ok(!descriptions.has(description));descriptions.add(description);
+    const graph=JSON.parse(html.match(/application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];
+    const article=graph.find(n=>['NewsArticle','BlogPosting'].includes(n['@type']));
+    assert.equal(article.headline,post.title);
+    assert.equal(article.datePublished,post.published_at);
+    assert.equal(article.dateModified,post.updated_at);
+    assert.equal(article.author.name,config.name);
+    assert.equal(article.publisher['@id'],config.origin+'/#organization');
+    assert.match(html,/aria-label="관련 블로그 글"/);
+    assert.match(html,/aria-label="관련 걷기 정보와 교육"/);
+    for(const [,id] of html.matchAll(/href="#(article-section-\d+)"/g))assert.ok(html.includes('id="'+id+'"'));
+    for(const [,slug] of html.matchAll(/href="\/press\/([a-z0-9-]+)\/"/g)){
+      assert.notEqual(slug,post.slug);assert.ok(bundledPosts.some(p=>p.slug===slug));
+    }
+  }
+});
