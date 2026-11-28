@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /admin/
+Disallow: /_server/
+
+# OpenAI search crawler; training crawler preferences remain separate.
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_server/
+
 Sitemap: https://bareunwalking.org/sitemap.xml

@@ -45,6 +45,18 @@ test('production build requires a domain and generates canonical URL and sitemap
   assert.ok(!sitemap.includes('/admin/'));
   assert.ok(!sitemap.includes('404.html'));
   assert.match(fs.readFileSync(path.join(output,'robots.txt'),'utf8'),/Sitemap: https:\/\/walk.test\/sitemap.xml/);
+  const robots=fs.readFileSync(path.join(output,'robots.txt'),'utf8');
+  const searchGroup=robots.split('User-agent: OAI-SearchBot\n')[1];
+  assert.ok(searchGroup,'ChatGPT search must have an explicit crawler policy');
+  assert.match(searchGroup,/Allow: \//);
+  for (const privatePath of ['/api/', '/admin/', '/_server/']) assert.ok(searchGroup.includes('Disallow: '+privatePath));
+  assert.ok(!robots.includes('User-agent: GPTBot'),'search changes must not change training preferences');
+  assert.match(html,/<h1[^>]*>대한바른자세걷기협회 — 바른 자세 걷기 교육<\/h1>/);
+  const faq=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'].find(n=>n['@type']==='FAQPage');
+  for (const question of faq.mainEntity) {
+    assert.ok(html.includes(question.name),'structured questions must also be visible');
+    assert.ok(html.includes(question.acceptedAnswer.text),'structured answers must also be visible');
+  }
   // Restore the report and preview output. Test output is kept separate from deployable files.
   execFileSync(process.execPath,['scripts/build.mjs'],{cwd:root,stdio:'pipe'});
 });

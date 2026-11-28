@@ -5,7 +5,7 @@ export function renderHero() {
     { n: '03', label: '배움을 일상으로 연결하는 걷기 교육', lines: ['함께 걷는', '건강한 일상.'], detail: '대한바른자세걷기협회가 함께합니다.' }
   ];
   return `<section class="kinetic-hero" aria-labelledby="walking-hero-title" data-kinetic-hero>
-    <h1 id="walking-hero-title" class="visually-hidden">바른 자세, 바른 걸음. 함께 걷는 건강한 일상.</h1>
+    <h1 id="walking-hero-title" class="visually-hidden">대한바른자세걷기협회 — 바른 자세 걷기 교육</h1>
     <div class="kinetic-stage" aria-hidden="true">
       <div class="kinetic-watermark">WALK</div>
       <div class="kinetic-photo" data-hero-photo="0"><img src="/assets/images/hero-lecture-1280.webp" alt="신발을 활용해 올바른 걷기를 설명하는 협회 강사" width="1280" height="960" fetchpriority="high" decoding="async"></div>
