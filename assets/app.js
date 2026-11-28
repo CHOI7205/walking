@@ -18,7 +18,7 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', event => {
   if (nav && !nav.contains(event.target) && !menuButton?.contains(event.target)) closeMenu();
 });
-window.matchMedia('(min-width: 1281px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+window.matchMedia('(min-width: 851px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
 
 const filterButtons = document.querySelectorAll('[data-filter]');
 const resultCount = document.querySelector('#result-count');
@@ -123,22 +123,3 @@ applicationForm?.addEventListener('submit', async event => {
     delete applicationForm.dataset.submitting;
   }
 });
-
-
-// Institution filters use their own data attributes, independent of activity filters.
-const institutionFilterRoot = document.querySelector('.institution-filter-bar');
-if (institutionFilterRoot) {
- const institutionButtons = [...institutionFilterRoot.querySelectorAll('[data-institution-filter]')];
- const institutionCards = [...document.querySelectorAll('[data-institution-category]')];
- const institutionStatus = document.querySelector('#institution-results');
- institutionButtons.forEach(button => button.addEventListener('click', () => {
-  const category = button.dataset.institutionFilter;
-  institutionButtons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-  let visible = 0;
-  institutionCards.forEach(card => {
-   card.hidden = category !== 'all' && card.dataset.institutionCategory !== category;
-   if (!card.hidden) visible++;
-  });
-  if (institutionStatus) institutionStatus.textContent = visible + '개 기관·현장';
- }));
-}
